@@ -1,7 +1,9 @@
-Feature: Glossary
+Feature: 03 Glossary
 
 Event (AKA Restart Party)
-: Free community electronics repair event.  People join us to fix their broken electronics. At events, Restart Party Hosts log the status of devices, and afterwards feed into our online database.
+: Free community electronics repair event. People join us to fix their broken
+electronics. At events, Restart Party Hosts log the status of devices, and
+afterwards feed into our online database.
 
 Participant AKA Owner
 : A participant is someone who brings a device to an event for repair.
@@ -100,7 +102,7 @@ Spare parts
 screen repairs, participants bring the parts with them and we are able to fix
 the device on the spot. Most require follow-up by the device owner.
 Spare parts for some devices and categories of devices are found for sale
-online. 
+online.
 
 
 
