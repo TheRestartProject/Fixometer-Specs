@@ -1,4 +1,4 @@
-Feature: 01 Vision
+Feature: 1 Vision
 
 The Fixometer is a data collection and visualisation tool that lets repair
 organisations easily and conveniently collect information on repairs, and

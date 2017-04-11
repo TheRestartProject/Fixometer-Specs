@@ -1,4 +1,4 @@
-Feature: 03 Glossary
+Feature: 4 Glossary
 
 Event (AKA Restart Party)
 : Free community electronics repair event. People join us to fix their broken
