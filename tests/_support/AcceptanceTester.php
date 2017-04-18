@@ -67,4 +67,12 @@ class AcceptanceTester extends \Codeception\Actor
     {
          $this->see('No user account was found for the email and password provided. Please check your details and try again.');
     }
+
+    /**
+     * @Then the user is taken to the Administrator Dashboard
+     */
+    public function theUserIsTakenToTheAdministratorDashboard()
+    {
+        $this->seeInTitle('Administrator Dashboard');
+    }
 }

@@ -329,6 +329,50 @@ jsonPWrapper ({
       }
     },
     {
+      "RelativeFolder": "2-UserAccounts/06-LandingPages.feature",
+      "Feature": {
+        "Name": "06 Landing Pages",
+        "Description": "Different user types are taken to different default pages when they log in.\n\nGiven the following user account has been created\n    | Email                    | Password |\n    | hubert@planetexpress.com | hubert!  |",
+        "FeatureElements": [
+          {
+            "Name": "Administrator is taken to Administrator Dashboard",
+            "Slug": "administrator-is-taken-to-administrator-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"hubert@planetexpress.com\" and password \"hubert!\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is taken to the Administrator Dashboard",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
       "RelativeFolder": "2-UserAccounts/04 PasswordRecovery.feature",
       "Feature": {
         "Name": "03 Password Recovery",
@@ -504,6 +548,23 @@ jsonPWrapper ({
       }
     },
     {
+      "RelativeFolder": "1-Overview/5-Personas.feature",
+      "Feature": {
+        "Name": "Personas",
+        "Description": "* Professor Hubert J. Farnsworth is an Admin.\n* Fry is a Restart Host with the group Planet Express.",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
       "RelativeFolder": "1-Overview/4-Glossary.feature",
       "Feature": {
         "Name": "4 Glossary",
@@ -646,6 +707,13 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "2-UserAccounts/06-LandingPages.feature",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
         "Folder": "2-UserAccounts/04 PasswordRecovery.feature",
         "Total": 0,
         "Passing": 0,
@@ -661,6 +729,13 @@ jsonPWrapper ({
       },
       {
         "Folder": "2-UserAccounts/01 AccountRequest.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "1-Overview/5-Personas.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -767,6 +842,13 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "2-UserAccounts/06-LandingPages.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
         "Folder": "2-UserAccounts/04 PasswordRecovery.feature",
         "Total": 0,
         "Passing": 0,
@@ -782,6 +864,13 @@ jsonPWrapper ({
       },
       {
         "Folder": "2-UserAccounts/01 AccountRequest.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "1-Overview/5-Personas.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -817,20 +906,20 @@ jsonPWrapper ({
       }
     ],
     "Scenarios": {
-      "Total": 5,
+      "Total": 6,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 5
+      "Inconclusive": 6
     },
     "Features": {
-      "Total": 17,
+      "Total": 19,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 17
+      "Inconclusive": 19
     }
   },
   "Configuration": {
     "SutName": "Restart Project Fixometer",
-    "GeneratedOn": "18 April 2017 15:35:37"
+    "GeneratedOn": "18 April 2017 15:46:10"
   }
 });
