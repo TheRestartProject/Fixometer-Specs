@@ -2,3 +2,6 @@ output
 node_modules
 deploy-specs-output.sh
 .#*
+
+tests/_output/*
+vendor
