@@ -4,7 +4,7 @@ Feature: 02 User Authentication
     I want to be able to log in
 
 Background:
-    Given the following user account has been created
+    Given the following user accounts have been created
         | Email                 | Password |
         | fry@planetexpress.com | fry!     | 
 

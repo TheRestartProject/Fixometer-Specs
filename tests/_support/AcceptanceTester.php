@@ -25,7 +25,7 @@ class AcceptanceTester extends \Codeception\Actor
     */
 
     /**
-     * @Given the following user account has been created
+     * @Given the following user accounts have been created
      */
     public function theFollowingUserAccountHasBeenCreated()
     {
@@ -74,5 +74,13 @@ class AcceptanceTester extends \Codeception\Actor
     public function theUserIsTakenToTheAdministratorDashboard()
     {
         $this->seeInTitle('Administrator Dashboard');
+    }
+
+    /**
+     * @Then the user is taken to the Host Dashboard
+     */
+    public function theUserIsTakenToTheHostDashboard()
+    {
+        $this->seeInTitle('Host Dashboard');
     }
 }
