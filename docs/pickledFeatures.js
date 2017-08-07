@@ -278,6 +278,23 @@ jsonPWrapper ({
       }
     },
     {
+      "RelativeFolder": "3-Groups/Stats/HeadlineStats.feature",
+      "Feature": {
+        "Name": "Headline stats",
+        "Description": "Each group has their own headline stats showing:\n\n- participants\n- hours volunteered\n- parties thrown\n- waste prevented\n- co2 emissions prevented\n\n![](./headline-stats.png)",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
       "RelativeFolder": "3-Groups/EditGroupProfile.feature",
       "Feature": {
         "Name": "Edit Group Profile",
@@ -332,7 +349,7 @@ jsonPWrapper ({
       "RelativeFolder": "2-UserAccounts/06-LandingPages.feature",
       "Feature": {
         "Name": "06 Landing Pages",
-        "Description": "Different user types are taken to different default pages when they log in.\n\nGiven the following user account has been created\n    | Email                    | Password |\n    | hubert@planetexpress.com | hubert!  |",
+        "Description": "Different user types are taken to different default pages when they log in.\n\nGiven the following user accounts have been created\n    | Email                    | Password | Role  |\n    | hubert@planetexpress.com | hubert!  | Admin |\n    | fry@planetexpress.com    | fry!     | Host  |",
         "FeatureElements": [
           {
             "Name": "Administrator is taken to Administrator Dashboard",
@@ -343,13 +360,43 @@ jsonPWrapper ({
                 "Keyword": "When",
                 "NativeKeyword": "When ",
                 "Name": "a user logs in with email \"hubert@planetexpress.com\" and password \"hubert!\"",
-                "StepComments": [],
+                "StepComments": [
+                  {
+                    "Text": "# TODO: change this so its just - when an Admin logs in"
+                  }
+                ],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
                 "Name": "the user is taken to the Administrator Dashboard",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Host is taken to Host Dashboard",
+            "Slug": "host-is-taken-to-host-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is taken to the Host Dashboard",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -496,7 +543,7 @@ jsonPWrapper ({
             {
               "Keyword": "Given",
               "NativeKeyword": "Given ",
-              "Name": "the following user account has been created",
+              "Name": "the following user accounts have been created",
               "TableArgument": {
                 "HeaderRow": [
                   "Email",
@@ -686,6 +733,13 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "3-Groups/Stats/HeadlineStats.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
         "Folder": "3-Groups/EditGroupProfile.feature",
         "Total": 0,
         "Passing": 0,
@@ -708,10 +762,10 @@ jsonPWrapper ({
       },
       {
         "Folder": "2-UserAccounts/06-LandingPages.feature",
-        "Total": 1,
+        "Total": 2,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 1
+        "Inconclusive": 2
       },
       {
         "Folder": "2-UserAccounts/04 PasswordRecovery.feature",
@@ -821,6 +875,13 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "3-Groups/Stats/HeadlineStats.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
         "Folder": "3-Groups/EditGroupProfile.feature",
         "Total": 0,
         "Passing": 0,
@@ -906,20 +967,20 @@ jsonPWrapper ({
       }
     ],
     "Scenarios": {
-      "Total": 6,
+      "Total": 7,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 6
+      "Inconclusive": 7
     },
     "Features": {
-      "Total": 19,
+      "Total": 20,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 19
+      "Inconclusive": 20
     }
   },
   "Configuration": {
     "SutName": "Restart Project Fixometer",
-    "GeneratedOn": "18 April 2017 15:46:10"
+    "GeneratedOn": "7 August 2017 12:09:00"
   }
 });
