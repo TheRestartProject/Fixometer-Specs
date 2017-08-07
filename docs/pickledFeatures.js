@@ -295,10 +295,10 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "3-Groups/Stats/FilterStats.feature",
+      "RelativeFolder": "3-Groups/Stats/CO2EquivalenceStat.feature",
       "Feature": {
-        "Name": "Filter stats",
-        "Description": "",
+        "Name": "CO2 Equivalence visualisation",
+        "Description": "Each group, on their group page in the Fixometer, has a visualisation of the \nequivalence of their CO2 impact in terms such as distance driven, manufacture of \nnumber of cars, etc.\n\n![](./impact-equivalence-visualisation.png)",
         "FeatureElements": [],
         "Result": {
           "WasExecuted": false,
@@ -312,10 +312,10 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "3-Groups/Stats/CO2EquivalenceStat.feature",
+      "RelativeFolder": "3-Groups/PartiesFilter.feature",
       "Feature": {
-        "Name": "CO2 Equivalence visualisation",
-        "Description": "Each group, on their group page in the Fixometer, has a visualisation of the \nequivalence of their CO2 impact in terms such as distance driven, manufacture of \nnumber of cars, etc.\n\n![](./impact-equivalence-visualisation.png)",
+        "Name": "Parties filter",
+        "Description": "The events filter allows admins and hosts to be able to filter\ndown the list of events that they have access to.\n\nThis helps to find for example events related to a specific group\nfor a particular date range.\n\nThis is particularly useful for accessing the various stats \nfor a group of events.\n\nThe list can be filtered by group, individual parties, and a date range.\n\nThe filter can be reset.\n\nIn the filtered results, we see:\n\n- headline stats\n- the list of parties\n- impact tab with volunteer stats, fix stats, most repaired devices, and CO2 equivalence stats\n- details tab with devices restarted stats, category details stats, devices restarted per category stats\n\nWe can also download the filtered results as a list.\n\n![](./parties-filter.png)",
         "FeatureElements": [],
         "Result": {
           "WasExecuted": false,
@@ -774,14 +774,14 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
-        "Folder": "3-Groups/Stats/FilterStats.feature",
+        "Folder": "3-Groups/Stats/CO2EquivalenceStat.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
         "Inconclusive": 0
       },
       {
-        "Folder": "3-Groups/Stats/CO2EquivalenceStat.feature",
+        "Folder": "3-Groups/PartiesFilter.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -930,14 +930,14 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
-        "Folder": "3-Groups/Stats/FilterStats.feature",
+        "Folder": "3-Groups/Stats/CO2EquivalenceStat.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
         "Inconclusive": 0
       },
       {
-        "Folder": "3-Groups/Stats/CO2EquivalenceStat.feature",
+        "Folder": "3-Groups/PartiesFilter.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -1043,6 +1043,6 @@ jsonPWrapper ({
   },
   "Configuration": {
     "SutName": "Restart Project Fixometer",
-    "GeneratedOn": "7 August 2017 12:19:13"
+    "GeneratedOn": "7 August 2017 13:12:35"
   }
 });
