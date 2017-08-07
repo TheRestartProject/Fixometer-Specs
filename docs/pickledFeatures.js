@@ -278,23 +278,6 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "3-Groups/Stats/ImpactVisualisation.feature",
-      "Feature": {
-        "Name": "Impact Equivalence Visualisation",
-        "Description": "Each group, on their group page in the Fixometer, has a visualisation of the \nequivalence of their impact in terms such as distance driven, manufacture of \nnumber of cars, etc.\n\n![](./impact-equivalence-visualisation.png)",
-        "FeatureElements": [],
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
       "RelativeFolder": "3-Groups/Stats/HeadlineStats.feature",
       "Feature": {
         "Name": "Headline stats",
@@ -316,6 +299,23 @@ jsonPWrapper ({
       "Feature": {
         "Name": "Filter stats",
         "Description": "",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "3-Groups/Stats/CO2EquivalenceStat.feature",
+      "Feature": {
+        "Name": "CO2 Equivalence visualisation",
+        "Description": "Each group, on their group page in the Fixometer, has a visualisation of the \nequivalence of their CO2 impact in terms such as distance driven, manufacture of \nnumber of cars, etc.\n\n![](./impact-equivalence-visualisation.png)",
         "FeatureElements": [],
         "Result": {
           "WasExecuted": false,
@@ -767,13 +767,6 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
-        "Folder": "3-Groups/Stats/ImpactVisualisation.feature",
-        "Total": 0,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 0
-      },
-      {
         "Folder": "3-Groups/Stats/HeadlineStats.feature",
         "Total": 0,
         "Passing": 0,
@@ -782,6 +775,13 @@ jsonPWrapper ({
       },
       {
         "Folder": "3-Groups/Stats/FilterStats.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "3-Groups/Stats/CO2EquivalenceStat.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -923,13 +923,6 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
-        "Folder": "3-Groups/Stats/ImpactVisualisation.feature",
-        "Total": 0,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 0
-      },
-      {
         "Folder": "3-Groups/Stats/HeadlineStats.feature",
         "Total": 0,
         "Passing": 0,
@@ -938,6 +931,13 @@ jsonPWrapper ({
       },
       {
         "Folder": "3-Groups/Stats/FilterStats.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "3-Groups/Stats/CO2EquivalenceStat.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -1043,6 +1043,6 @@ jsonPWrapper ({
   },
   "Configuration": {
     "SutName": "Restart Project Fixometer",
-    "GeneratedOn": "7 August 2017 12:15:35"
+    "GeneratedOn": "7 August 2017 12:19:13"
   }
 });
