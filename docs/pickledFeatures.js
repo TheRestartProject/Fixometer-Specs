@@ -210,6 +210,25 @@ jsonPWrapper ({
       }
     },
     {
+      "RelativeFolder": "4-Events/Stats/ShareYourStats.feature",
+      "Feature": {
+        "Name": "Share party statistics",
+        "Description": "Ability for groups/hosts to embed widgets that highlight the achievements\nof individual parties in their websites.\n\nThe host is presented with a basic piece of HTML which will pull in \nstatistics for the party when it is embedded into a website.\n\nThe two statistics available for embedding are:\n\n- headline party stats (date, location, participants, restarters, CO2/waste, fixed, repairable, repaired)\n- CO2 equivalence visualisation\n\n![](./share-your-stats-party-button.png)\n![](./share-your-stats-party-modal.png)",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": [
+          "@stats"
+        ]
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
       "RelativeFolder": "4-Events/TrackImpact.feature",
       "Feature": {
         "Name": "Track Impact",
@@ -271,6 +290,25 @@ jsonPWrapper ({
           "WasSuccessful": false
         },
         "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "3-Groups/Stats/ShareYourStats.feature",
+      "Feature": {
+        "Name": "Share group statistics",
+        "Description": "Ability for groups to embed widgets that highlight their achievements\nin their own websites.\n\nThe host is presented with a basic piece of HTML which will pull in \nstatistics when it is embedded into a website.\n\nThe two statistics available for embedding are:\n\n- headline stats\n- CO2 equivalence visualisation\n\n![](./share-your-stats-button.png)\n![](./share-your-stats-modal.png)",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": [
+          "@stats"
+        ]
       },
       "Result": {
         "WasExecuted": false,
@@ -715,7 +753,15 @@ jsonPWrapper ({
     }
   ],
   "Summary": {
-    "Tags": [],
+    "Tags": [
+      {
+        "Tag": "@stats",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      }
+    ],
     "Folders": [
       {
         "Folder": "7-Wordpress-Module/Upcoming Parties.feature",
@@ -737,6 +783,13 @@ jsonPWrapper ({
         "Passing": 0,
         "Failing": 0,
         "Inconclusive": 2
+      },
+      {
+        "Folder": "4-Events/Stats/ShareYourStats.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
       },
       {
         "Folder": "4-Events/TrackImpact.feature",
@@ -761,6 +814,13 @@ jsonPWrapper ({
       },
       {
         "Folder": "4-Events/Create Event.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "3-Groups/Stats/ShareYourStats.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -895,6 +955,13 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "4-Events/Stats/ShareYourStats.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
         "Folder": "4-Events/TrackImpact.feature",
         "Total": 0,
         "Passing": 0,
@@ -917,6 +984,13 @@ jsonPWrapper ({
       },
       {
         "Folder": "4-Events/Create Event.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "3-Groups/Stats/ShareYourStats.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -1035,14 +1109,14 @@ jsonPWrapper ({
       "Inconclusive": 7
     },
     "Features": {
-      "Total": 22,
+      "Total": 24,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 22
+      "Inconclusive": 24
     }
   },
   "Configuration": {
     "SutName": "Restart Project Fixometer",
-    "GeneratedOn": "7 August 2017 13:14:02"
+    "GeneratedOn": "7 August 2017 15:00:39"
   }
 });
