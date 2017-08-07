@@ -229,6 +229,57 @@ jsonPWrapper ({
       }
     },
     {
+      "RelativeFolder": "4-Events/Create/EditEvent.feature",
+      "Feature": {
+        "Name": "Edit Event",
+        "Description": "Add Device\n\n- Category\n- Comment\n- Brand/Model\n- Repair Status\n- Spare parts?\n\n- Estimate weight for none of the above",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "4-Events/Create/Create Event.feature",
+      "Feature": {
+        "Name": "Create events",
+        "Description": "Notes: In the absence of the Restarter role functionality being\nin place, new events are currently created with a default\nvolunteer.",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "4-Events/Create/VenueDetails.feature",
+      "Feature": {
+        "Name": "Add venue details",
+        "Description": "Users can add the name and address of the venue where the party\nis taking place.\n\nThe venue location is geocoded and pin-pointed on a map in order\nto display to visitors to the front-facing website later on.\n\n![](./venue-details.png)\n\nNotes: we used to only have one field, named 'Location', into which the\nuser would input the address, geocode, and then had to go back and\nupdate the field to a more publicly dislpayable name (the venue name, essentially.)\nUsers found this confusing so we split it out into two fields.  \nVenue Name is the field that displays on therestartproject.org homepage\nand related events pages.",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
       "RelativeFolder": "4-Events/TrackImpact.feature",
       "Feature": {
         "Name": "Track Impact",
@@ -250,40 +301,6 @@ jsonPWrapper ({
       "Feature": {
         "Name": "Edit Historic Event",
         "Description": "",
-        "FeatureElements": [],
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "4-Events/EditEvent.feature",
-      "Feature": {
-        "Name": "Edit Event",
-        "Description": "Add Device\n\n- Category\n- Comment\n- Brand/Model\n- Repair Status\n- Spare parts?\n\n- Estimate weight for none of the above",
-        "FeatureElements": [],
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "4-Events/Create Event.feature",
-      "Feature": {
-        "Name": "Create events",
-        "Description": "Notes: In the absence of the Restarter role functionality being\nin place, new events are currently created with a default\nvolunteer.",
         "FeatureElements": [],
         "Result": {
           "WasExecuted": false,
@@ -792,6 +809,27 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "4-Events/Create/EditEvent.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "4-Events/Create/Create Event.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "4-Events/Create/VenueDetails.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
         "Folder": "4-Events/TrackImpact.feature",
         "Total": 0,
         "Passing": 0,
@@ -800,20 +838,6 @@ jsonPWrapper ({
       },
       {
         "Folder": "4-Events/EditHistoricEvent.feature",
-        "Total": 0,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 0
-      },
-      {
-        "Folder": "4-Events/EditEvent.feature",
-        "Total": 0,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 0
-      },
-      {
-        "Folder": "4-Events/Create Event.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -962,6 +986,27 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
+        "Folder": "4-Events/Create/EditEvent.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "4-Events/Create/Create Event.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "4-Events/Create/VenueDetails.feature",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
         "Folder": "4-Events/TrackImpact.feature",
         "Total": 0,
         "Passing": 0,
@@ -970,20 +1015,6 @@ jsonPWrapper ({
       },
       {
         "Folder": "4-Events/EditHistoricEvent.feature",
-        "Total": 0,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 0
-      },
-      {
-        "Folder": "4-Events/EditEvent.feature",
-        "Total": 0,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 0
-      },
-      {
-        "Folder": "4-Events/Create Event.feature",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -1109,14 +1140,14 @@ jsonPWrapper ({
       "Inconclusive": 7
     },
     "Features": {
-      "Total": 24,
+      "Total": 25,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 24
+      "Inconclusive": 25
     }
   },
   "Configuration": {
     "SutName": "Restart Project Fixometer",
-    "GeneratedOn": "7 August 2017 15:00:39"
+    "GeneratedOn": "7 August 2017 16:39:50"
   }
 });
