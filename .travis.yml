@@ -1,0 +1,60 @@
+language: php
+
+env:
+          - MYSQL_USER=travis MYSQL_PASSWORD=''
+
+php:
+          - '7.1'
+              
+services:
+          - mysql
+
+addons:
+          hosts:
+                      - fixometer.dev 
+                            
+before_install:
+        - mysql -u root -e 'create database fixometer_dev;'
+        - mysql -u root -e 'select @@sql_mode;'
+        - mysql -u root -e 'create user ''fixometer_root''@''localhost'';'
+        - mysql -u root -e 'grant all privileges on fixometer_dev.* to ''fixometer_root''@''localhost'';'
+
+before_script:
+        - git clone https://github.com/therestartproject/fixometer
+        - cat `ls -1 fixometer/data/migrations/*.sql | sort -n` | mysql -u root fixometer_dev
+        # Setup Apache
+        - sudo apt-get update
+        - sudo apt-get install apache2 libapache2-mod-fastcgi
+        # enable php-fpm
+        - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.conf
+        - sudo cp ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf.default ~/.phpenv/versions/$(phpenv version-name)/etc/php-fpm.d/www.conf
+        - sudo a2enmod rewrite actions fastcgi alias
+        - echo "cgi.fix_pathinfo = 1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+        - sudo sed -i -e "s,www-data,travis,g" /etc/apache2/envvars
+        - sudo chown -R travis:travis /var/lib/apache2/fastcgi
+        - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
+        # configure fixometer
+        - sudo cp -f build/travis-ci-apache /etc/apache2/sites-available/fixometer.dev.conf
+        - cd fixometer
+        - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/fixometer.dev.conf
+        - cp config/config.example.php config/config.php
+        - cp config/database.example.php config/database.php
+        - sed -e "s?username?fixometer_root?g" --in-place config/database.php
+        - sed -e "s?password??g" --in-place config/database.php
+        - sed -e "s?dbname?fixometer_dev?g" --in-place config/database.php
+
+        - sudo a2ensite fixometer.dev
+        - sudo a2enmod rewrite        
+        - sudo service apache2 reload
+        - sudo service apache2 restart
+        # Debug: inspect site
+        - curl "http://www.fixometer.dev"
+        #- curl "http://127.0.0.1"
+script:
+        #- php vendor/codeception/codeception/codecept run acceptance
+
+after_failure:
+        # debug
+        - ls -al /etc/apache2/sites-available
+        - cat /etc/apache2/sites-available/fixometer.dev.conf 
+        - cat /etc/hosts
