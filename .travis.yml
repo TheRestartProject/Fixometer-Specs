@@ -19,6 +19,10 @@ before_install:
         - mysql -u root -e 'create user ''fixometer_root''@''localhost'';'
         - mysql -u root -e 'grant all privileges on fixometer_dev.* to ''fixometer_root''@''localhost'';'
 
+install:
+        - composer self-update
+        - composer install --prefer-dist
+
 before_script:
         - git clone https://github.com/therestartproject/fixometer
         - cat `ls -1 fixometer/data/migrations/*.sql | sort -n` | mysql -u root fixometer_dev
