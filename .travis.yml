@@ -46,16 +46,17 @@ before_script:
         - sed -e "s?username?fixometer_root?g" --in-place config/database.php
         - sed -e "s?password??g" --in-place config/database.php
         - sed -e "s?dbname?fixometer_dev?g" --in-place config/database.php
-
+        - cd ..
+        # bring site up
         - sudo a2ensite fixometer.dev
         - sudo a2enmod rewrite        
         - sudo service apache2 reload
         - sudo service apache2 restart
         # Debug: inspect site
         - curl "http://www.fixometer.dev"
-        #- curl "http://127.0.0.1"
+
 script:
-        #- php vendor/codeception/codeception/codecept run acceptance
+        - php vendor/codeception/codeception/codecept run acceptance
 
 after_failure:
         # debug
