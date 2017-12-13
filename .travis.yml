@@ -14,7 +14,7 @@ addons:
                       - fixometer.dev 
                             
 before_install:
-        - echo "Pass: "$FIXOMETER_DB_PASSWORD
+        - echo 'Pass: $FIXOMETER_DB_PASSWORD'
         - mysql -u root -e 'create database fixometer_dev;'
         - mysql -u root -e 'select @@sql_mode;'
         - mysql -u root -e 'create user ''fixometer_root''@''localhost'' identified by ''$FIXOMETER_DB_PASSWORD'';'
