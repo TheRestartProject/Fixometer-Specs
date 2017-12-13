@@ -16,6 +16,8 @@
  *
  * @SuppressWarnings(PHPMD)
 */
+use \Codeception\Util\Locator;
+
 class AcceptanceTester extends \Codeception\Actor
 {
     use _generated\AcceptanceTesterActions;
@@ -82,5 +84,51 @@ class AcceptanceTester extends \Codeception\Actor
     public function theUserIsTakenToTheHostDashboard()
     {
         $this->seeInTitle('Host Dashboard');
+    }
+
+    /**
+      * @Given I am not logged in
+      */
+    public function iAmNotLoggedIn()
+    {
+        //throw new \Codeception\Exception\Incomplete("Step `I am not logged in` is not defined");
+	    //TODO: Define 
+	    //
+        $this->haveInDatabase('groups', array('idgroups' => '1000', 'name' => 'FOORestart HQ', 'location' => 'HQ'));
+    }
+
+    /** 
+     * @Given iHaveThreeFixedDevicesInTheDatabase
+     */
+    public function iHaveThreeFixedDevicesInTheDatabase()
+    {
+	    // Define a set of test records to include three devices
+	    $this->haveInDatabase('groups', array('idgroups' => '1000', 'name' => 'Foo HQ', 'location' => 'HQ'));
+	    $this->haveInDatabase('events', array('idevents' => '2000', 'group' => '1000', 'event_date' => '2011-10-02'));
+	    $this->haveInDatabase('users', array('idusers' => '3000', 'email' => 'foo@foo', 'name' => 'foo', 'password' => 'bar'));
+	    $this->haveInDatabase('devices', array('iddevices' => '10000', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => l));
+	    $this->haveInDatabase('devices', array('iddevices' => '10001', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => l));
+	    $this->haveInDatabase('devices', array('iddevices' => '10002', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => l));
+    }
+
+    /**
+      * @When I go to login page
+      */
+    public function iGoToLoginPage()
+    {
+        $this->amOnPage("/user/login");
+    }
+
+    /**
+     * @Then I should see that total devices restarted is :num1
+     */
+    public function iShouldSeeThatTotalDevicesRestartedIs($num1)
+    {
+        // Note - the page construction looks wrong, why is span element a child of span element?
+	$this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Devices Restarted']]/span[@class='big-number']/span[@class='big-number'][text()='$num1']");
+
+	// Example for Waste Prevented:
+	//$this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Waste prevented']]/span[@class='big-number'][text()='5,306 kg']");
+
     }
 }

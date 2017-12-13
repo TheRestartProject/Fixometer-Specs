@@ -7,11 +7,11 @@
 class_name: AcceptanceTester
 modules:
     enabled:
-#        - PhpBrowser:
-#            url: http://localhost/myapp
+        - PhpBrowser:
+            url: 'http://www.fixometer.dev/'
+          #        - WebDriver
+        - Db:
+                    populate: true # run populator before all test
+                    cleanup: true
+                    populator: 'mysql -u $user $dbname < tests/_data/dump.sql'
         - \Helper\Acceptance
-        - WebDriver
-    config:
-        WebDriver:
-            url: 'http://community.therestartproject.dev/'
-            browser: phantomjs
