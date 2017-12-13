@@ -94,21 +94,21 @@ class AcceptanceTester extends \Codeception\Actor
         //throw new \Codeception\Exception\Incomplete("Step `I am not logged in` is not defined");
 	    //TODO: Define 
 	    //
-        $this->haveInDatabase('groups', array('idgroups' => '1000', 'name' => 'FOORestart HQ', 'location' => 'HQ'));
     }
 
     /** 
-     * @Given iHaveThreeFixedDevicesInTheDatabase
+     * @Given I have three fixed devices in the database
+     *
      */
     public function iHaveThreeFixedDevicesInTheDatabase()
     {
 	    // Define a set of test records to include three devices
 	    $this->haveInDatabase('groups', array('idgroups' => '1000', 'name' => 'Foo HQ', 'location' => 'HQ'));
-	    $this->haveInDatabase('events', array('idevents' => '2000', 'group' => '1000', 'event_date' => '2011-10-02'));
+	    $this->haveInDatabase('events', array('idevents' => '2000', 'group' => '1000', 'event_date' => '2011-10-02', 'start' => '09:00:00', 'end' => '13:00:00', 'location' => 'Bar', 'latitude' => '51.5477', 'longitude' => '-0.163824'));
 	    $this->haveInDatabase('users', array('idusers' => '3000', 'email' => 'foo@foo', 'name' => 'foo', 'password' => 'bar'));
-	    $this->haveInDatabase('devices', array('iddevices' => '10000', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => l));
-	    $this->haveInDatabase('devices', array('iddevices' => '10001', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => l));
-	    $this->haveInDatabase('devices', array('iddevices' => '10002', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => l));
+	    $this->haveInDatabase('devices', array('iddevices' => '10000', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1));
+	    $this->haveInDatabase('devices', array('iddevices' => '10001', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1));
+	    $this->haveInDatabase('devices', array('iddevices' => '10002', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1));
     }
 
     /**

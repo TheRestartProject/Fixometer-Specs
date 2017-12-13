@@ -1,4 +1,4 @@
-actor: Tester
+actor_suffix: Tester
 paths:
     tests: tests
     log: tests/_output
