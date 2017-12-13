@@ -26,7 +26,7 @@ install:
 
 before_script:
         # debug
-        - env | grep PASS
+        - env | grep PASSWORD
         - git clone https://github.com/therestartproject/fixometer
         - cat `ls -1 fixometer/data/migrations/*.sql | sort -n` | mysql -u root fixometer_dev
         # Setup Apache
