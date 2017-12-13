@@ -14,9 +14,10 @@ addons:
                       - fixometer.dev 
                             
 before_install:
+        - echo "Pass: "$FIXOMETER_DB_PASSWORD
         - mysql -u root -e 'create database fixometer_dev;'
         - mysql -u root -e 'select @@sql_mode;'
-        - mysql -u root -e 'create user ''fixometer_root''@''localhost'';'
+        - mysql -u root -e 'create user ''fixometer_root''@''localhost'' identified by ''$FIXOMETER_DB_PASSWORD'';'
         - mysql -u root -e 'grant all privileges on fixometer_dev.* to ''fixometer_root''@''localhost'';'
 
 install:
@@ -46,7 +47,7 @@ before_script:
         - cp config/config.example.php config/config.php
         - cp config/database.example.php config/database.php
         - sed -e "s?username?fixometer_root?g" --in-place config/database.php
-        - sed -e "s?password??g" --in-place config/database.php
+        - sed -e "s?password?$FIXOMETER_DB_PASSWORD?g" --in-place config/database.php
         - sed -e "s?dbname?fixometer_dev?g" --in-place config/database.php
         - cd ..
         # bring site up
