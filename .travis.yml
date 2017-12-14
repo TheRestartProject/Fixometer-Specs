@@ -16,7 +16,7 @@ addons:
 before_install:
         - echo $FIXOMETER_DB_PASSWORD
         - mysql -u root -e 'create database fixometer_dev;'
-        - mysql -u root -e 'select @@sql_mode;'
+        - mysql -u root -e 'select @@sql_mode;'         # debug
         - mysql -u root -e "create user 'fixometer_root'@'localhost' identified by '$FIXOMETER_DB_PASSWORD';"
         - mysql -u root -e 'grant all privileges on fixometer_dev.* to ''fixometer_root''@''localhost'';'
 
@@ -25,8 +25,6 @@ install:
         - composer install --prefer-dist
 
 before_script:
-        # debug
-        - env | grep PASSWORD
         - git clone https://github.com/therestartproject/fixometer
         - cat `ls -1 fixometer/data/migrations/*.sql | sort -n` | mysql -u root fixometer_dev
         # Setup Apache
