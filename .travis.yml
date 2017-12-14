@@ -61,6 +61,7 @@ script:
 
 after_failure:
         # debug
-        - ls -al /etc/apache2/sites-available
-        - cat /etc/apache2/sites-available/fixometer.dev.conf 
-        - cat /etc/hosts
+        #- ls -al /etc/apache2/sites-available
+        #- cat /etc/apache2/sites-available/fixometer.dev.conf 
+        #- cat /etc/hosts
+        - cat tests/_output/*.fail.html
