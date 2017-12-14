@@ -97,10 +97,10 @@ class AcceptanceTester extends \Codeception\Actor
     }
 
     /** 
-     * @Given I have three fixed devices in the database
+     * @Given I have three fixed devices 
      *
      */
-    public function iHaveThreeFixedDevicesInTheDatabase()
+    public function iHaveThreeFixedDevices()
     {
 	    // Define a set of test records to include three devices
 	    $this->haveInDatabase('groups', array('idgroups' => '1000', 'name' => 'Foo HQ', 'location' => 'HQ'));
@@ -113,6 +113,51 @@ class AcceptanceTester extends \Codeception\Actor
 	    $this->haveInDatabase('devices', array('iddevices' => '10000', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
 	    $this->haveInDatabase('devices', array('iddevices' => '10001', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
 	    $this->haveInDatabase('devices', array('iddevices' => '10002', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+    }
+
+    /**
+     * @Given I have three events organised by three different groups
+     */
+    public function iHaveThreeEventsOrganisedByThreeDifferentGroups()
+    {
+	    $this->haveInDatabase('groups', array('idgroups' => '1000', 'name' => 'Foo HQ', 'location' => 'HQ'));
+   	    $this->haveInDatabase('events', array('idevents' => '2000', 'group' => '1000', 'event_date' => '2011-10-02', 'start' => '09:00:00', 'end' => '13:00:00', 'location' => 'Bar', 'latitude' => '51.5477', 'longitude' => '-0.163824'));
+
+	    $this->haveInDatabase('groups', array('idgroups' => '1001', 'name' => 'Foo North', 'location' => 'North'));
+   	    $this->haveInDatabase('events', array('idevents' => '2001', 'group' => '1001', 'event_date' => '2011-10-03', 'start' => '10:00:00', 'end' => '14:00:00', 'location' => 'Bar North', 'latitude' => '50.5477', 'longitude' => '-0.163824'));
+
+	    $this->haveInDatabase('groups', array('idgroups' => '1002', 'name' => 'Foo South', 'location' => 'South'));
+	    $this->haveInDatabase('events', array('idevents' => '2002', 'group' => '1002', 'event_date' => '2011-10-04', 'start' => '11:00:00', 'end' => '15:00:00', 'location' => 'Bar South', 'latitude' => '52.5477', 'longitude' => '-0.163824'));
+    }
+
+    /**
+     * @Given I have one medium laptop fixed at each event
+     */
+    public function iHaveOneMediumLaptopFixedAtEachEvent()
+    {
+	    $this->haveInDatabase('devices', array('iddevices' => '10000', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10001', 'event' => '2001', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10002', 'event' => '2002', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+    }
+
+    /**
+     * @Given I have one large laptop fixed at each event 
+     */
+    public function iHaveOneLargeLaptopFixedAtEachEvent()
+    {
+	    $this->haveInDatabase('devices', array('iddevices' => '10003', 'event' => '2000', 'category' => 15, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10004', 'event' => '2001', 'category' => 15, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10005', 'event' => '2002', 'category' => 15, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+    }
+
+    /**
+     * @Given I have one small laptop not fixed at each event 
+     */
+    public function iHaveOneSmallLaptopNotFixedAtEachEvent()
+    {
+	    $this->haveInDatabase('devices', array('iddevices' => '10006', 'event' => '2000', 'category' => 17, 'category_creation' => 16, 'repair_status' => 2, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10007', 'event' => '2001', 'category' => 17, 'category_creation' => 16, 'repair_status' => 2, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10008', 'event' => '2002', 'category' => 17, 'category_creation' => 16, 'repair_status' => 2, 'estimate' => ''));
     }
 
     /**
@@ -140,5 +185,14 @@ class AcceptanceTester extends \Codeception\Actor
     {
 	$this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Waste prevented']]/span[@class='big-number'][text()='$num1']");
 
+    }
+
+
+    /**
+      * @Then I should see that total parties thrown is :num1
+      */
+    public function iShouldSeeThatTotalPartiesThrownIs($num1)
+    {
+        $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number'][text()='$num1']");
     }
 }
