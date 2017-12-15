@@ -105,9 +105,6 @@ class AcceptanceTester extends \Codeception\Actor
 	    // Define a set of test records to include three devices
 	    $this->haveInDatabase('groups', array('idgroups' => '1000', 'name' => 'Foo HQ', 'location' => 'HQ'));
 	    $this->haveInDatabase('events', array('idevents' => '2000', 'group' => '1000', 'event_date' => '2011-10-02', 'start' => '09:00:00', 'end' => '13:00:00', 'location' => 'Bar', 'latitude' => '51.5477', 'longitude' => '-0.163824'));
-	    /* Not needed 
-		    $this->haveInDatabase('users', array('idusers' => '3000', 'email' => 'foo@foo', 'name' => 'foo', 'password' => 'bar'));
-	     */
 	    // Estimate must be provided as otherwise will default to null - this breaks the aggregation.
 	    // TODO: Fix the aggregation in the devices model SQL statement to use ifnull(sum(...))
 	    $this->haveInDatabase('devices', array('iddevices' => '10000', 'event' => '2000', 'category' => 16, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
@@ -145,9 +142,9 @@ class AcceptanceTester extends \Codeception\Actor
      */
     public function iHaveOneLargeLaptopFixedAtEachEvent()
     {
-	    $this->haveInDatabase('devices', array('iddevices' => '10003', 'event' => '2000', 'category' => 15, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
-	    $this->haveInDatabase('devices', array('iddevices' => '10004', 'event' => '2001', 'category' => 15, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
-	    $this->haveInDatabase('devices', array('iddevices' => '10005', 'event' => '2002', 'category' => 15, 'category_creation' => 16, 'repair_status' => 1, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10003', 'event' => '2000', 'category' => 15, 'category_creation' => 15, 'repair_status' => 1, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10004', 'event' => '2001', 'category' => 15, 'category_creation' => 15, 'repair_status' => 1, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10005', 'event' => '2002', 'category' => 15, 'category_creation' => 15, 'repair_status' => 1, 'estimate' => ''));
     }
 
     /**
@@ -155,9 +152,9 @@ class AcceptanceTester extends \Codeception\Actor
      */
     public function iHaveOneSmallLaptopNotFixedAtEachEvent()
     {
-	    $this->haveInDatabase('devices', array('iddevices' => '10006', 'event' => '2000', 'category' => 17, 'category_creation' => 16, 'repair_status' => 2, 'estimate' => ''));
-	    $this->haveInDatabase('devices', array('iddevices' => '10007', 'event' => '2001', 'category' => 17, 'category_creation' => 16, 'repair_status' => 2, 'estimate' => ''));
-	    $this->haveInDatabase('devices', array('iddevices' => '10008', 'event' => '2002', 'category' => 17, 'category_creation' => 16, 'repair_status' => 2, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10006', 'event' => '2000', 'category' => 17, 'category_creation' => 17, 'repair_status' => 2, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10007', 'event' => '2001', 'category' => 17, 'category_creation' => 17, 'repair_status' => 2, 'estimate' => ''));
+	    $this->haveInDatabase('devices', array('iddevices' => '10008', 'event' => '2002', 'category' => 17, 'category_creation' => 17, 'repair_status' => 2, 'estimate' => ''));
     }
 
     /**
@@ -169,12 +166,35 @@ class AcceptanceTester extends \Codeception\Actor
     }
 
     /**
+     * @When I go to the fixometer admin stats page
+      */
+    public function iGoToTheFixometerAdminStatsPage()
+    {
+        $this->amOnPage("/admin/stats/2");
+    }
+
+    /**
      * @Then I should see that total devices restarted is :num1
      */
     public function iShouldSeeThatTotalDevicesRestartedIs($num1)
     {
-        // Note - the page construction looks wrong, why is span element a child of span element?
-	$this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Devices Restarted']]/span[@class='big-number']/span[@class='big-number'][text()='$num1']");
+	    $pageId = $this->grabFromCurrentUrl();
+	    ##file_put_contents("/tmp/codeception.debug.currentURL.log", $pageId);
+	    switch ($pageId) {
+	    case "/user/login":
+		    // Note - the page construction looks wrong, why is span element a child of span element?
+		    $itemPath = "//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Devices Restarted']]/span[@class='big-number']/span[@class='big-number']";
+		    // Alternative approach:
+		    // $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Devices Restarted']]/span[@class='big-number']/span[@class='big-number'][text()='$num1']");
+		    break;
+	    case "/admin/stats/2":
+		    // Not available on this page
+		    PHPUnit_Framework_Assert::fail('"Devices Restarted" is not a valid observation on page ' . $pageId);
+		    break;
+	    }
+	    $value = $this->grabTextFrom($itemPath);
+	    $trimmed_value = trim($value);
+	    PHPUnit_Framework_Assert::assertEquals($trimmed_value, $num1);
     }
 
     /**
@@ -183,8 +203,24 @@ class AcceptanceTester extends \Codeception\Actor
      */
     public function iShouldSeeThatTotalWastePreventedIs($num1)
     {
-	$this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Waste prevented']]/span[@class='big-number'][text()='$num1']");
+	    $pageId = $this->grabFromCurrentUrl();
+	    switch ($pageId) {
+	    case "/user/login":
+		    $itemPath = "//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Waste prevented']]/span[@class='big-number']";
+		    #$value = $this->grabTextFrom("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Waste prevented']]/span[@class='big-number']");
 
+		    // Alternative approach:
+		    // $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Waste prevented']]/span[@class='big-number'][text()='$num1']");
+		    break;
+	    case "/admin/stats/2":
+		    $itemPath = "//section[@id='impact-dataviz']/div/span[@class='datalabel'][text()='Total waste prevented: ']/../span[@class='blue']";
+		    ##$value = $this->grabTextFrom("//section[@id='impact-dataviz']/div/span[@class='datalabel'][text()='Total waste prevented: ']/../span[@class='blue']");
+		    // strip leading and trailing spaces as the site is padding
+		    break;
+	    }
+	    $value = $this->grabTextFrom($itemPath);
+	    $trimmed_value = trim($value);
+	    PHPUnit_Framework_Assert::assertEquals($trimmed_value, $num1);
     }
 
 
@@ -193,6 +229,20 @@ class AcceptanceTester extends \Codeception\Actor
       */
     public function iShouldSeeThatTotalPartiesThrownIs($num1)
     {
-        $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number'][text()='$num1']");
+	    $pageId = $this->grabFromCurrentUrl();
+	    switch ($pageId) {
+	    case "/user/login":
+		    $itemPath = "//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number']";
+		    // Alternative method
+		    // $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number'][text()='$num1']");
+		    break;
+	    case "/admin/stats/2":
+		    PHPUnit_Framework_Assert::fail('"Total Parties Thrown" is not a valid observation on page ' . $pageId);
+		    break;
+	    }
+	    $value = $this->grabTextFrom($itemPath);
+	    $trimmed_value = trim($value);
+	    PHPUnit_Framework_Assert::assertEquals($trimmed_value, $num1);
     }
+
 }

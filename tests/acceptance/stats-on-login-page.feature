@@ -1,7 +1,7 @@
-Feature: stats-on-login
+Feature: stats-on-login-page
   In order to view current impact
   As a user
-  I need to be able to see statistics on login screen
+  I need to be able to see statistics on login page
 
   Scenario: observe statistics 
     Given I am not logged in
@@ -18,6 +18,6 @@ Feature: stats-on-login
 		And I have one small laptop not fixed at each event 
      When I go to login page
      Then I should see that total devices restarted is 6
-      And I should see that total waste prevented is "8 kg"
+      And I should see that total waste prevented is "15 kg"
       And I should see that total parties thrown is 3
 
