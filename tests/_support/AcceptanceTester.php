@@ -232,7 +232,7 @@ class AcceptanceTester extends \Codeception\Actor
 	    $pageId = $this->grabFromCurrentUrl();
 	    switch ($pageId) {
 	    case "/user/login":
-		    $itemPath = "//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number']";
+		    $itemSelector = "#parties-thrown-value";
 		    // Alternative method
 		    // $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number'][text()='$expectedNumParties']");
 		    break;
@@ -240,9 +240,9 @@ class AcceptanceTester extends \Codeception\Actor
 		    PHPUnit_Framework_Assert::fail('"Total Parties Thrown" is not a valid observation on page ' . $pageId);
 		    break;
 	    }
-	    $value = $this->grabTextFrom($itemPath);
-	    $trimmed_value = trim($value);
-	    PHPUnit_Framework_Assert::assertEquals($expectedNumParties, $trimmed_value);
+	    $value = $this->grabTextFrom($itemSelector);
+	    $actualNumParties = trim($value);
+	    PHPUnit_Framework_Assert::assertEquals($expectedNumParties, $actualNumParties);
     }
 
 }
