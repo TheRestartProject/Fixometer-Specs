@@ -225,16 +225,16 @@ class AcceptanceTester extends \Codeception\Actor
 
 
     /**
-      * @Then I should see that total parties thrown is :num1
+      * @Then I should see that total parties thrown is :expectedNumParties
       */
-    public function iShouldSeeThatTotalPartiesThrownIs($num1)
+    public function iShouldSeeThatTotalPartiesThrownIs($expectedNumParties)
     {
 	    $pageId = $this->grabFromCurrentUrl();
 	    switch ($pageId) {
 	    case "/user/login":
 		    $itemPath = "//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number']";
 		    // Alternative method
-		    // $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number'][text()='$num1']");
+		    // $this->seeElement("//div[@class='detail-wrap']/div[@class='detail'][h4[text()='Parties thrown']]/span[@class='big-number'][text()='$expectedNumParties']");
 		    break;
 	    case "/admin/stats/2":
 		    PHPUnit_Framework_Assert::fail('"Total Parties Thrown" is not a valid observation on page ' . $pageId);
@@ -242,7 +242,7 @@ class AcceptanceTester extends \Codeception\Actor
 	    }
 	    $value = $this->grabTextFrom($itemPath);
 	    $trimmed_value = trim($value);
-	    PHPUnit_Framework_Assert::assertEquals($trimmed_value, $num1);
+	    PHPUnit_Framework_Assert::assertEquals($expectedNumParties, $trimmed_value);
     }
 
 }
