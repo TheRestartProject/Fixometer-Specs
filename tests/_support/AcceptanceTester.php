@@ -174,9 +174,9 @@ class AcceptanceTester extends \Codeception\Actor
     }
 
     /**
-     * @Then I should see that total devices restarted is :num1
+     * @Then I should see that total devices restarted is :expectedNumDevices
      */
-    public function iShouldSeeThatTotalDevicesRestartedIs($num1)
+    public function iShouldSeeThatTotalDevicesRestartedIs($expectedNumDevices)
     {
 	    $pageId = $this->grabFromCurrentUrl();
 	    ##file_put_contents("/tmp/codeception.debug.currentURL.log", $pageId);
@@ -194,7 +194,7 @@ class AcceptanceTester extends \Codeception\Actor
 	    }
 	    $value = $this->grabTextFrom($itemPath);
 	    $trimmed_value = trim($value);
-	    PHPUnit_Framework_Assert::assertEquals($trimmed_value, $num1);
+	    PHPUnit_Framework_Assert::assertEquals($expectedNumDevices, $trimmed_value);
     }
 
     /**
@@ -245,4 +245,84 @@ class AcceptanceTester extends \Codeception\Actor
 	    PHPUnit_Framework_Assert::assertEquals($expectedNumParties, $actualNumParties);
     }
 
+
+    /**
+     * @Given the following groups:
+     */
+    public function theFollowingGroups(\Behat\Gherkin\Node\TableNode $groups)
+    {
+        foreach ($groups->getRows() as $index => $row)
+        {
+            if ($index === 0) { // first row to define fields
+                $keys = $row;
+                continue;
+            }
+            $this->haveInDatabase('groups', array_combine($keys, $row));
+        }
+    }
+
+
+    /**
+     * @Given the following events:
+     */
+    public function theFollowingEvents(\Behat\Gherkin\Node\TableNode $events)
+    {
+        foreach ($events->getRows() as $index => $row)
+        {
+            if ($index === 0) { // first row to define fields
+                $keys = $row;
+                continue;
+            }
+            $this->haveInDatabase('events', array_combine($keys, $row));
+        }
+    }
+
+    /**
+     * @Given the following devices at the :eventId event:
+     */
+    public function theFollowingDevicesAtTheEvent($eventId, \Behat\Gherkin\Node\TableNode $devices)
+    {
+
+        foreach ($devices->getHash() as $index => $row)
+        {
+            $deviceRow = array(
+                'iddevices' => $index,
+                'category' => $row['category_id'],
+                'category_creation' => $row['category_id'],
+                'repair_status' => $row['Repair Outcome'],
+                'event' => $eventId
+            );
+            if ($row['Estimate'] != '')
+                $deviceRow['estimate'] = $row['Estimate'];
+            $this->haveInDatabase('devices', $deviceRow);
+        }
+    }
+
+
+    /**
+     * @When I view the headline stats for the :eventId event
+     */
+    public function iViewTheHeadlineStatsForTheEvent($eventId)
+    {
+        $this->amOnPage('/party/stats/'.$eventId);
+    }
+
+    /**
+     * @Then the CO2 diverted should be :expcecptedCo2Diverted
+     */
+    public function theCO2DivertedShouldBe($expectedCo2Diverted)
+    {
+        $actualCo2Diverted = $this->grabTextFrom('#co2-diverted-value');
+        PHPUnit_Framework_Assert::assertEquals($expectedCo2Diverted, $actualCo2Diverted);
+    }
+
+    /**
+     * @Then the ewaste diverted should be :expectedEwasteDiverted
+     */
+    public function theEwasteDivertedShouldBe($expectedEwasteDiverted)
+    {
+        $actualEwasteDiverted = $this->grabTextFrom('#ewaste-diverted-value');
+
+        PHPUnit_Framework_Assert::assertEquals($expectedEwasteDiverted, $actualEwasteDiverted);
+    }
 }
