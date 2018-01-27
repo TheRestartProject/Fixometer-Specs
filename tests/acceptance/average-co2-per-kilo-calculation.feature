@@ -1,3 +1,4 @@
+@current
 Feature: Average CO2 emissions per kilo
 
 This calculation is used to estimate a CO2 emission value
@@ -56,7 +57,6 @@ Estimate CO2 per kilo of device = Total CO2 / Total Weight
 | 46 | Misc                              |      1 |      NULL |
 
 
-@current
 Scenario: 10 categorised devices in the Fixometer, check average CO2 per kilo of misc device
 Given the following groups:
 | id | name    |
@@ -81,7 +81,6 @@ And the following devices at the "Tooting" event:
 Then the estimated CO2 per kilo of device for misc devices should be "38.8122"
 
 
-@current
 Scenario: 10 categorised devices and some Misc devices in the Fixometer, check average CO2 per kilo of misc device
 Given the following groups:
 | id | name    |
@@ -105,6 +104,39 @@ And the following devices at the "Tooting" event:
 | Misc                   | Fixed          |        2 |
 | Misc                   | Fixed          |        3 |
 | Misc                   | Fixed          |        4 |
+# weight = 34.298
+# co2 = 1331.18
+# misc devices shouldn't have any bearing on the estimated CO2 per kilo
+Then the estimated CO2 per kilo of device for misc devices should be "38.8122"
+
+
+Scenario: 10 fixed, categorised devices, some non-fixed, check average CO2 per kilo of misc device
+Given the following groups:
+| id | name    |
+|  1 | Restart |
+And the following events:
+| id | venue   | group   |
+|  1 | Tooting | Restart |
+And the following devices at the "Tooting" event:
+| Category               | Repair Outcome | Estimate |
+| Desktop computer       | Fixed          |          |
+| Flat screen 15-17"     | Fixed          |          |
+| Laptop large           | Fixed          |          |
+| Laptop medium          | Fixed          |          |
+| Paper shredder         | Fixed          |          |
+| Printer/scanner        | Fixed          |          |
+| Digital Compact Camera | Fixed          |          |
+| Headphones             | Fixed          |          |
+| Tablet                 | Fixed          |          |
+| Portable radio         | Fixed          |          |
+| Misc                   | Fixed          |        1 |
+| Misc                   | Fixed          |        2 |
+| Misc                   | Fixed          |        3 |
+| Misc                   | Fixed          |        4 |
+| Misc                   | Repairable     |        4 |
+| Tablet                 | End-of-life    |          |
+| Laptop large           | Repairable     |          |
+| Headphones             | End-of-life    |          |
 # weight = 34.298
 # co2 = 1331.18
 # misc devices shouldn't have any bearing on the estimated CO2 per kilo
