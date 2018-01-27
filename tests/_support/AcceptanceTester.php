@@ -43,9 +43,29 @@ class AcceptanceTester extends \Codeception\Actor
     /**
      * @Given the following user accounts have been created
      */
-    public function theFollowingUserAccountHasBeenCreated()
+    public function theFollowingUserAccountHasBeenCreated(\Behat\Gherkin\Node\TableNode $users)
     {
-        //throw new \Codeception\Exception\Incomplete("Step `the following user account has been created` is not defined");
+        foreach ($users->getHash() as $index => $row)
+        {
+            $created_at = date('Y-m-d H:i:s', time());
+            # TODO: secret needs to be defined somewhere else, common to tests and app.
+            $password = crypt($row['Password'], '$1$' . strrev(md5('foobar')));
+            $role_id = $this->grabFromDatabase('roles', 'idroles', array('role' => $row['Role']));
+
+            $userData = array(
+                'idusers' => $index,
+                'name' => $row['Name'],
+                'email' => $row['Email'],
+                'password' => $password,
+                'created_at' => $created_at,
+                'role' => $role_id
+            );
+            $userId = $this->haveInDatabase('users', $userData);
+
+            $session = 'noToken'.md5(substr(time(), -8));
+            $created_at = date('Y-m-d H:i:s', time() );
+            $this->haveInDatabase('sessions', array('session' => $session, 'user' => $userId, 'created_at' => $created_at));
+        }
     }
 
     /**

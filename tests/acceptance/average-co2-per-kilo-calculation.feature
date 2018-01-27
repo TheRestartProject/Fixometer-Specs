@@ -1,4 +1,3 @@
-@current
 Feature: Average CO2 emissions per kilo
 
 This calculation is used to estimate a CO2 emission value

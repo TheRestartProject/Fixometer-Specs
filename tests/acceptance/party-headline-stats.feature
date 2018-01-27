@@ -129,7 +129,6 @@ Then the CO2 diverted should be "666"
 And the ewaste diverted should be "34"
 
 
-@current
 Scenario: Misc device fixed at an event
 Given the following groups:
 | id | name    |

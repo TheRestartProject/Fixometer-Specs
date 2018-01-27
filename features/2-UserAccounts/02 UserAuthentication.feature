@@ -5,9 +5,10 @@ Feature: 02 User Authentication
 
 Background:
     Given the following user accounts have been created
-        | Email                 | Password |
-        | fry@planetexpress.com | fry!     | 
+        | Name | Email                 | Password | Role |   
+        | Fry  | fry@planetexpress.com | fry!     | Administrator |
 
+@current
 Scenario: Valid login
     When a user logs in with email "fry@planetexpress.com" and password "fry!"
     Then the user is logged in as "Fry" with email "fry@planetexpress.com"
