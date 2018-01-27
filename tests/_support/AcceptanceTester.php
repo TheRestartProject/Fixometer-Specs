@@ -307,13 +307,17 @@ class AcceptanceTester extends \Codeception\Actor
             $groupName = $row['group'];
 
             $groupId = $this->grabFromDatabase('groups', 'idgroups', array('name' => $groupName));
-            $eventRow = array(
+            $eventData = array(
                 'idevents' => $row['id'],
                 'venue' => $row['venue'],
                 'group' => $groupId
             );
+            if (isset($row['participants']) && $row['participants'] != '')
+                $eventData['pax'] = $row['participants'];
+            if (isset($row['volunteers']) && $row['volunteers'] != '')
+                $eventData['volunteers'] = $row['volunteers'];
 
-            $this->haveInDatabase('events', $eventRow);
+            $this->haveInDatabase('events', $eventData);
         }
     }
 
@@ -383,4 +387,51 @@ class AcceptanceTester extends \Codeception\Actor
 
         PHPUnit_Framework_Assert::assertEquals($estimate, $to4SignificantFigures);
     }
+
+    /**
+     * @Given :userName has logged in with email :email and password :password
+     */
+    public function userHasLoggedInWithEmailAndPassword($userName, $email, $password)
+    {
+        $this->amOnPage('/');
+        $this->submitForm('#login', [
+            'email' => $email,
+            'password' => $password,
+        ]);
+    }
+
+    /**
+     * @When :userName views their Admin Dashboard
+     */
+    public function viewsTheirAdminDashboard($userName)
+    {
+        $this->amOnPage('/admin');
+    }
+
+    /**
+     * @Then the stats in the party list for the :partyName party are:
+     */
+    public function theStatsInThePartyListForThePartyAre($partyName, \Behat\Gherkin\Node\TableNode $stats)
+    {
+        $statsRow = $stats->getHash()[0];
+
+        $partyId = $this->grabFromDatabase('events', 'idevents', array('venue' => $partyName));
+
+        $actualParticipants = $this->grabTextFrom('#party-'.$partyId.'-participants');
+        $actualVolunteers = $this->grabTextFrom('#party-'.$partyId.'-volunteers');
+        $actualCo2 = $this->grabTextFrom('#party-'.$partyId.'-co2-value');
+        $actualFixed = $this->grabTextFrom('#party-'.$partyId.'-fixed');
+        $actualRepairable = $this->grabTextFrom('#party-'.$partyId.'-repairable');
+        $actualEndoflife = $this->grabTextFrom('#party-'.$partyId.'-dead');
+
+        $this->pauseExecution();
+
+        PHPUnit_Framework_Assert::assertEquals($statsRow['Participants'], $actualParticipants);
+        PHPUnit_Framework_Assert::assertEquals($statsRow['Restarters'], $actualVolunteers);
+        PHPUnit_Framework_Assert::assertEquals($statsRow['CO2'], $actualCo2);
+        PHPUnit_Framework_Assert::assertEquals($statsRow['Fixed'], $actualFixed);
+        PHPUnit_Framework_Assert::assertEquals($statsRow['Repairable'], $actualRepairable);
+        PHPUnit_Framework_Assert::assertEquals($statsRow['End-of-life'], $actualEndoflife);
+    }
+
 }
