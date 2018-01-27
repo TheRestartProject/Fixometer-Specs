@@ -351,4 +351,16 @@ class AcceptanceTester extends \Codeception\Actor
 
         PHPUnit_Framework_Assert::assertEquals($expectedEwasteDiverted, $actualEwasteDiverted);
     }
+
+
+    /**
+     * @Then the estimated CO2 per kilo of device for misc devices should be :estimate
+     */
+    public function theEstimatedCo2PerKiloOfDeviceForMiscDevicesShouldBe($estimate)
+    {
+        $actualValue = $this->grabFromDatabase('view_waste_emission_ratio', 'Ratio');
+        $to4SignificantFigures = number_format($actualValue, 4);
+
+        PHPUnit_Framework_Assert::assertEquals($estimate, $to4SignificantFigures);
+    }
 }
