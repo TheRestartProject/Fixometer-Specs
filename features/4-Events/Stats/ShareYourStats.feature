@@ -12,5 +12,7 @@ The two statistics available for embedding are:
 - headline party stats (date, location, participants, restarters, CO2/waste, fixed, repairable, repaired)
 - CO2 equivalence visualisation
 
+As the embed may be embedded in various places at various, it needs to be responsive.
+
 ![](./share-your-stats-party-button.png)
 ![](./share-your-stats-party-modal.png)

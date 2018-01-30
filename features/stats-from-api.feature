@@ -1,13 +1,8 @@
-Feature: Stats on list of parties
+Feature: Homepage stats from API
 
-We display here: participants, Restarters, CO2 prevented, devices fixed, repairable and dead.
-TODO: why no ewaste figure here?
-
-Background:
-Given the following user accounts have been created
-| Name | Email                 | Password | Role |   
-| Hubert | hubert@planetexpress.com | pr0f! | Administrator |
-And the following groups:
+@current
+Scenario:
+Given the following groups:
 | id | name    |
 |  1 | Restart |
 And the following events:
@@ -25,12 +20,14 @@ And the following devices at the "Tooting" event:
 | Headphones             | Fixed          |          |
 | Tablet                 | Fixed          |          |
 | Portable radio         | Fixed          |          |
+| Misc                   | Fixed          |        1 |
+| Misc                   | Fixed          |        2 |
+| Misc                   | Fixed          |        3 |
 | Misc                   | Fixed          |        4 |
-| Tablet                 | Repairable     |          |
-
-Scenario: Admin Dashboard shows individual party stats correctly
-Given "Hubert" has logged in with email "hubert@planetexpress.com" and password "pr0f!"
-When "Hubert" views their Admin Dashboard
-Then the stats in the party list for the "Tooting" party are:
-| Participants | Restarters | CO2 | Fixed | Repairable | End-of-life |
-|           10 |          5 | 743 |    11 |          1 |           0 |
+| Tablet                 | Repairable     |         |
+| Tablet                 | Repairable     |         |
+# weight = 34.298
+# co2 = 1331.18
+Then the stats from the API for the homepage should be:
+| Hours Volunteered | Items Fixed | Ewaste Diverted |
+|          24       |       14    |        44   |

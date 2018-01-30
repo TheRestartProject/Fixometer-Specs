@@ -8,7 +8,7 @@ Feature: stats-on-login-page
       And I have three fixed devices
   When I go to login page
   Then I should see that total devices restarted is 3
-   And I should see that total waste prevented is "7 kg"
+   And I should see that total waste prevented is "7"
 
   Scenario: observe statistics for devices in multiple categories and from multiple groups 
 		Given I am not logged in
@@ -18,6 +18,6 @@ Feature: stats-on-login-page
 		And I have one small laptop not fixed at each event 
      When I go to login page
      Then I should see that total devices restarted is 6
-      And I should see that total waste prevented is "15 kg"
+      And I should see that total waste prevented is "15"
       And I should see that total parties thrown is 3
 

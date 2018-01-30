@@ -1,7 +1,4 @@
-Feature: Stats on list of parties
-
-We display here: participants, Restarters, CO2 prevented, devices fixed, repairable and dead.
-TODO: why no ewaste figure here?
+Feature: Total Headline Stats
 
 Background:
 Given the following user accounts have been created
@@ -13,6 +10,7 @@ And the following groups:
 And the following events:
 | id | venue   | group   | participants | volunteers |
 |  1 | Tooting | Restart | 10 | 5 |
+|  2 | Camden | Restart | 15 | 6 |
 And the following devices at the "Tooting" event:
 | Category               | Repair Outcome | Estimate |
 | Desktop computer       | Fixed          |          |
@@ -25,12 +23,22 @@ And the following devices at the "Tooting" event:
 | Headphones             | Fixed          |          |
 | Tablet                 | Fixed          |          |
 | Portable radio         | Fixed          |          |
+| Tablet                 | Repairable     |         |
+And the following devices at the "Camden" event:
+| Category               | Repair Outcome | Estimate |
+| Misc                   | Fixed          |        1 |
+| Misc                   | Fixed          |        2 |
+| Misc                   | Fixed          |        3 |
 | Misc                   | Fixed          |        4 |
-| Tablet                 | Repairable     |          |
+| Tablet                 | Repairable     |         |
 
-Scenario: Admin Dashboard shows individual party stats correctly
+
+@current
+Scenario: Admin Dashboard shows total headline stats correctly
 Given "Hubert" has logged in with email "hubert@planetexpress.com" and password "pr0f!"
 When "Hubert" views their Admin Dashboard
-Then the stats in the party list for the "Tooting" party are:
-| Participants | Restarters | CO2 | Fixed | Repairable | End-of-life |
-|           10 |          5 | 743 |    11 |          1 |           0 |
+Then the total headline stats are:
+# weight = 34.298 + 10 from the miscs
+# co2 = 666 + 194 = 860
+| Participants | Hours Volunteered | Parties Thrown | Waste Prevented | CO2 Emission Prevented |
+|           25 |                51 |            2 |               44 |                      860 |

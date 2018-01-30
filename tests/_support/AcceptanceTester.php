@@ -17,6 +17,8 @@
  * @SuppressWarnings(PHPMD)
 */
 use \Codeception\Util\Locator;
+use Page\Login as LoginPage;
+use Page\AdminDashboard as AdminDashboardPage;
 
 class AcceptanceTester extends \Codeception\Actor
 {
@@ -334,7 +336,7 @@ class AcceptanceTester extends \Codeception\Actor
             $eventId = $this->grabFromDatabase('events', 'idevents', array('venue' => $eventName));
 
             $deviceRow = array(
-                'iddevices' => $index+1,
+                //'iddevices' => $index+1,
                 'category' => $categoryId, 
                 'category_creation' => $categoryId,
                 'repair_status' => $this->repairOutcomeValueFromText($row['Repair Outcome']),
@@ -424,8 +426,6 @@ class AcceptanceTester extends \Codeception\Actor
         $actualRepairable = $this->grabTextFrom('#party-'.$partyId.'-repairable');
         $actualEndoflife = $this->grabTextFrom('#party-'.$partyId.'-dead');
 
-        $this->pauseExecution();
-
         PHPUnit_Framework_Assert::assertEquals($statsRow['Participants'], $actualParticipants);
         PHPUnit_Framework_Assert::assertEquals($statsRow['Restarters'], $actualVolunteers);
         PHPUnit_Framework_Assert::assertEquals($statsRow['CO2'], $actualCo2);
@@ -434,4 +434,81 @@ class AcceptanceTester extends \Codeception\Actor
         PHPUnit_Framework_Assert::assertEquals($statsRow['End-of-life'], $actualEndoflife);
     }
 
+    /**
+     * @Then the stats from the API for the homepage should be:
+     */
+    public function theStatsFromTheApiForTheHomepageShouldBe(\Behat\Gherkin\Node\TableNode $stats)
+    {
+        $statsRow = $stats->getHash()[0];
+
+        $this->amOnPage('/api/homepage_data');
+        // Can't use REST module with WebDriver module, so grabbing raw response text...
+        $source = $this->grabPageSource();
+        $json = json_decode($source);
+        $this->pauseExecution();
+        $this->assertEquals($statsRow['Hours Volunteered'], $json->hours_volunteered);
+        $this->assertEquals($statsRow['Items Fixed'], $json->items_fixed);
+        $this->assertEquals($statsRow['Ewaste Diverted'], $json->weights);
+    }
+
+
+    /**
+     * @Then the total headline stats are:
+     */
+    public function theTotalHeadlineStatsAre(\Behat\Gherkin\Node\TableNode $stats)
+    {
+        $I = $this;
+
+        $statsRow = $stats->getHash()[0];
+
+        $I->amOnPage(AdminDashboardPage::$URL);
+
+        $I->assertEquals($statsRow['Participants'], $I->grabTextFrom(AdminDashboardPage::$allParticipantsStat));
+        $I->assertEquals($statsRow['Hours Volunteered'], $I->grabTextFrom(AdminDashboardPage::$allHoursVolunteeredStat));
+        $I->assertEquals($statsRow['Parties Thrown'], $I->grabTextFrom(AdminDashboardPage::$allPartiesThrownStat));
+        $I->assertEquals($statsRow['Waste Prevented'], $I->grabTextFrom(AdminDashboardPage::$allWastePreventedStat));
+        $I->assertEquals($statsRow['CO2 Emission Prevented'], $I->grabTextFrom(AdminDashboardPage::$allCo2PreventedStat));
+    }
+
+
+    /**
+     * @When we produce a spreadsheet of all stats
+     */
+    public function produceASpreadsheetOfAllStats()
+    {
+        $I = $this;
+
+        $I->amOnPage("/admin/stats/1"); // TODO
+        $I->amOnPage("/admin/stats/2"); // TODO
+
+        $I->amOnPage(LoginPage::$URL);
+
+        $stats['login']['devices_restarted'] = $I->grabTextFrom(LoginPage::$devicesRestartedStat);
+        $stats['login']['co2_prevented'] = $I->grabTextFrom(LoginPage::$partiesThrownStat);
+        $stats['login']['waste_prevented'] = $I->grabTextFrom(LoginPage::$wastePreventedStat);
+        $stats['login']['parties_thrown'] = $I->grabTextFrom(LoginPage::$partiesThrownStat);
+
+        $I->submitForm(LoginPage::$loginForm, [
+            'email' => 'devadmin@foo.com',
+            'password' => 'adm1n'
+        ]);
+
+        $I->amOnPage(AdminDashboardPage::$URL);
+        $I->see('Admin Console');
+        $stats['admin_dash']['headline']['participants'] = $I->grabTextFrom(AdminDashboardPage::$allParticipantsStat);
+        $stats['admin_dash']['headline']['hours_volunteered'] = $I->grabTextFrom(AdminDashboardPage::$allHoursVolunteeredStat);
+        $stats['admin_dash']['headline']['parties_thrown'] = $I->grabTextFrom(AdminDashboardPage::$allPartiesThrown);
+        $stats['admin_dash']['headline']['waste_prevented'] = $I->grabTextFrom(AdminDashboardPage::$allWastePrevented);
+        $stats['admin_dash']['headline']['co2_prevented'] = $I->grabTextFrom(AdminDashboardPage::$allCo2Prevented);
+
+        $parties = $I->findElements('.party-with-data');//$I->getModule('WebDriver')->_findElements('.party-with-data');
+        foreach ($parties as $party)
+        {
+            $partyName = $party->findElement(WebDriverBy::className('location'))->getText();
+            $participantsValue = $party->findElement(WebDriverBy::className('location'))->getText();
+            $stats['admin_dash']['parties'][$partyName] = 'foo';
+        }
+
+        yaml_emit_file('stats.yml', $stats);
+    }
 }
