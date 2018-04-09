@@ -1,7 +1,8 @@
 Feature: 02 User Authentication
     As a user
-    In order to perform what I want to do on the site
     I want to be able to log in
+    In order to use the site
+
 
 Background:
     Given the following user accounts have been created
@@ -9,8 +10,10 @@ Background:
         | fry@planetexpress.com | fry!     | 
 
 Scenario: Valid login
-    When a user logs in with email "fry@planetexpress.com" and password "fry!"
-    Then the user is logged in as "Fry" with email "fry@planetexpress.com"
+   When a user logs in with email ‘Email’ and password ‘Password’ 
+    Then the user is logged in
+    And the user is redirected to the home page
+ 
 
 Scenario: Valid login with alternate case email
 # Emails are case-insensitive.
