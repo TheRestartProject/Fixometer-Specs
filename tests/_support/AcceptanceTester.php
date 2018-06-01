@@ -25,20 +25,6 @@ class AcceptanceTester extends \Codeception\Actor
    /**
     * Define custom actions here
     */
-    public function repairOutcomeValueFromText($repairOutcomeText)
-    {
-        switch ($repairOutcomeText)
-        {
-        case "Fixed":
-            return 1;
-        case "Repairable":
-            return 2;
-        case "End-of-life":
-            return 3;
-        default:
-            throw Exception("Unknown repair outcome text.  Should be one of 'Fixed', 'Repairable' or 'End-of-life'");
-        }
-    }
 
     /**
      * @Given the following user accounts have been created
@@ -265,14 +251,13 @@ class AcceptanceTester extends \Codeception\Actor
      */
     public function theFollowingGroups(\Behat\Gherkin\Node\TableNode $groups)
     {
-        foreach ($groups->getHash() as $index => $row)
+        foreach ($groups->getRows() as $index => $row)
         {
-            $groupRow = array(
-                'idgroups' => $row['id'],
-                'name' => $row['name']
-            );
-
-            $this->haveInDatabase('groups', $groupRow);
+            if ($index === 0) { // first row to define fields
+                $keys = $row;
+                continue;
+            }
+            $this->haveInDatabase('groups', array_combine($keys, $row));
         }
     }
 
@@ -282,59 +267,48 @@ class AcceptanceTester extends \Codeception\Actor
      */
     public function theFollowingEvents(\Behat\Gherkin\Node\TableNode $events)
     {
-        foreach ($events->getHash() as $index => $row)
+        foreach ($events->getRows() as $index => $row)
         {
-            $groupName = $row['group'];
-
-            $groupId = $this->grabFromDatabase('groups', 'idgroups', array('name' => $groupName));
-            $eventRow = array(
-                'idevents' => $row['id'],
-                'venue' => $row['venue'],
-                'group' => $groupId
-            );
-
-            $this->haveInDatabase('events', $eventRow);
+            if ($index === 0) { // first row to define fields
+                $keys = $row;
+                continue;
+            }
+            $this->haveInDatabase('events', array_combine($keys, $row));
         }
     }
 
     /**
-     * @Given the following devices at the :eventName event:
+     * @Given the following devices at the :eventId event:
      */
-    public function theFollowingDevicesAtTheEvent($eventName, \Behat\Gherkin\Node\TableNode $devices)
+    public function theFollowingDevicesAtTheEvent($eventId, \Behat\Gherkin\Node\TableNode $devices)
     {
+
         foreach ($devices->getHash() as $index => $row)
         {
-            $categoryName = $row['Category'];
-            $categoryId = $this->grabFromDatabase('categories', 'idcategories', array('name' => $categoryName));
-
-            $eventId = $this->grabFromDatabase('events', 'idevents', array('venue' => $eventName));
-
             $deviceRow = array(
-                'iddevices' => $index+1,
-                'category' => $categoryId, 
-                'category_creation' => $categoryId,
-                'repair_status' => $this->repairOutcomeValueFromText($row['Repair Outcome']),
+                'iddevices' => $index,
+                'category' => $row['category_id'],
+                'category_creation' => $row['category_id'],
+                'repair_status' => $row['Repair Outcome'],
                 'event' => $eventId
             );
-            if (isset($row['Estimate']) && $row['Estimate'] != '')
+            if ($row['Estimate'] != '')
                 $deviceRow['estimate'] = $row['Estimate'];
-
             $this->haveInDatabase('devices', $deviceRow);
         }
     }
 
 
     /**
-     * @When I view the headline stats for the :eventName event
+     * @When I view the headline stats for the :eventId event
      */
-    public function iViewTheHeadlineStatsForTheEvent($eventName)
+    public function iViewTheHeadlineStatsForTheEvent($eventId)
     {
-        $eventId = $this->grabFromDatabase('events', 'idevents', array('venue' => $eventName));
         $this->amOnPage('/party/stats/'.$eventId);
     }
 
     /**
-     * @Then the CO2 diverted should be :expectedCo2Diverted
+     * @Then the CO2 diverted should be :expcecptedCo2Diverted
      */
     public function theCO2DivertedShouldBe($expectedCo2Diverted)
     {
