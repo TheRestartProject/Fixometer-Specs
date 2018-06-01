@@ -21,5 +21,5 @@ Scenario: Valid search
     | james      | james@yahoo.com        | Portsmouth  | Group3     | Restarter  |
     Then the admin should get the details of that perticalr user.
 
-Scenario: Invalid search
+Scenario: Invalid 
 # 
