@@ -8,4 +8,5 @@ Scenario: Adding new group tag
     | Tag name          | Description(optional   | 
     | Example tag1      |                        |
     | Example tag2      |                        |
-    Then he/she should click on Create new tag button to save the changes.
+    And should click on Create new tag button to save the changes
+    Then she should land on group tag page with the recently added group tag in list of tags.
