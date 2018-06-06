@@ -13,8 +13,10 @@ Scenario: Editing a skill
     | Skill name        | Description(optional   | 
     | Scanners          |                        |
     | laptops           |                        |
-    Then click on save skill button to save the changes.
+    And click on save skill button to save the changes
+    Then she will land on all skills page with the edited skill in the list of skills, with a message saying your changes have been saved.
 
 Scenario: Deleting a skill
     When an admin wants to delete a skill which is in their profile
-    Then click on delete skill button to delete the skill.
+    And click on delete skill button to delete the skill
+    Then she will land on all skills page where the deleted skill will no longer be there in the list of skills, with a message saying your skill have been deleted.
