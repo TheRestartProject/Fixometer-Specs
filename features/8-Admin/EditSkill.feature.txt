@@ -1,4 +1,4 @@
-Feature: Add new skill  (Admin/user)
+Feature: Edit skill  (Admin/user)
     As an admin/user
     In order to add edit my skill
     I should be able to do that by navigating  to edit skill page and click on save skill to save the changes
