@@ -10,5 +10,5 @@ Background:
 
 Scenario: Editing User Role
     When the user permission(s) checked
-    Then the user will have those permissions to do and click on save role to save the changes.
-   
+    And the user will have those permissions to do and click on save role to save the changes
+    Then she should land on All users page with the edited user in the list of users.
