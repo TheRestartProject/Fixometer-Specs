@@ -5,9 +5,8 @@ Feature: All group tags
 
 Scenario: View All Group Tags
     When an admin wants to see all the group tags at one place
-    Then he/she should navigate to Group Tags page.
+    Then she should navigate to Group Tags page.
 
 Scenario: Creating new tag
     When an admin wanted to create a new group tag
     Then he/she should click on create new tag button.
- 
