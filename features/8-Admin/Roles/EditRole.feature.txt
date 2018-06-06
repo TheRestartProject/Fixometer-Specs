@@ -8,5 +8,7 @@ Background:
         | Email                      | Password |
         | dean@wecreatedigital.co.uk | dean     | 
 
-Scenario: Editing Role
+Scenario: Editing User Role
+    When the user permission(s) checked
+    Then the user will have those permissions to do and click on save role to save the changes.
    
