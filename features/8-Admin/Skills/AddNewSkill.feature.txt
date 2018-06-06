@@ -1,18 +1,16 @@
-Feature: Add new skill  (Admin/user)
-    As an admin/user
+Feature: Add new skill
+    As an admin
     In order to add a new skill
-    I should be able to do that by filling the fields of add new skill pop-up and click on create new skill button
+    I should fill the fields of add new skill pop-up and click on create new skill button
 
 Background:
-    Given the following account have been created as an admin/user
+    Given the following account have been created as an admin
         | Email                      | Password |
         | dean@wecreatedigital.co.uk | dean     | 
 
 Scenario: Adding new skill
-    When an admin or a user wants to add a new skill to their profile, they should fill the fields as follows
+    When a admin needs new skill to their profile, they should fill the fields as follows
     | Skill name        | Description(optional   | 
     | Mobile devices    |                        |
     | laptops           |                        |
-    Then he/she should click on Create new skill button to save the changes.
-
-    
+    Then click on Create new skill button to save the changes.

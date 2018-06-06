@@ -1,15 +1,10 @@
-Feature: All Categories  (Admin/user)
-    As an admin/user
+Feature: All Categories
+    As an admin
     In order to view all categories
-    I should be able to do that by navigating to the Categories page
-
-Background:
-    Given the following account have been created as an admin/user
-        | Email                      | Password |
-        | dean@wecreatedigital.co.uk | dean     | 
+    I should be able to navigating on the Categories page
 
 Scenario: View All Categories
-    When an admin or a user wants view all the categories
+    When an admin view all the categories
     Then he/she should navigate to categories page.
 
 Scenario: Create new category

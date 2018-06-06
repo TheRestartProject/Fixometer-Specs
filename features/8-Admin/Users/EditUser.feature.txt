@@ -1,7 +1,7 @@
 Feature: Edit user (Profile)
-    As a User
+    As an Admin
     In order to change the details entered before
-    I should be able to do by using a edit user functionality
+    I should be using a edit user functionality
 
 Background:
     Given the following account have been created as a user
@@ -18,7 +18,7 @@ Scenario: Editing My Profile
     | Name       | Email address          | Age | Country         | Town/City   | Gender  | Your biography(optional)     | 
     | jenny      | jenny@gmail.com        | 45  | United Kingdom  | Remakery    | Male    | I am an Artist by proffesion |
     | diamond    | diamond@gmail.com      | 23  | Spain           | Belgium     | Male    |                              |
-    Then the user saves all the cahnges he made in that section
+    Then the user saves all the changes he made in that section
 
 Scenario: Editing Repair Skills
 # Updating details in the Repair skills section
@@ -32,9 +32,4 @@ Scenario: Editing Repair Skills
 Scenario: Upload profile picture
 # Updating the profile picture in change my photo section
    When a user wants to change their profile picture
-   Then the user can make the changes by browsing the pic and click on change photo button. 
-
-Scenario: Deleting user account
-# Deleting user account by the admin 
-   When an admin 
-   Then  
+   Then browse the pic and click on change photo button.  

@@ -1,12 +1,8 @@
 Feature: Roles
-    As a User/Admin
-    In order to know the roles
+    As a Admin
+    In order to view the roles
     I should be able to see them with permissions
 
-Background:
-    Given the following account have been created as a user/admin
-        | Email                      | Password |
-        | jenny@google.co.uk         | dean1    |
-        | dean@google.co.uk          | helo1    | 
-
 Scenario: Roles with Permissions
+    When an admin wants to view the permissions of the Roles
+    Then navigate to roles page
