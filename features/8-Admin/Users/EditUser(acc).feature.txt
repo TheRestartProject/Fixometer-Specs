@@ -1,7 +1,7 @@
 Feature: Edit user (Account)
     As an Admin
     In order to change the account details entered before
-    I should be able to do by using a edit functionality
+    I should use edit functionality
 
 Scenario: Edit User account
     When an admin changes/updates any account details and clicks on save
