@@ -12,4 +12,5 @@ Scenario: Edit Category
     When the fields are changed/updated in edit category section as follows
     | Category name            | weight(kg) | CO2 Footprint(kg) | Reliability | Category cluster  | Description  |
     | jenny@google.co.uk       | dean1      | 1.34              | good        | Digital telephone | good product |
-    Then he/she should click on save category.
+    And click on save category
+    Then she will land on All categories page with the edited category in the list of categories.
