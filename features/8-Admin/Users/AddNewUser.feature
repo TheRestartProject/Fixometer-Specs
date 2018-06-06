@@ -13,4 +13,5 @@ Scenario: Creating new user
     | Name       | Email address          | User role   | Password   | Repeat password | 
     | diamond    | diamond@gmail.com      | Volunteer   | h£!!05     | h£!!05          |
     | james      | james@yahoo.com        | Restarter   | scr7vd*    | scr7vd*         |
-    Then click on new user on the community platform.
+    And click on new user on the community platform
+    Then she will land on all users page with the newly added user in the list of users, with a message saying that new user has been added.
