@@ -10,7 +10,8 @@ Background:
 
 Scenario: Edit User
     When a user wants to change/update any details 
-    Then he/she should be able to do that by changing the details and saving them.
+    And he/she should be able to do that by changing the details and saving them
+    Then she should land on the Users page with the edited user in the list of users, a message saying that the changes have been saved .
 
 Scenario: Editing My Profile
 # Updating details in the My Profile section and click on save profile button
@@ -18,7 +19,8 @@ Scenario: Editing My Profile
     | Name       | Email address          | Age | Country         | Town/City   | Gender  | Your biography(optional)     | 
     | jenny      | jenny@gmail.com        | 45  | United Kingdom  | Remakery    | Male    | I am an Artist by proffesion |
     | diamond    | diamond@gmail.com      | 23  | Spain           | Belgium     | Male    |                              |
-    Then the user saves all the changes he made in that section
+    And the user saves all the changes he made in that section
+    Then she should land on the profile page with a message saying that the changes have been saved.
 
 Scenario: Editing Repair Skills
 # Updating details in the Repair skills section
@@ -28,10 +30,10 @@ Scenario: Editing Repair Skills
     | Laptops         |
     | Kitchen devices |
     And the user saves the changes in that section
-    Then she will land on the User page with a message saying that the changes have been saved.
+    Then she should land on the profile page with a message saying that the changes have been saved.
 
 Scenario: Upload profile picture
 # Updating the profile picture in change my photo section
    When a user wants to change their profile picture
    And browse the pic and click on change photo button
-   Then she should land on User page with the uploaded picture in the placeholder, with a message saying the picture has been uploaded.  
+   Then she should land on profile page with the uploaded picture in the placeholder, with a message saying the picture has been uploaded.  
