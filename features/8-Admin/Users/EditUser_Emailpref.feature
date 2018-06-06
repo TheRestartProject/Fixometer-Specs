@@ -10,7 +10,8 @@ Background:
 
 Scenario: Check Email preferences
     When an admin wants to get notified by the Restart Project
-    Then ticking-off the checkbox and click on save preferences button.
+    And ticking-off the checkbox and click on save preferences button
+    Then she should land on Email preferences page with a message saying that the changes have been saved.
 
 Scenario: Creating an email.
 # User can create a email or set an email to Restart Project discussion platform and click on save preferences button
