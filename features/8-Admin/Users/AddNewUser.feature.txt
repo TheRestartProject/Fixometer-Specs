@@ -3,11 +3,6 @@ Feature: Add New User
     In order to add a user to the community platform
     I should be able to do by using a "Create new user" button
 
-Background:
-    Given the following account have been created as an admin
-        | Email                      | Password |
-        | dean@wecreatedigital.co.uk | dean     | 
-
 Scenario: Creating New Users
     When an admin wants to create a new user
     Then he/she should be able to do that by using a create new user button.
@@ -18,7 +13,7 @@ Scenario: Valid- Creating new user
     | Name       | Email address          | User role   | Password   | Repeat password | 
     | diamond    | diamond@gmail.com      | Volunteer   | h£!!05     | h£!!05          |
     | james      | james@yahoo.com        | Restarter   | scr7vd*    | scr7vd*         |
-    Then the click on create new user button to create a new user on the community platform.
+    Then the click on new user on the community platform.
 
 Scenario: Invalid Search
 # If admin doesn't enter any one of the details then the create new user button should be in invalid state only. 
