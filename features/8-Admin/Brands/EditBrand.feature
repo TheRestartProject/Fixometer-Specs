@@ -4,7 +4,7 @@ Feature: Edit Brand Name
     I should go to edit brand page and click on save brand to save the changes
 
 Scenario: Editing a brand name
-    When a brand name is edited, should edit the field as follows
+    When a brand name is edited, should edit the field as follows and click on save brand button to save the changes
     | Brand name       | 
     | HP               |
-    Then he/she should click the save brand button to save the changes.
+    Then she will land on brands name page with the edited brand name in the list, pop-up message saying your changes have beeen saved.
