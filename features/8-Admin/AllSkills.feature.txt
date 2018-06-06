@@ -10,3 +10,9 @@ Background:
         | dean@google.co.uk          | helo1    | 
 
 Scenario: All skills with description
+    When an admin or a user wants to know the description of skills
+    Then he/she should be able to do that by navigating to the Skills page.
+
+Scenario: Create new skill button
+    When an admin or a user wants to add a skill to their profile
+    Then he/she should be able to do that by clicking on create new skill button and follow the steps.

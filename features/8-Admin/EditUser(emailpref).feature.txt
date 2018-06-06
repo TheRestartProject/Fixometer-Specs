@@ -1,7 +1,7 @@
 Feature: Email Preferences
     As a User
     In order to know the important information going in the Restart Project
-    I should be able to do so by using email alerts
+    I should be able to do so by using email alerts and save the preferences
 
 Background:
     Given the following account have been created as a user
@@ -10,10 +10,10 @@ Background:
 
 Scenario: Email preferences
     When a user wants to know about the events, or any information from the Restart Project
-    Then he/she should be able to do that by ticking-off the checkbox they prefer.
+    Then he/she should be able to do that by ticking-off the checkbox they prefer following by clicking on save preferences button.
 
 Scenario: Creating an email.
-# User can create a email or set an email to Restart Project discussion platform
+# User can create a email or set an email to Restart Project discussion platform and click on save preferences button
     When a user create a email or set an email to Restart Project discussion platform
     Then the user receives the information to that email id.
  

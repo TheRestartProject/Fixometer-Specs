@@ -33,3 +33,8 @@ Scenario: Upload profile picture
 # Updating the profile picture in change my photo section
    When a user wants to change their profile picture
    Then the user can make the changes by browsing the pic and click on change photo button. 
+
+Scenario: Deleting user account
+# Deleting user account by the admin 
+   When an admin 
+   Then  
