@@ -9,11 +9,10 @@ Background:
         | jenny@google.co.uk         | dean1    | 
 
 Scenario: Check Email preferences
-    When a user wants to get notified by the Restart Project
-    Then ticking-off the checkbox, prefer following by clicking on save preferences button.
+    When an admin wants to get notified by the Restart Project
+    Then ticking-off the checkbox and click on save preferences button.
 
 Scenario: Creating an email.
 # User can create a email or set an email to Restart Project discussion platform and click on save preferences button
     When a user create a email or set an email to Restart Project discussion platform
-    Then the user receives the information to that email id and click.
- 
+    Then the user receives the information to that email id and click
