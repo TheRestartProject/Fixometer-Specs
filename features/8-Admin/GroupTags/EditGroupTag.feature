@@ -8,8 +8,10 @@ Scenario: Editing a group tag
     | Tag name          | Description(optional   | 
     | Example tag12     |                        |
     | Example tag2      |                        |
-    Then he/she should click on save tag button to save the changes.
+    And should click on save tag button to save the changes
+    Then she should land on group tags page with the edited tag in the list of tags.
 
 Scenario: Deleting a group tag
-    When an admin wants to delete a group tag
-    Then he/she should click on delete tag button to delete the group tag.
+    When an admin wants to delete a group tag 
+    And click on delete tag button to delete the group tag
+    Then she should land on group tags pages with no trace of the deleted tag in the list.
