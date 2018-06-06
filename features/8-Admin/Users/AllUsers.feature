@@ -24,7 +24,7 @@ Scenario2: Entering details in only one field like name or email
     | Name       | Email                  | Town/City   | Group      | Role       | 
     | jenny      |                        |             |            |            |
     |            | diamond@gmail.com      |             |            |            |
-    Then the admin should get the details of that perticalr user.
+    Then the admin should get the details of that particalr user.
     
 Scenario3: Entering details in any two of the fields like name and Town/City or Email and Role or name and group 
 # Entering correct details in the fields provided at By details category.
