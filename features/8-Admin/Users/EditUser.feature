@@ -27,9 +27,11 @@ Scenario: Editing Repair Skills
     | Mobiles devices |
     | Laptops         |
     | Kitchen devices |
-    Then the user saves the changes in that section.
+    And the user saves the changes in that section
+    Then she will land on the User page with a message saying that the changes have been saved.
 
 Scenario: Upload profile picture
 # Updating the profile picture in change my photo section
    When a user wants to change their profile picture
-   Then browse the pic and click on change photo button.  
+   And browse the pic and click on change photo button
+   Then she should land on User page with the uploaded picture in the placeholder, with a message saying the picture has been uploaded.  
