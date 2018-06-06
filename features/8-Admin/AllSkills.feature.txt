@@ -1,0 +1,12 @@
+Feature: All Skills
+    As a User/Admin
+    In order to know the skills
+    I should be able to see them with description
+
+Background:
+    Given the following account have been created as a user/admin
+        | Email                      | Password |
+        | jenny@google.co.uk         | dean1    |
+        | dean@google.co.uk          | helo1    | 
+
+Scenario: All skills with description

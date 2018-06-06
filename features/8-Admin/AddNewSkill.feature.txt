@@ -1,0 +1,11 @@
+Feature: Add new skill  (Admin/user)
+    As an admin/user
+    In order to add a new skill
+    I should be 
+
+Background:
+    Given the following account have been created as an admin/user
+        | Email                      | Password |
+        | dean@wecreatedigital.co.uk | dean     | 
+
+Scenario: Adding new role

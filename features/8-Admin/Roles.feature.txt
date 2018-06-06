@@ -1,0 +1,12 @@
+Feature: Roles
+    As a User/Admin
+    In order to know the roles
+    I should be able to see them with permissions
+
+Background:
+    Given the following account have been created as a user/admin
+        | Email                      | Password |
+        | jenny@google.co.uk         | dean1    |
+        | dean@google.co.uk          | helo1    | 
+
+Scenario: Roles with Permissions
