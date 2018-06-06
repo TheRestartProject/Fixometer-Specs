@@ -9,9 +9,9 @@ Background:
         | dean@wecreatedigital.co.uk | dean     | 
 
 Scenario: View All Brands
-    When an admin see all the brand names at one place
-    Then he/she may clickany brad name brand name with a link.
+    When an admin navigate to Brand page       
+    Then she can view all the brand names in that page.
 
 Scenario: Creating new brand
-    When an admin or a user wants to create a new brand
+    When an admin wants to create a new brand
     Then he/she should click on create new brand button.
