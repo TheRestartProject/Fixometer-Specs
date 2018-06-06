@@ -9,7 +9,7 @@ Background:
         | jenny@google.co.uk         | dean1    | 
 
 Scenario: Edit Category
-    When a user wants to change/update any fields of edit category section as follows
-    | Category name            | weight() |
-    | jenny@google.co.uk       | dean1    | 
-    Then he/she should be able to do that by changing the details and saving them.
+    When the fields are changed/updated in edit category section as follows
+    | Category name            | weight(kg) | CO2 Footprint(kg) | Reliability | Category cluster  | Description  |
+    | jenny@google.co.uk       | dean1      | 1.34              | good        | Digital telephone | good product |
+    Then he/she should click on save category.
