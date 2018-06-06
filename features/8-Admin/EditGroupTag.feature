@@ -18,6 +18,3 @@ Scenario: Editing a gruop tag
 Scenario: Deleting a group tag
     When an admin or a user wants to delete a group tag
     Then he/she should click on delete tag button to delete the group tag.
-
-
-    
