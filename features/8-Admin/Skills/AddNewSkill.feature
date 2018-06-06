@@ -14,4 +14,4 @@ Scenario: Adding new skill
     | Mobile devices    |                        |
     | laptops           |                        |
     And click on Create new skill button to save the changes
-    Then she should land on all skills page with the new skill added in the list of skills.
+    Then she should land on all skills page with the new skill added in the list of skills, with a message saying new skill have been added.
