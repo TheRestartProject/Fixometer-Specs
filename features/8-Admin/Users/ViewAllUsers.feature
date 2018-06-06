@@ -37,3 +37,8 @@ Scenario3: Entering details in any two of the fields like name and Town/City or 
 
 Scenario: Invalid Search
 # Not entering any of the fields and clicking on search all users button.
+    When an admin does not enter any field as follows
+    | Name       | Email                  | Town/City   | Group      | Role       | 
+    |            |                        |             |            |            |
+    And clicks on search users button
+    Then she will land on All users page without any changes.
