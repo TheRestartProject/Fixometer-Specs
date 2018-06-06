@@ -13,4 +13,5 @@ Scenario: Adding new skill
     | Skill name        | Description(optional   | 
     | Mobile devices    |                        |
     | laptops           |                        |
-    Then click on Create new skill button to save the changes.
+    And click on Create new skill button to save the changes
+    Then she should land on all skills page with the new skill added in the list of skills.
