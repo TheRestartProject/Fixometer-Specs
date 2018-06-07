@@ -1,7 +1,7 @@
-Feature: Edit an event
+Feature: Add an event
     As a User (Host, Admin)
-    In order to edit a new event
-    I should be able to do by navigating to edit event page
+    In order to add a new event
+    I should be able to do by navigating to add an event page
 
 Background:
     Given the following account have been created as a host or an admin
@@ -9,12 +9,11 @@ Background:
         | dean@wecreatedigital.co.uk | dean     | Host  |
         | hello@howareyou.com        | hello    | Admin |
 
-Scenario: Editing a event
-    When a host clicks on edit event page and changes/updates the data as follows
+Scenario: Create a new event
+    When a host clicks on event page and fills the data as follows
     | Name of event     | Event group | Description                | Date of event | Start/end time | Venue address  | Add event image  |
-    | Ram               | vanarulu    | group in fixing things     | 7/6/2018      | 20-24          | Remakery       | Add event image  |
-    And clicks on save party button
-    Then host lands on all events page with the edited event in the list of events.
+    | Ram               | vanarulu    | exp group in fixing things | 7/6/2018      | 20-24          | Remakery       | Add event image  |
+    Then he lands on events page and can see all the events in that page.
     
 Scenario: Text cleaned in the description
     When a host copies and paste into the description box
@@ -29,7 +28,7 @@ Scenario: Calender pop-up on Date of event
 Scenario: When clicked on start time, automatically generate 3hr+ as end time
     When a host clicks on start time, automatically from then +3hr time is calculated as follows
     | Start/end time  |
-    | 14:00     17:00 |
+    | 13:00     16:00 |
     Then that time is stored in the end time field.
 
 Scenario: How to find Venue adddress 
@@ -38,7 +37,4 @@ Scenario: How to find Venue adddress
 
 Scenario: searching the image
 #TODO: when clicked on add event image here text, dropdown opens consisting browsing options such as the picture inside system or from google drive or anyother place.
-    When a host wants to change the image, click on remove button 
-    And browse for another image 
-    Then the image gets autosaved.
     
