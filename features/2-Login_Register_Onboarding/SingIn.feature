@@ -1,4 +1,4 @@
-Feature: 02 User Authentication
+Feature: User Authentication
     As a user
     In order to perform what I want to do on the site
     I want to be able to log in
