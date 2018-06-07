@@ -11,8 +11,13 @@ Scenario: Forgot Password
     When a user completes the fields as follows
     | Email address              |
     | hubert@planetexpress.com   |
-    And clicks on rest button
+    And clicks on reset button
     Then user should land on same page with a message saying the please check your email and follow.
+
+Scenario: Invalid email ID
+    When a user enters wrong email id or the email id is not present in database
+    And clicks reset button
+    Then the user lands on same page with an error.
 
 Scenario: I remembered Password 
     When a user remembers the password
