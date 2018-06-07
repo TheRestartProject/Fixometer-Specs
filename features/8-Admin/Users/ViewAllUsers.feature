@@ -9,7 +9,7 @@ Background:
         | dean@wecreatedigital.co.uk | dean     | 
 
 # Valid search - Multiple scenario's
-Scenario1: Entering details in all the fields
+Scenario: Entering details in all the fields
 # Entering correct details in the fields provided at By details category.
     When an admin enter details of a particular user in the feilds provided as follows
     | Name       | Email                  | Town/City   | Group      | Role       | 
@@ -18,7 +18,7 @@ Scenario1: Entering details in all the fields
     | james      | james@yahoo.com        | Portsmouth  | Group3     | Restarter  |
     Then the admin should get the details of that particalr user.
     
-Scenario2: Entering details in only one field like name or email
+Scenario: Entering details in only one field like name or email
 # Entering correct details in the fields provided at By details category.
     When an admin enter details of a particular user in the feilds provided as follows
     | Name       | Email                  | Town/City   | Group      | Role       | 
@@ -26,7 +26,7 @@ Scenario2: Entering details in only one field like name or email
     |            | diamond@gmail.com      |             |            |            |
     Then the admin should get the details of that particalr user.
     
-Scenario3: Entering details in any two of the fields like name and Town/City or Email and Role or name and group 
+Scenario: Entering details in any two of the fields like name and Town/City or Email and Role or name and group 
 # Entering correct details in the fields provided at By details category.
     When an admin enter details of a particular user in the feilds provided as follows
     | Name       | Email                  | Town/City   | Group      | Role       | 
