@@ -8,7 +8,7 @@ Background:
         | Email                      | Password |
         | dean@wecreatedigital.co.uk | dean     | 
 
- Valid search - Multiple scenario's
+# Valid search - Multiple scenario's
 Scenario1: Entering details in all the fields
 # Entering correct details in the fields provided at By details category.
     When an admin enter details of a particular user in the feilds provided as follows
