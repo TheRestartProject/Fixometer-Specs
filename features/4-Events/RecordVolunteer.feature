@@ -1,20 +1,12 @@
 Feature: Record Volunteer   
-   As a User (host, admin)
-    
+   As a User (host, admin)  
    In order to record the volunteer who directly came to the event    
    I should be able to click on add volunteer button on events pages.
-
-
-
-Background:
-    
-   Given the following account have been created as an host
-        
-   | Email                      | Password |
-        
+   
+Background:    
+   Given the following account have been created as an host        
+   | Email                      | Password |        
    | dean@wecreatedigital.co.uk | dean     | 
-
-
 
 Scenario: Recording volunteer's who came to the event directly(no RSVP) 
    When a user clicks on add volunteer button, a pop up screen of add volunteer is displayed 
