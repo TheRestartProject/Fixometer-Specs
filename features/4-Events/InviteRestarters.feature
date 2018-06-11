@@ -1,21 +1,12 @@
 Feature: Send Invite's to restarters    
-   As a User (All roles)
-    
-   In order to send invite's to restarters
-    
+   As a User (All roles)  
+   In order to send invite's to restarters   
    I should be able to click on invite button on events pages.
 
-
-
-Background:
-    
-   Given the following account have been created as an host
-        
-   | Email                      | Password |
-        
+Background:    
+   Given the following account have been created as an host        
+   | Email                      | Password |        
    | dean@wecreatedigital.co.uk | dean     | 
-
-
 
 Scenario: Inviting restarters to the event 
    When a user clicks on invite button, invite restarters a pop up screen is displayed
