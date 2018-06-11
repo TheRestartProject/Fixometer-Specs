@@ -12,6 +12,7 @@ Scenario: To view description about group
     When a restarter wants to know about a group and clicks on read more link
     Then a pop screen appears with full description of the group.
 
- Scenario: cancel the pop up screen
+ Scenario: Cancel the pop up screen
     When a restarter wants to close the pop up screen and go back to that group page
     Then he can click on cancel(X), will land on group page.
+
