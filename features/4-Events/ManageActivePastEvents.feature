@@ -34,3 +34,11 @@ Scenario: Add/ Manage a device details
    | Fixed  | More time   | Yes         | Flat screen TV | Toshiba | 123   | 3 years| Doesn't require memory card     |           |
    Then click on save button
    And we can find the new/ updated device in the list of devices.
+
+Scenario: Automatic Post event device upload reminder email
+   When 24hours has passed since an event has finished
+   Then the post event device upload reminder email shouldbe sent to the host of the event.
+
+Scenario: Host triggers post event device edit reminder email
+   When the host clicks the send email to restarters button
+   Then all the restarters that attended the event would receive an email to reminder them to edit device information.
