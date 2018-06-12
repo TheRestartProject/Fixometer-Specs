@@ -15,4 +15,8 @@ Scenario: View upcoming events details
 Scenario: Add to calendar  
    When a restarter wants to attend the party and wants add to calendar
    Then click on add to calendar button
-   And the event will be added to your calendar. 
+   And the event will be added to your calendar.
+
+Scenario: Volunteer triggers RSVP button and sends email to host
+   When the volunteer clicks the RSVP button
+   Then the host(s) would receive an email about status of the volunteer. 

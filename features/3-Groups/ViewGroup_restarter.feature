@@ -35,3 +35,7 @@ Scenario: See all events
     When a restarter wants to see all the events that completed recently
     Then he can click on see all events links
     And can add a device by clicking on its link.
+
+Scenario: Restarter triggers notification email to host by joining the group
+   When the restarter clicks on join group button
+   Then the host would receive an notification email about that restarter joining the group.

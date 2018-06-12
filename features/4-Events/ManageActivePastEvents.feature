@@ -42,3 +42,7 @@ Scenario: Automatic Post event device upload reminder email
 Scenario: Host triggers post event device edit reminder email
    When the host clicks the send email to restarters button
    Then all the restarters that attended the event would receive an email to reminder them to edit device information.
+
+Scenario: Host/restarter triggers email by marking description of a repair suitable to wiki
+   When the host/restarter marks the description of a repair suitable to wiki and clicks save
+   Then admin would receive an email to view the repair notes.

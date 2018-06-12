@@ -41,4 +41,7 @@ Scenario: searching the image
     When a host wants to change the image, click on remove button 
     And browse for another image 
     Then the image gets autosaved.
-    
+
+Scenario: Admin triggers view event email
+   When the admin clicks the approve event button
+   Then the host(s) would receive an email about confirmation of that event.

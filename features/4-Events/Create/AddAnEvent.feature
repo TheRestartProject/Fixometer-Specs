@@ -39,3 +39,6 @@ Scenario: How to find Venue adddress
 Scenario: searching the image
 #TODO: when clicked on add event image here text, dropdown opens consisting browsing options such as the picture inside system or from google drive or anyother place.
     
+Scenario: User triggers notification email about event creation to admin
+   When the user clicks on save event button
+   Then the admin would receive an notification email about event creation for moderation.

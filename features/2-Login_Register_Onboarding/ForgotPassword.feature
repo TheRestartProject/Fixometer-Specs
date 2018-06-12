@@ -23,3 +23,7 @@ Scenario: I remembered Password
     When a user remembers the password
     And clicks on the link I remembered. Let me sign in
     Then the user lands on login page.
+
+Scenario: User triggers password reset request email
+   When the user clicks the forgot password link
+   Then the user would receive an email to his registered email account, to reset password.

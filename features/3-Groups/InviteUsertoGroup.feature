@@ -14,3 +14,7 @@ Scenario: Invite volunteers to a group
    | Email address              | Message      |       
    | dean@wecreatedigital.co.uk | Hi, Welcome! | 
    And can click on send invite button.
+
+Scenario: User triggers invitation to group email
+   When the user clicks the send invite to group button
+   Then the volunteer(s) that the user has sent sent invite to group would receive an email about information of that group.

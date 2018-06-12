@@ -23,3 +23,7 @@ Scenario: Invalid email address
    When a user gives invalid email id 
    And clicks on send invite button
    Then an error message will display.
+
+Scenario: User triggers invitation to an event email
+   When the user clicks the send invite button
+   Then the volunteer(s) that the user has sent sent invite to an event would receive an email about information on that event.
