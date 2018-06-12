@@ -1,4 +1,4 @@
-Feature: Selecting skills
+Feature: 01 Selecting skills
     As a user
     In order to complete the sign up process
     I want to be able to select the options in skills section

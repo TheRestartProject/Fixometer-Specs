@@ -1,4 +1,4 @@
-Feature: Email Preferences
+Feature: 03 Email Preferences
     As a User
     In order to get notified by the Restart Project
     I should signup for email alerts and save the preferences

@@ -1,4 +1,4 @@
-Feature: About and Register
+Feature: 02 About and Register
     As a user
     In order to complete the sign up process
     I want to be able to fill the fields in tell us about yourself section

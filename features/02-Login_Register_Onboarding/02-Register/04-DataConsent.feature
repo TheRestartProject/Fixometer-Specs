@@ -1,4 +1,4 @@
-Feature: Data Consent
+Feature: 04 Data Consent
     As a User
     In order to know how my data is to be used 
     I should give my acceptance to Restartproject 
