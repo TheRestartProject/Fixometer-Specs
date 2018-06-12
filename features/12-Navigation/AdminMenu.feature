@@ -43,7 +43,7 @@ Scenario: Events, Devices and Groups menus
     When a host clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.  
 
-     Examples:
+    Examples:
     | menuitem   | landingpage  |
     | Events     | Events       |
     | Devices    | Devices      |
