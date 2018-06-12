@@ -86,80 +86,6 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\LandingPages.feature",
-      "Feature": {
-        "Name": "06 Landing Pages",
-        "Description": "Different user types are taken to different default pages when they log in.\r\n\r\nGiven the following user accounts have been created\r\n    | Email                    | Password | Role  |\r\n    | hubert@planetexpress.com | hubert!  | Admin |\r\n    | fry@planetexpress.com    | fry!     | Host  |",
-        "FeatureElements": [
-          {
-            "Name": "Administrator is taken to Administrator Dashboard",
-            "Slug": "administrator-is-taken-to-administrator-dashboard",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"hubert@planetexpress.com\" and password \"hubert!\"",
-                "StepComments": [
-                  {
-                    "Text": "# TODO: change this so its just - when an Admin logs in"
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is taken to the Administrator Dashboard",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Host is taken to Host Dashboard",
-            "Slug": "host-is-taken-to-host-dashboard",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is taken to the Host Dashboard",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
       "RelativeFolder": "02-Login_Register_Onboarding\\AboutRegister.feature",
       "Feature": {
         "Name": "About and Register",
@@ -693,6 +619,80 @@ jsonPWrapper ({
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
                 "Name": "the user would receive an email to his registered email account, to reset password.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "02-Login_Register_Onboarding\\LandingPages.feature",
+      "Feature": {
+        "Name": "Landing Pages",
+        "Description": "Different user types are taken to different default pages when they log in.\r\n\r\nGiven the following user accounts have been created\r\n    | Email                    | Password | Role  |\r\n    | hubert@planetexpress.com | hubert!  | Admin |\r\n    | fry@planetexpress.com    | fry!     | Host  |",
+        "FeatureElements": [
+          {
+            "Name": "Administrator is taken to Administrator Dashboard",
+            "Slug": "administrator-is-taken-to-administrator-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"hubert@planetexpress.com\" and password \"hubert!\"",
+                "StepComments": [
+                  {
+                    "Text": "# TODO: change this so its just - when an Admin logs in"
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is taken to the Administrator Dashboard",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Host is taken to Host Dashboard",
+            "Slug": "host-is-taken-to-host-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is taken to the Host Dashboard",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -7355,7 +7355,11 @@ jsonPWrapper ({
                 "NativeKeyword": "Then ",
                 "Name": "only admin can have that privilage to do.",
                 "StepComments": [],
-                "AfterLastStepComments": []
+                "AfterLastStepComments": [
+                  {
+                    "Text": "# This should also be tested for users logged in a host/restarter and an admin changing their own profile."
+                  }
+                ]
               }
             ],
             "Tags": [],
@@ -7416,14 +7420,14 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Editing My Profile",
-            "Slug": "editing-my-profile",
+            "Name": "Editing User Profile",
+            "Slug": "editing-user-profile",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a user enter details in My Profile section as follows and clicks on save profile",
+                "Name": "a user enter details in User Profile section as follows and clicks on save profile",
                 "TableArgument": {
                   "HeaderRow": [
                     "Name",
@@ -7457,7 +7461,7 @@ jsonPWrapper ({
                 },
                 "StepComments": [
                   {
-                    "Text": "# Updating details in the My Profile section and click on save profile button"
+                    "Text": "# Updating details in the User Profile section and click on save profile button"
                   }
                 ],
                 "AfterLastStepComments": []
@@ -7494,7 +7498,7 @@ jsonPWrapper ({
                 "Name": "a user types the skills he/she have",
                 "TableArgument": {
                   "HeaderRow": [
-                    "My Skills"
+                    "Key Skills"
                   ],
                   "DataRows": [
                     [
@@ -7547,7 +7551,7 @@ jsonPWrapper ({
                 "Name": "a user wants to change their profile picture",
                 "StepComments": [
                   {
-                    "Text": "# Updating the profile picture in change my photo section"
+                    "Text": "# Updating the profile picture in change photo section"
                   }
                 ],
                 "AfterLastStepComments": []
@@ -7564,7 +7568,11 @@ jsonPWrapper ({
                 "NativeKeyword": "Then ",
                 "Name": "she should land on profile page with the uploaded picture in the placeholder, with a message saying the picture has been uploaded.",
                 "StepComments": [],
-                "AfterLastStepComments": []
+                "AfterLastStepComments": [
+                  {
+                    "Text": "# This should also be tested for users logged in a host/restarter and an admin changing their own profile."
+                  }
+                ]
               }
             ],
             "Tags": [],
@@ -7675,7 +7683,11 @@ jsonPWrapper ({
                 "NativeKeyword": "Then ",
                 "Name": "the user receives the information to that email id",
                 "StepComments": [],
-                "AfterLastStepComments": []
+                "AfterLastStepComments": [
+                  {
+                    "Text": "# This should also be tested for users logged in a host/restarter and an admin changing their own profile."
+                  }
+                ]
               }
             ],
             "Tags": [],
@@ -7997,6 +8009,76 @@ jsonPWrapper ({
             "WasSuccessful": false
           }
         },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "08-Admin\\Users\\ViewProfile.feature",
+      "Feature": {
+        "Name": "View profile of an User",
+        "Description": "As a User (All roles)\r\nIn to see the profile of the user\r\nI should be able to see on view profile page.",
+        "FeatureElements": [
+          {
+            "Name": "View profile page",
+            "Slug": "view-profile-page",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user wants to see the biography and skills of a user and click on view profile",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "they will land on view profile page with their details.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Edit User",
+            "Slug": "edit-user",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "user wants to change the profile, click on edit profile button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "user will land on edit profile page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
         "Result": {
           "WasExecuted": false,
           "WasSuccessful": false
@@ -10342,31 +10424,27 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "13-Dashboard\\DashboardFirstVisit_restarter.feature",
+      "RelativeFolder": "13-Dashboard\\Dashboard_host.feature",
       "Feature": {
-        "Name": "View Notifications",
-        "Description": "As a User (All roles)\r\nIn order to view all the notifications\r\nI should be able to click on notification symbol with viewing notifications in it.",
+        "Name": "View of Dashboard after log in on the community platform",
+        "Description": "As a Host\r\nIn order to view the dashboard\r\nI should be able to login as a host on the community platform.",
         "FeatureElements": [
           {
-            "Name": "View all notifications",
-            "Slug": "view-all-notifications",
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a host clicks on notification icon",
-                "StepComments": [
-                  {
-                    "Text": "# View all events i.e., notifications related to events, devices and groups"
-                  }
-                ],
+                "Name": "a host lands on dashboard",
+                "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "a side view appears with all the notifications in it.",
+                "Name": "he would view all the activities that he can do and that is going on and that has been done on the platform.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -10378,120 +10456,21 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Identifying new notifications",
-            "Slug": "identifying-new-notifications",
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a host wants to know if he got a notification or not, just simply by looking at the number near the symbol tells how many notifications are present",
+                "Name": "host lands on dashboard, he can view Creat new event, How to host an event, Keep your group information up to date!, Edit an existing or past event, Restarters in your area, Wiki.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "if any notification is present then host will open else not.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "View upcoming events",
-            "Slug": "view-upcoming-events",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "there is a upcoming event",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "user views notifications",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "they should see notifications of upcoming events.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Clicking links inside notifications",
-            "Slug": "clicking-links-inside-notifications",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "user has notifications of upcoming events",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "they click on the link in that notification",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "they land to that upcoming event page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "No notifications",
-            "Slug": "no-notifications",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "there are no notifications",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host clikcs on notification symbol, even though they did not get any notification(for the first time)",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "there will be a welcome message.",
+                "Name": "the host should be able to navigate(by clicking the links provided) through categories according to their use.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -10510,7 +10489,367 @@ jsonPWrapper ({
             {
               "Keyword": "Given",
               "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an host",
+              "Name": "the following account have been created as a host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "13-Dashboard\\Dashboard_restarter.feature",
+      "Feature": {
+        "Name": "View of Dashboard after log in on the community platform",
+        "Description": "As a Restarter\r\nIn order to view the dashboard\r\nI should be able to login as a restarter on the community platform.",
+        "FeatureElements": [
+          {
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter lands on dashboard",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he would view all the activities that he can do and that is going on and that has been done on the platform.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "restarter lands on dashboard, he can view past events, upcoming events, community news, wiki, Discussion, Welcome materials",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the restarter should be able to navigate(by clicking the links provided) through categories according to their use.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a restarter",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "13-Dashboard\\DashboardFirstVisit_host.feature",
+      "Feature": {
+        "Name": "View of Dashboard for the first time when a host sign up on the community platform",
+        "Description": "As a Host\r\nIn order to view the dashboard\r\nI should be able to signup as a host on the community platform.",
+        "FeatureElements": [
+          {
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host lands on dashboard",
+                "StepComments": [
+                  {
+                    "Text": "# View dashboard consisting all the activities to bo done on the platform"
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he would view all the activities that he can do with a journey of updating your profile.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "About Getting started",
+            "Slug": "about-getting-started",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "host lands on dashboard, the getting started column is useful to build your profile",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the host can build his profile by clicking the links and following the process.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "host lands on dashboard, he can view Discussion, Welcome Materials, How to set up a group, Restarters in your area and Wiki categories",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the host should explore(by clicking the links provided) all the categories to get familiar with the platform.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "13-Dashboard\\DashboardFirstVisit_restarter.feature",
+      "Feature": {
+        "Name": "View of Dashboard for the first time when a restarter sign up on the community platform",
+        "Description": "As a Restarter\r\nIn order to view the dashboard\r\nI should be able to signup as a restarter on the community platform.",
+        "FeatureElements": [
+          {
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter lands on dashboard",
+                "StepComments": [
+                  {
+                    "Text": "# View dashboard consisting all the activities to bo done on the platform"
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he would view all the activities that he can do with a journey of updating your profile.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "About Getting started",
+            "Slug": "about-getting-started",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "restarter lands on dashboard, the getting started column is useful to build your profile",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the restarter can build his profile by clicking the links and following the process.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "restarter lands on dashboard, he can view Welcome Materials, Discussion, Upoming events and Wiki categories",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the restarter should explore(by clicking the links provided) all the categories to get familiar with the platform.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a restarter",
               "TableArgument": {
                 "HeaderRow": [
                   "Email",
@@ -10578,10 +10917,10 @@ jsonPWrapper ({
       },
       {
         "Folder": "08-Admin",
-        "Total": 34,
+        "Total": 36,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 34
+        "Inconclusive": 36
       },
       {
         "Folder": "09-Devices",
@@ -10613,10 +10952,10 @@ jsonPWrapper ({
       },
       {
         "Folder": "13-Dashboard",
-        "Total": 5,
+        "Total": 10,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 5
+        "Inconclusive": 10
       }
     ],
     "NotTestedFolders": [
@@ -10692,21 +11031,21 @@ jsonPWrapper ({
       }
     ],
     "Scenarios": {
-      "Total": 207,
+      "Total": 214,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 207
+      "Inconclusive": 214
     },
     "Features": {
-      "Total": 72,
+      "Total": 76,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 72
+      "Inconclusive": 76
     }
   },
   "Configuration": {
     "SutName": "Restart Community Software",
     "SutVersion": "4.0.0(Beta)",
-    "GeneratedOn": "12 June 2018 16:34:09"
+    "GeneratedOn": "12 June 2018 17:52:12"
   }
 });
