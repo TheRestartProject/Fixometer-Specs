@@ -19,3 +19,6 @@ Scenario: Admin only
 # Updating details in the Repair skills section
   When the admin uses this page to change a users role and group
   Then only admin can have that privilage to do. 
+
+
+# This should also be tested for users logged in a host/restarter and an admin changing their own profile.

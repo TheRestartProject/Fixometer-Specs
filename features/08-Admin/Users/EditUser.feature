@@ -13,9 +13,9 @@ Scenario: Edit User
     And he/she should be able to do that by changing the details and saving them
     Then she should land on the Users page with the edited user in the list of users, a message saying that the changes have been saved .
 
-Scenario: Editing My Profile
-# Updating details in the My Profile section and click on save profile button
-    When a user enter details in My Profile section as follows and clicks on save profile
+Scenario: Editing User Profile
+# Updating details in the User Profile section and click on save profile button
+    When a user enter details in User Profile section as follows and clicks on save profile
     | Name       | Email address          | Age | Country         | Town/City   | Gender  | Your biography(optional)     | 
     | jenny      | jenny@gmail.com        | 45  | United Kingdom  | Remakery    | Male    | I am an Artist by proffesion |
     | diamond    | diamond@gmail.com      | 23  | Spain           | Belgium     | Male    |                              |
@@ -25,7 +25,7 @@ Scenario: Editing My Profile
 Scenario: Editing Repair Skills
 # Updating details in the Repair skills section
    When a user types the skills he/she have 
-    | My Skills       | 
+    | Key Skills      | 
     | Mobiles devices |
     | Laptops         |
     | Kitchen devices |
@@ -33,7 +33,9 @@ Scenario: Editing Repair Skills
     Then she should land on the profile page with a message saying that the changes have been saved.
 
 Scenario: Upload profile picture
-# Updating the profile picture in change my photo section
+# Updating the profile picture in change photo section
    When a user wants to change their profile picture
    And browse the pic and click on change photo button
    Then she should land on profile page with the uploaded picture in the placeholder, with a message saying the picture has been uploaded.  
+
+# This should also be tested for users logged in a host/restarter and an admin changing their own profile.

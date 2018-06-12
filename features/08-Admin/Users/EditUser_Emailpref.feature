@@ -17,3 +17,5 @@ Scenario: Creating an email.
 # User can create a email or set an email to Restart Project discussion platform and click on save preferences button
     When a user create a email or set an email to Restart Project discussion platform
     Then the user receives the information to that email id
+
+# This should also be tested for users logged in a host/restarter and an admin changing their own profile.

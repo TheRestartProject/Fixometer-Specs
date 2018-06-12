@@ -8,7 +8,7 @@ Background:
         | Email                      | Password |
         | dean@wecreatedigital.co.uk | dean     | 
 
-Scenario: Our group and Other menus
+Scenario Outline: Our group and Other menus
     When a host clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.
 
@@ -22,7 +22,7 @@ Scenario: Our group and Other menus
     | Help                  | Help                  |
     | Welcome               | Welcome               | 
     
-Scenario: Reporting and General menus
+Scenario Outline: Reporting and General menus
     When a host clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.
 
@@ -34,7 +34,7 @@ Scenario: Reporting and General menus
     | Changed pasword  | Changed pasword  |
     | Logout           | Logout           |
 
-Scenario: Events, Devices and Groups menus
+Scenario Outline: Events, Devices and Groups menus
     When a host clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.  
 

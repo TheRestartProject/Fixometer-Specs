@@ -1,4 +1,4 @@
-Feature: 06 Landing Pages
+Feature: Landing Pages
 
 Different user types are taken to different default pages when they log in.
 
