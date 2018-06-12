@@ -85,10 +85,7 @@ function getFeaturesMatching(searchString, features) {
 }
 
 function findFeatureByRelativeFolder(path, features) {
-    // make sure path is not url encoded, and replace forward-slashes with back-slashes to match JSON
     path = decodeURIComponent(path);
-    // TODO: make the following platform-independent
-    // path = path.replace(/\//g, '\\');
 
     var feature = _.find(features, function(featureTesting) {
         return featureTesting.RelativeFolder == path;
