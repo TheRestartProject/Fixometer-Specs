@@ -1,4 +1,4 @@
-Feature: View Menus
+Feature: View Menus as Restarter
     As a Restarter
     In order to view all the menus
     I should be able to click on the menus on dashboard.
@@ -8,36 +8,36 @@ Background:
         | Email                      | Password |
         | dean@wecreatedigital.co.uk | dean     | 
 
-Scenario: Our group and Other menus with parameters
-    When a host clicks on <parameter> menu 
+Scenario: Our group and Other menus
+    When a restarter clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.
 
     Examples:
-    | parameter             | landingpage                            |
-    | Fixometer             | Will land on Fixometer page            |
-    | Community             | Will land on Community page            |
-    | Restart Wiki          | Will land on Restart Wiki page         | 
-    | The Repair Directory  | Will land on The Repair Directory page |
-    | The Restart Project   | Will land on The Restart Project page  |
-    | Help                  | Will land on Help page                 |
-    | Welcome               | Will land on Welcome page              | 
+    | menuitem              | landingpage           |
+    | Fixometer             | Fixometer             |
+    | Community             | Community             |
+    | Restart Wiki          | Restart Wiki          | 
+    | The Repair Directory  | The Repair Directory  |
+    | The Restart Project   | The Restart Project   |
+    | Help                  | Help                  |
+    | Welcome               | Welcome               | 
     
-Scenario: General menus with parameters
-    When a host clicks on <parameter> menu 
+Scenario: General menus
+    When a restarter clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.
 
     Examples:
-    | parameter        | landingpage                       |
-    | Your profile     | Will land on Your profile page    |
-    | Changed pasword  | Will land on Changed pasword page |
-    | Logout           | Will land on Logout page          |
+    | menuitem         | landingpage     |
+    | Your profile     | Profile         |
+    | Changed pasword  | Changed pasword |
+    | Logout           | Logout          |
 
 Scenario: Events, Devices and Groups menus
-    When a host clicks on <parameter> menu 
+    When a restarter clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.  
 
      Examples:
-    | parameter  | landingpage                 |
-    | Events     | Will land on Events page    |
-    | Devices    | Will land on Devices page   |
-    | Groups     | Will land on Groups page    | 
+    | menuitem   | landingpage  |
+    | Events     | Events       |
+    | Devices    | Devices      |
+    | Groups     | Groups       | 

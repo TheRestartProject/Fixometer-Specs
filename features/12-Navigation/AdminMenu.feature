@@ -1,4 +1,4 @@
-Feature: View Menus
+Feature: View Menus as an Admin
     As an admin
     In order to view all the menus
     I should be able to click on the menus on dashboard.
@@ -9,42 +9,42 @@ Background:
         | dean@wecreatedigital.co.uk | dean     | 
 
 Scenario: Our group and Other menus with parameters
-    When a host clicks on <parameter> menu 
+    When a host clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.
 
     Examples:
-    | parameter             | landingpage                                    |
-    | Discussion            | http://talk.restarters.net/                    |
-    | Restart Wiki          | http://therestartproject.org/wiki/Main_Page    |
-    | The Repair Directory  | https://therestartproject.org/repairdirectory/ | 
-    | The Restart Project   | https://therestartproject.org/                 |
-    | Help                  | Will land on Help page                         |
-    | Welcome               | Will land on Welcome page                      | 
+    | menuitem              | landingpage                                     |
+    | Discussion            | https://talk.restarters.net/                    |
+    | Restart Wiki          | https://therestartproject.org/wiki/Main_Page    |
+    | The Repair Directory  | https://therestartproject.org/repairdirectory/  | 
+    | The Restart Project   | https://therestartproject.org/                  |
+    | Help                  | Help                                            |
+    | Welcome               | Welcome                                         | 
     
 Scenario: Administrator, Reporting and General menus with parameters
-    When a host clicks on <parameter> menu 
+    When a host clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.
 
     Examples:
-    | parameter        | landingpage                       |
-    | Brands           | Will land on Brands page          |
-    | Skills           | Will land on Skills page          |
-    | Group tags       | Will land on Group tags page      | 
-    | Categories       | Will land on Categories page      |
-    | Users            | Will land on Users page           |
-    | Roles            | Will land on Roles page           | 
-    | Time reporting   | Will land on Time reporting page  |
-    | Event reporting  | Will land on Event reporting page | 
-    | Your profile     | Will land on Your profile page    |
-    | Changed pasword  | Will land on Changed pasword page |
-    | Logout           | Will land on Logout page          |
+    | menuitem         | landingpage      |
+    | Brands           | Brands           |
+    | Skills           | Skills           |
+    | Group tags       | Group tags       | 
+    | Categories       | Categories       |
+    | Users            | Users            |
+    | Roles            | Roles            | 
+    | Time reporting   | Time reporting   |
+    | Event reporting  | Event reporting  | 
+    | Your profile     | Your profile     |
+    | Changed pasword  | Changed pasword  |
+    | Logout           | Logout           |
 
 Scenario: Events, Devices and Groups menus
-    When a host clicks on <parameter> menu 
+    When a host clicks on <menuitem> in the menu 
     Then they land on <landingpage> page.  
 
      Examples:
-    | parameter  | landingpage                 |
-    | Events     | Will land on Events page    |
-    | Devices    | Will land on Devices page   |
-    | Groups     | Will land on Groups page    | 
+    | menuitem   | landingpage  |
+    | Events     | Events       |
+    | Devices    | Devices      |
+    | Groups     | Groups       | 
