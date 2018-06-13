@@ -38,7 +38,7 @@ jsonPWrapper ({
       "RelativeFolder": "01-Overview\\3-Capabilities.feature",
       "Feature": {
         "Name": "3 Capabitilies",
-        "Description": "",
+        "Description": "* Ability to record Restart volunteers within the system\r\n  * With corresponding data capture on:\r\n  * Name (could be a pseudonym) \r\n  * Location\r\n  * Email\r\n  * Age (within ranges) \r\n  * Gender (?) \r\n* Ability for self-registration/onboarding of volunteers\r\n* Profile completion\r\n* Opt-in to the uses of the system\r\n* Ability to record time volunteered by volunteers, by linking Restarters to events \r\n* Ability to report on time volunteered\r\n* Filtered by age and location\r\n* Ability to tag groups for reporting purposes\r\n\r\n* To recognise service - for Hosts and Restarters to see time volunteered \r\n* To have a record of who was in attendance in the case of any liability issues\r\n* To potentially send event reports to Restarters\r\n* To allow Restarters edit access to device data, to improve it\r\n* To allow for invite and private RSVP for scheduled events \r\n* To allow for export of time-related data in a way that would help time-bankers\r\n* To understand and monitor patterns in Restarter participation, based on region, age and other data\r\n* To integrate with our onboarding of volunteers globally – to a communication platform, and to the Wiki\r\n* To reinforce best practice, safety and community values\r\n* To allow for open feedback on a given event – a bit like a graffiti wall for volunteers, that is a safe space\r\n* To allow Restarters opportunity to get credit for device fixes and get a history \r\n* To allow unaffiliated Restarters to sign up - detect areas with numerous volunteers\r\n* Help hosts find restarters in their area\r\n* To allow for photos of devices by Restarters",
         "FeatureElements": [],
         "Result": {
           "WasExecuted": false,
@@ -86,9 +86,286 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\AboutRegister.feature",
+      "RelativeFolder": "02-Login_Register_Onboarding\\01-Features_Onboarding.feature",
       "Feature": {
-        "Name": "About and Register",
+        "Name": "01 Features/Onboarding",
+        "Description": "As a prospective user\r\nIn order to find out about why I should join the Restarters community\r\nI want to see an easy-to-understand overview of the benefits of joining",
+        "FeatureElements": [
+          {
+            "Name": "Unregistered user views onboarding information",
+            "Slug": "unregistered-user-views-onboarding-information",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "the user is unregistered",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user visits the features page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user should be presented with the onboarding text and images",
+                "StepComments": [],
+                "AfterLastStepComments": [
+                  {
+                    "Text": "# Registered users should be able to view the onboarding information if they want to."
+                  }
+                ]
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Registered user views onboarding information",
+            "Slug": "registered-user-views-onboarding-information",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "the user is registered",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user visits the features page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user should be presented with the onboarding text and images",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Unregistered user starts sign up process",
+            "Slug": "unregistered-user-starts-sign-up-process",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "the user is unregistered",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user visits the features page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks the sign up button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "they will land on select skills page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Registered user starts sign up process",
+            "Slug": "registered-user-starts-sign-up-process",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "the user is registered",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user visits the features page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks the sign up button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "they will be shown a message saying 'You are already registered!'",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "they will be taken to the dashboard",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "02-Login_Register_Onboarding\\02-Register\\01-SelectSkills.feature",
+      "Feature": {
+        "Name": "01 Selecting skills",
+        "Description": "As a community organiser\r\nIn order to help group hosts organise their events\r\nI want volunteers to list their skills when they join\r\n\r\nAs a volunteer\r\nIn order to help hosts assign me to tasks during events\r\nI want to list my skills when I register",
+        "FeatureElements": [
+          {
+            "Name": "User selects some skills and clicks next",
+            "Slug": "user-selects-some-skills-and-clicks-next",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "the user is registering and is on the select skills step",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user selects at least one option from the list of skills",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "click on Next step button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user lands on About and Register page",
+                "StepComments": [],
+                "AfterLastStepComments": [
+                  {
+                    "Text": "# Although useful, selecting skills is optional."
+                  }
+                ]
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "User selects no skills and clicks next",
+            "Slug": "user-selects-no-skills-and-clicks-next",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "the user is registering and is on the select skills step",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user does not select any option from the list of skills",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "click on Next Step button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user lands on About and Register page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "02-Login_Register_Onboarding\\02-Register\\02-AboutRegister.feature",
+      "Feature": {
+        "Name": "02 About and Register",
         "Description": "As a user\r\nIn order to complete the sign up process\r\nI want to be able to fill the fields in tell us about yourself section",
         "FeatureElements": [
           {
@@ -230,104 +507,9 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\DataConsent.feature",
+      "RelativeFolder": "02-Login_Register_Onboarding\\02-Register\\03-EmailPreferences.feature",
       "Feature": {
-        "Name": "Data Consent",
-        "Description": "As a User\r\nIn order to know how my data is to be used \r\nI should give my acceptance to Restartproject ",
-        "FeatureElements": [
-          {
-            "Name": "Check preferences",
-            "Slug": "check-preferences",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user gives acceptance to his/her data to be used by the Restartproject",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "ticking-off the checkbox and click on Complete my profile button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "user should land on dashboard page with pop up of onboarding process.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "User wants to go to previous step",
-            "Slug": "user-wants-to-go-to-previous-step",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user wants to go to previous step, click Previous step link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user lands on previous page i.e., select skills page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the user accounts have not been created yet",
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "02-Login_Register_Onboarding\\EmailPreferences.feature",
-      "Feature": {
-        "Name": "Email Preferences",
+        "Name": "03 Email Preferences",
         "Description": "As a User\r\nIn order to get notified by the Restart Project\r\nI should signup for email alerts and save the preferences",
         "FeatureElements": [
           {
@@ -420,34 +602,60 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\FeaturesLanding.feature",
+      "RelativeFolder": "02-Login_Register_Onboarding\\02-Register\\04-DataConsent.feature",
       "Feature": {
-        "Name": "Find out more",
-        "Description": "As a user\r\nIn order to find out more about the site\r\nI want to be able to click on the link given and land on features landing page",
+        "Name": "04 Data Consent",
+        "Description": "As a User\r\nIn order to know how my data is to be used \r\nI should give my acceptance to Restartproject ",
         "FeatureElements": [
           {
-            "Name": "Sign me up",
-            "Slug": "sign-me-up",
+            "Name": "Check preferences",
+            "Slug": "check-preferences",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a user lands on features landing page, finds images about community, signup button and link to Register/sign in",
+                "Name": "a user gives acceptance to his/her data to be used by the Restartproject",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "And",
                 "NativeKeyword": "And ",
-                "Name": "user clicks on either signup button or link to Register/sign in",
+                "Name": "ticking-off the checkbox and click on Complete my profile button",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "they will land on select skills page",
+                "Name": "user should land on dashboard page with pop up of onboarding process.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "User wants to go to previous step",
+            "Slug": "user-wants-to-go-to-previous-step",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user wants to go to previous step, click Previous step link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user lands on previous page i.e., select skills page",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -466,7 +674,7 @@ jsonPWrapper ({
             {
               "Keyword": "Given",
               "NativeKeyword": "Given ",
-              "Name": "the user accounts has not been created yet",
+              "Name": "the user accounts have not been created yet",
               "StepComments": [],
               "AfterLastStepComments": []
             }
@@ -489,7 +697,24 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\ForgotPassword.feature",
+      "RelativeFolder": "02-Login_Register_Onboarding\\02-Register\\05-CompleteRegistration.feature",
+      "Feature": {
+        "Name": "05 Complete Registration",
+        "Description": "As a user\r\nIn order for my repair activities and volunteering to be remembered\r\nI want to be able to create an account that remembers my activities",
+        "FeatureElements": [],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "02-Login_Register_Onboarding\\04-ForgotPassword.feature",
       "Feature": {
         "Name": "Forgot Password",
         "Description": "   As a User\r\n   In order to get a new password\r\n   I should be able to do that in forgot password page. \r\n\r\nGiven the following user accounts have been created\r\n   | Email                    | Role  |\r\n   | hubert@planetexpress.com | User  |",
@@ -642,31 +867,46 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\LandingPages.feature",
+      "RelativeFolder": "02-Login_Register_Onboarding\\05-ResetPassword.feature",
       "Feature": {
-        "Name": "Landing Pages",
-        "Description": "Different user types are taken to different default pages when they log in.\r\n\r\nGiven the following user accounts have been created\r\n    | Email                    | Password | Role  |\r\n    | hubert@planetexpress.com | hubert!  | Admin |\r\n    | fry@planetexpress.com    | fry!     | Host  |",
+        "Name": "Reset Password",
+        "Description": "   As a User\r\n   In order to reset my password\r\n   I should be able to do that in password reset page. \r\n\r\nGiven the following user accounts have been created\r\n   | Email                    | Role  |\r\n   | hubert@planetexpress.com | User  |",
         "FeatureElements": [
           {
-            "Name": "Administrator is taken to Administrator Dashboard",
-            "Slug": "administrator-is-taken-to-administrator-dashboard",
+            "Name": "Reset Password",
+            "Slug": "reset-password",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"hubert@planetexpress.com\" and password \"hubert!\"",
-                "StepComments": [
-                  {
-                    "Text": "# TODO: change this so its just - when an Admin logs in"
-                  }
-                ],
+                "Name": "a user fills the data as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Password",
+                    "Repeat password"
+                  ],
+                  "DataRows": [
+                    [
+                      "hubert!",
+                      "hubert!"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on change password button",
+                "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "the user is taken to the Administrator Dashboard",
+                "Name": "user should land on login page with a message saying the password has been successfully changed.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -678,25 +918,10 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Host is taken to Host Dashboard",
-            "Slug": "host-is-taken-to-host-dashboard",
+            "Name": "Password Validation",
+            "Slug": "password-validation",
             "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is taken to the Host Dashboard",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
+            "Steps": [],
             "Tags": [],
             "Result": {
               "WasExecuted": false,
@@ -716,7 +941,148 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\Onboarding.feature",
+      "RelativeFolder": "02-Login_Register_Onboarding\\03-SignIn.feature",
+      "Feature": {
+        "Name": "User Authentication",
+        "Description": "As a user\r\nIn order to perform what I want to do on the site\r\nI want to be able to log in",
+        "FeatureElements": [
+          {
+            "Name": "Valid login",
+            "Slug": "valid-login",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Valid login with alternate case email",
+            "Slug": "valid-login-with-alternate-case-email",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"FRY@PlAnetExPreSs.com\" and password \"fry!\"",
+                "StepComments": [
+                  {
+                    "Text": "# Emails are case-insensitive."
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Invalid login due to password casing",
+            "Slug": "invalid-login-due-to-password-casing",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"FRY!\"",
+                "StepComments": [
+                  {
+                    "Text": "# Passwords are case-sensitive."
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is not logged in",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "a message is displayed to the user letting them know they have not been logged in",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following user accounts have been created",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "fry@planetexpress.com",
+                    "fry!"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "03-Dashboard\\Onboarding.feature",
       "Feature": {
         "Name": "Onboarding steps",
         "Description": "As a User\r\nIn order to know how the platform works \r\nI should see onboarding process",
@@ -863,46 +1229,27 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "02-Login_Register_Onboarding\\ResetPassword.feature",
+      "RelativeFolder": "03-Dashboard\\Dashboard_host.feature",
       "Feature": {
-        "Name": "Reset Password",
-        "Description": "   As a User\r\n   In order to reset my password\r\n   I should be able to do that in password reset page. \r\n\r\nGiven the following user accounts have been created\r\n   | Email                    | Role  |\r\n   | hubert@planetexpress.com | User  |",
+        "Name": "View of Dashboard after log in on the community platform",
+        "Description": "As a Host\r\nIn order to view the dashboard\r\nI should be able to login as a host on the community platform.",
         "FeatureElements": [
           {
-            "Name": "Reset Password",
-            "Slug": "reset-password",
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a user fills the data as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Password",
-                    "Repeat password"
-                  ],
-                  "DataRows": [
-                    [
-                      "hubert!",
-                      "hubert!"
-                    ]
-                  ]
-                },
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on change password button",
+                "Name": "a host lands on dashboard",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "user should land on login page with a message saying the password has been successfully changed.",
+                "Name": "he would view all the activities that he can do and that is going on and that has been done on the platform.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -914,1250 +1261,21 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Password Validation",
-            "Slug": "password-validation",
-            "Description": "",
-            "Steps": [],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "02-Login_Register_Onboarding\\SelectSkills.feature",
-      "Feature": {
-        "Name": "Selecting skills",
-        "Description": "As a user\r\nIn order to complete the sign up process\r\nI want to be able to select the options in skills section",
-        "FeatureElements": [
-          {
-            "Name": "Valid Selection",
-            "Slug": "valid-selection",
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a user does not select any option or selects atleast one option from the repair skills",
-                "StepComments": [
-                  {
-                    "Text": "# User can just simply click next button if they don't have any repair skill"
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "click on Next step button",
+                "Name": "host lands on dashboard, he can view Creat new event, How to host an event, Keep your group information up to date!, Edit an existing or past event, Restarters in your area, Wiki.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "the user lands on About and Register page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the user accounts have not been created yet",
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "02-Login_Register_Onboarding\\SignIn.feature",
-      "Feature": {
-        "Name": "User Authentication",
-        "Description": "As a user\r\nIn order to perform what I want to do on the site\r\nI want to be able to log in",
-        "FeatureElements": [
-          {
-            "Name": "Valid login",
-            "Slug": "valid-login",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Valid login with alternate case email",
-            "Slug": "valid-login-with-alternate-case-email",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"FRY@PlAnetExPreSs.com\" and password \"fry!\"",
-                "StepComments": [
-                  {
-                    "Text": "# Emails are case-insensitive."
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Invalid login due to password casing",
-            "Slug": "invalid-login-due-to-password-casing",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"FRY!\"",
-                "StepComments": [
-                  {
-                    "Text": "# Passwords are case-sensitive."
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is not logged in",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "a message is displayed to the user letting them know they have not been logged in",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following user accounts have been created",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "fry@planetexpress.com",
-                    "fry!"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\AddAGroup.feature",
-      "Feature": {
-        "Name": "Add a group",
-        "Description": "As a User (Host, Admin)\r\nIn order to add a new group\r\nI should be able to do by navigating to add group page",
-        "FeatureElements": [
-          {
-            "Name": "Create a new group",
-            "Slug": "create-a-new-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host clicks on add a group page and fills the data as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Name of group",
-                    "Your website",
-                    "Tell us about your group",
-                    "Group location",
-                    "Group image"
-                  ],
-                  "DataRows": [
-                    [
-                      "Mighty Restarters",
-                      "https://mightyrestarters.co.uk",
-                      "expert group in fixing things",
-                      "Southwark",
-                      ":)"
-                    ]
-                  ]
-                },
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on create group button to create a new group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he lands on group page with the newly created group in the list of gropus in that page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Text cleaned in the description",
-            "Slug": "text-cleaned-in-the-description",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host copies and paste into the description box",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "the data should loose all htmls and css properties it has",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "it show a message inside description box as text cleaned.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "How to give group location",
-            "Slug": "how-to-give-group-location",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host clicks on group location, types the address",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "automatically suggestions should show up and the place should be pointed in map.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "searching the image",
-            "Slug": "searching-the-image",
-            "Description": "",
-            "Steps": [],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a host or an admin",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password",
-                  "Role"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean",
-                    "Host"
-                  ],
-                  [
-                    "hello@howareyou.com",
-                    "hello",
-                    "Admin"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\EditGroup.feature",
-      "Feature": {
-        "Name": "Edit a group",
-        "Description": "As a User (Host, Admin)\r\nIn order to edit a group\r\nI should be able to do by navigating to edit group page",
-        "FeatureElements": [
-          {
-            "Name": "Editing a group",
-            "Slug": "editing-a-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host clicks on edit group page and edits the data as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Name of group",
-                    "Your website",
-                    "Tell us about your group",
-                    "Group location",
-                    "Group image",
-                    "Group tags(admin only)"
-                  ],
-                  "DataRows": [
-                    [
-                      "Mighty Restarter",
-                      "https://mire.co.uk",
-                      "experts in fixing things",
-                      "Southwark",
-                      ":)",
-                      "Exampletag1"
-                    ]
-                  ]
-                },
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on approve group button to save the changes",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he lands on group page with the edited group in the list of gropus in that page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Text cleaned in the description",
-            "Slug": "text-cleaned-in-the-description",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host copies and paste into the description box",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "the data should loose all htmls and css properties it has",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "it show a message inside description box as text cleaned.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "How to give group location",
-            "Slug": "how-to-give-group-location",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host clicks on group location, types the address",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "automatically suggestions should show up and the place should be pointed in map.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "searching the image",
-            "Slug": "searching-the-image",
-            "Description": "",
-            "Steps": [],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Adding group tags",
-            "Slug": "adding-group-tags",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin clicks on add new tag link beside group tags and edits the data as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Group tags(admin only)"
-                  ],
-                  "DataRows": [
-                    [
-                      "Exampletags1"
-                    ]
-                  ]
-                },
-                "StepComments": [
-                  {
-                    "Text": "#Only admin can add a new tag"
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the edited tag appers in the field with cancel option, if needed we can delete the tag using cancel option.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a host or an admin",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password",
-                  "Role"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean",
-                    "Host"
-                  ],
-                  [
-                    "hello@howareyou.com",
-                    "hello",
-                    "Admin"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\EventsFilter.feature",
-      "Feature": {
-        "Name": "Filter Events",
-        "Description": "As a User (admin, host)\r\nIn order to filter events\r\nI should be able to do so by navigating to events filter page",
-        "FeatureElements": [
-          {
-            "Name": "To search for an event",
-            "Slug": "to-search-for-an-event",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to search for an event, fill the fields as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "By group",
-                    "By event",
-                    "From date",
-                    "To date",
-                    "Group tag"
-                  ],
-                  "DataRows": [
-                    [
-                      "Mighty Restarter",
-                      "history event",
-                      "23/04/2017",
-                      "09/11/2018",
-                      "Exampletag1"
-                    ],
-                    [
-                      "Mighty Restarter",
-                      "",
-                      "23/04/2017",
-                      "09/11/2018",
-                      ""
-                    ]
-                  ]
-                },
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "its not mandatory to fill all the details, they are optional",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "click on filter results button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view the filtered event results year wise(descending order) along with other information.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an admin",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\InviteUsertoGroup.feature",
-      "Feature": {
-        "Name": "Invite volunteers to a group",
-        "Description": "As a User (All roles)   \r\nIn order to invite volunteers to a group    \r\nI should be able to click on invite to group link.",
-        "FeatureElements": [
-          {
-            "Name": "Invite volunteers to a group",
-            "Slug": "invite-volunteers-to-a-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user clicks on Invite to group from the group page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "a pop up appears, where email address(s) and message should be entered as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Email address",
-                    "Message"
-                  ],
-                  "DataRows": [
-                    [
-                      "dean@wecreatedigital.co.uk",
-                      "Hi, Welcome!"
-                    ]
-                  ]
-                },
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can click on send invite button.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "User triggers invitation to group email",
-            "Slug": "user-triggers-invitation-to-group-email",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the user clicks the send invite to group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the volunteer(s) that the user has sent sent invite to group would receive an email about information of that group.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an host",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\BecomeAHost.feature",
-      "Feature": {
-        "Name": "Restarter becoming a host",
-        "Description": "As a restarter\r\nIn order to become a host\r\nI should be able to create a new group by clicking on create new group button on group page",
-        "FeatureElements": [
-          {
-            "Name": "To create a new group",
-            "Slug": "to-create-a-new-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter clicks on create new group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "a pop up appears with message and a button to get started.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Cancel creating a group",
-            "Slug": "cancel-creating-a-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter does not want to create a group and wants to go back to all groups page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he should click on cancel(X) to go back.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a restarter",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\StatsEmbed.feature",
-      "Feature": {
-        "Name": "Share your Stats",
-        "Description": "As a User (all roles)  \r\nIn order to share the stats of a particular event to other place   \r\nI should be able to click on Events stats embed button on group page.",
-        "FeatureElements": [
-          {
-            "Name": "Sharing your stats",
-            "Slug": "sharing-your-stats",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user wants to share their group stats to other places, click on Group stats embed button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "a pop up appreas with iframe as headline stats and CO2 equivalence visualisation",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "copy the links required and use them",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "click on cancel(X) symbol",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "preview widget link is useful for how the iframe looks visulally on screen",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user will be back on group page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an host",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\ViewGroup_host.feature",
-      "Feature": {
-        "Name": "View a Group",
-        "Description": "As a host\r\nIn order to view a particular group details\r\nI should be able to go to groups page and click on a particular group link",
-        "FeatureElements": [
-          {
-            "Name": "To view information about the group",
-            "Slug": "to-view-information-about-the-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to know the information about a group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view on the particular group page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can find all the info like group address, website, key stats, device breakdown, environmental impact, upcoming events and recently completed events.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To view description about group",
-            "Slug": "to-view-description-about-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to know about a group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view under about the group section",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can even click on read more for more info about the group.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "View Volunteers in group",
-            "Slug": "view-volunteers-in-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to know the volunteers who are present in that group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view under volunteers section.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Add Volunteers in group",
-            "Slug": "add-volunteers-in-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to add the volunteers in that group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click invite to group link under volunteers section.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Add event",
-            "Slug": "add-event",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to add an event",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on add event link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can RSVP and can also add a device by clicking on respective links.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "See all events",
-            "Slug": "see-all-events",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to see all the events that completed recently",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on see all events links",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can add a device by clicking on its link.",
+                "Name": "the host should be able to navigate(by clicking the links provided) through categories according to their use.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -2211,34 +1329,27 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "03-Groups\\ViewGroup_restarter.feature",
+      "RelativeFolder": "03-Dashboard\\Dashboard_restarter.feature",
       "Feature": {
-        "Name": "View a Group",
-        "Description": "As a restarter\r\nIn order to view a particular group details\r\nI should be able to go to groups page and click on a particular group link",
+        "Name": "View of Dashboard after log in on the community platform",
+        "Description": "As a Restarter\r\nIn order to view the dashboard\r\nI should be able to login as a restarter on the community platform.",
         "FeatureElements": [
           {
-            "Name": "To view information about the group",
-            "Slug": "to-view-information-about-the-group",
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a restarter wants to know the information about a group",
+                "Name": "a restarter lands on dashboard",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "he can view on the particular group page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can find all the info like group address, website, key stats, device breakdown, environmental impact, upcoming events and recently completed events.",
+                "Name": "he would view all the activities that he can do and that is going on and that has been done on the platform.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -2250,172 +1361,21 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "To view description about group",
-            "Slug": "to-view-description-about-group",
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a restarter wants to know about a group",
+                "Name": "restarter lands on dashboard, he can view past events, upcoming events, community news, wiki, Discussion, Welcome materials",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "he can view under about the group section",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can even click on read more for more info about the group.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "View Volunteers in group",
-            "Slug": "view-volunteers-in-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter wants to know the volunteers who are present in that group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view under volunteers section.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Join as a Volunteer in that group",
-            "Slug": "join-as-a-volunteer-in-that-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter wants to join as a volunteer in that group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on join gropu link under volunteers section.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "View upcoming events",
-            "Slug": "view-upcoming-events",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter wants to attend an event",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on RSVP link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can add a device to an event which is happening by clicking on add a device link.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "See all events",
-            "Slug": "see-all-events",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter wants to see all the events that completed recently",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on see all events links",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can add a device by clicking on its link.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Restarter triggers notification email to host by joining the group",
-            "Slug": "restarter-triggers-notification-email-to-host-by-joining-the-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the restarter clicks on join group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the host would receive an notification email about that restarter joining the group.",
+                "Name": "the restarter should be able to navigate(by clicking the links provided) through categories according to their use.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -2469,874 +1429,23 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "03-Groups\\GroupDescription.feature",
+      "RelativeFolder": "03-Dashboard\\DashboardFirstVisit_host.feature",
       "Feature": {
-        "Name": "View a Group description",
-        "Description": "As a user (all roles)\r\nIn order to view a particular group description\r\nI should be able to click on read more link on that particular group page",
+        "Name": "View of Dashboard for the first time when a host sign up on the community platform",
+        "Description": "As a Host\r\nIn order to view the dashboard\r\nI should be able to signup as a host on the community platform.",
         "FeatureElements": [
           {
-            "Name": "To view description about group",
-            "Slug": "to-view-description-about-group",
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a restarter wants to know about a group and clicks on read more link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "a pop screen appears with full description of the group.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Cancel the pop up screen",
-            "Slug": "cancel-the-pop-up-screen",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter wants to close the pop up screen and go back to that group page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on cancel(X), will land on group page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a restarter",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\ViewGroup_admin.feature",
-      "Feature": {
-        "Name": "View a Groups",
-        "Description": "As an admin\r\nIn order to view a particular group details\r\nI should be able to go to groups page and click on a particular group link",
-        "FeatureElements": [
-          {
-            "Name": "To view the information about group",
-            "Slug": "to-view-the-information-about-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to know the information about a group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view on the particular group page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can find all the info like key stats, device breakdown, environmental impact, upcoming evetns and recently completed events.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To navigate to other groups",
-            "Slug": "to-navigate-to-other-groups",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to go to other group, he can click on Group name dropdown where other group names are present",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can easily navigate to other groups.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To view description about group",
-            "Slug": "to-view-description-about-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to know about a group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view under about the group section",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can even click on read more for more info about the group.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "View Volunteers in group",
-            "Slug": "view-volunteers-in-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to know the volunteers who are present in that group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can view under volunteers section.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Add Volunteers in group",
-            "Slug": "add-volunteers-in-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to add the volunteers in that group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click invite to group link under volunteers section.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Add event",
-            "Slug": "add-event",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to add an event",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on add event link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can RSVP and can also add a device by clicking on respective links.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "See all events",
-            "Slug": "see-all-events",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to see all the events that completed recently",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can click on see all events links",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can add a device by clicking on its link.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an admin",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\ViewAllGroups(admin).feature",
-      "Feature": {
-        "Name": "View All Groups",
-        "Description": "As an admin\r\nIn order to view all the groups\r\nI should be able to go to groups page and click on see all groups link",
-        "FeatureElements": [
-          {
-            "Name": "View all groups",
-            "Slug": "view-all-groups",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin clicks on all groups link from the admin drop down",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he lands on all groups page and can see all the groups",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can even search for group(s).",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Search for groups",
-            "Slug": "search-for-groups",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "an admin wants to search group(s), should enter the fields provided in the By details category as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Name",
-                    "Tag",
-                    "Town/City",
-                    "Country"
-                  ],
-                  "DataRows": [
-                    [
-                      "dean12",
-                      "Example1",
-                      "London",
-                      "UK"
-                    ],
-                    [
-                      "",
-                      "",
-                      "London",
-                      ""
-                    ],
-                    [
-                      "",
-                      "",
-                      "",
-                      "UK"
-                    ],
-                    [
-                      "",
-                      "Example2",
-                      "",
-                      ""
-                    ],
-                    [
-                      "James",
-                      "",
-                      "",
-                      ""
-                    ]
-                  ]
-                },
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "the fields here are optional, so can search by only country or only name etc.,",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the admin can view the filtered group.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Create new group",
-            "Slug": "create-new-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to create a new group, should click on create new group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "add an group page opens.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To access group details",
-            "Slug": "to-access-group-details",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to access/check the group details",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on the group name link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "host lands on that particular group page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To check the restarters and hosts",
-            "Slug": "to-check-the-restarters-and-hosts",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to check who are the hosts and restarters",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on the number link under their respective category",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "host can view the details on a pop up screen.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an admin",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\ViewAllGroups.feature",
-      "Feature": {
-        "Name": "View All Groups",
-        "Description": "As a User (host, restarter)\r\nIn order to view all the groups\r\nI should be able to go to groups page and click on see all groups link",
-        "FeatureElements": [
-          {
-            "Name": "View all groups",
-            "Slug": "view-all-groups",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host clicks on see all groups link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he lands on all groups page and can see all the groups in that page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Create new group",
-            "Slug": "create-new-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to create a new group, should click on create new group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "add an group page opens.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To access group details",
-            "Slug": "to-access-group-details",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to access/check the group details",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on the group name link",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "host lands on that particular group page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To check the restarters and hosts",
-            "Slug": "to-check-the-restarters-and-hosts",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to check who are the hosts and restarters",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on the number link under their respective category",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "host can view the details on a pop up screen.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an host",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\AllMembersofGroup.feature",
-      "Feature": {
-        "Name": "View all volunteers of a group",
-        "Description": "As a User (All roles)   \r\nIn order to view all volunteers of a group    \r\nI should be able to click on Join group link.",
-        "FeatureElements": [
-          {
-            "Name": "View all the volunteers of a group",
-            "Slug": "view-all-the-volunteers-of-a-group",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user clicks on Join group from the group page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "a pop up appears with all the list of restarters with their skills",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "can click on join group button.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an host",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "03-Groups\\YourGroups.feature",
-      "Feature": {
-        "Name": "View Your Groups",
-        "Description": "As a User (All roles)\r\nIn order to view all the groups that a user is involved and other groups that are near user\r\nI should be able to go to groups page",
-        "FeatureElements": [
-          {
-            "Name": "View all groups",
-            "Slug": "view-all-groups",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host clicks on group page",
+                "Name": "a host lands on dashboard",
                 "StepComments": [
                   {
-                    "Text": "# View all gropus i.e., groups involved with and the groups that are near me"
+                    "Text": "# View dashboard consisting all the activities to bo done on the platform"
                   }
                 ],
                 "AfterLastStepComments": []
@@ -3344,21 +1453,7 @@ jsonPWrapper ({
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "he lands on group page and can see all the groups in that page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "one section is the list of groups that host is involved",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "other section is the list of groups that are near to the host along with a see all groups link.",
+                "Name": "he would view all the activities that he can do with a journey of updating your profile.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -3370,21 +1465,21 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Create new group",
-            "Slug": "create-new-group",
+            "Name": "About Getting started",
+            "Slug": "about-getting-started",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a host wants to create a new group, should click on create new group button",
+                "Name": "host lands on dashboard, the getting started column is useful to build your profile",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "add an group page opens.",
+                "Name": "the host can build his profile by clicking the links and following the process.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -3396,61 +1491,21 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "To access group details",
-            "Slug": "to-access-group-details",
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a host wants to access/check the group details",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on the group name link",
+                "Name": "host lands on dashboard, he can view Discussion, Welcome Materials, How to set up a group, Restarters in your area and Wiki categories",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "host lands on that particular group page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "To check the restarters and hosts",
-            "Slug": "to-check-the-restarters-and-hosts",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host wants to check who are the hosts and restarters",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "clicks on the number link under their respective category",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "host can view the details on a pop up screen.",
+                "Name": "the host should explore(by clicking the links provided) all the categories to get familiar with the platform.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -3469,7 +1524,137 @@ jsonPWrapper ({
             {
               "Keyword": "Given",
               "NativeKeyword": "Given ",
-              "Name": "the following account have been created as an host",
+              "Name": "the following account have been created as a host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "03-Dashboard\\DashboardFirstVisit_restarter.feature",
+      "Feature": {
+        "Name": "View of Dashboard for the first time when a restarter sign up on the community platform",
+        "Description": "As a Restarter\r\nIn order to view the dashboard\r\nI should be able to signup as a restarter on the community platform.",
+        "FeatureElements": [
+          {
+            "Name": "View Dashboard",
+            "Slug": "view-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter lands on dashboard",
+                "StepComments": [
+                  {
+                    "Text": "# View dashboard consisting all the activities to bo done on the platform"
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he would view all the activities that he can do with a journey of updating your profile.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "About Getting started",
+            "Slug": "about-getting-started",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "restarter lands on dashboard, the getting started column is useful to build your profile",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the restarter can build his profile by clicking the links and following the process.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Activities present on dashboard",
+            "Slug": "activities-present-on-dashboard",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "restarter lands on dashboard, he can view Welcome Materials, Discussion, Upoming events and Wiki categories",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the restarter should explore(by clicking the links provided) all the categories to get familiar with the platform.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a restarter",
               "TableArgument": {
                 "HeaderRow": [
                   "Email",
@@ -5645,7 +3830,3116 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "05-Reporting\\BreakdownbyCountry.feature",
+      "RelativeFolder": "05-Groups\\AddAGroup.feature",
+      "Feature": {
+        "Name": "Add a group",
+        "Description": "As a User (Host, Admin)\r\nIn order to add a new group\r\nI should be able to do by navigating to add group page",
+        "FeatureElements": [
+          {
+            "Name": "Create a new group",
+            "Slug": "create-a-new-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host clicks on add a group page and fills the data as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Name of group",
+                    "Your website",
+                    "Tell us about your group",
+                    "Group location",
+                    "Group image"
+                  ],
+                  "DataRows": [
+                    [
+                      "Mighty Restarters",
+                      "https://mightyrestarters.co.uk",
+                      "expert group in fixing things",
+                      "Southwark",
+                      ":)"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on create group button to create a new group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he lands on group page with the newly created group in the list of gropus in that page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Text cleaned in the description",
+            "Slug": "text-cleaned-in-the-description",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host copies and paste into the description box",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the data should loose all htmls and css properties it has",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "it show a message inside description box as text cleaned.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "How to give group location",
+            "Slug": "how-to-give-group-location",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host clicks on group location, types the address",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "automatically suggestions should show up and the place should be pointed in map.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "searching the image",
+            "Slug": "searching-the-image",
+            "Description": "",
+            "Steps": [],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a host or an admin",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password",
+                  "Role"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean",
+                    "Host"
+                  ],
+                  [
+                    "hello@howareyou.com",
+                    "hello",
+                    "Admin"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\EditGroup.feature",
+      "Feature": {
+        "Name": "Edit a group",
+        "Description": "As a User (Host, Admin)\r\nIn order to edit a group\r\nI should be able to do by navigating to edit group page",
+        "FeatureElements": [
+          {
+            "Name": "Editing a group",
+            "Slug": "editing-a-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host clicks on edit group page and edits the data as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Name of group",
+                    "Your website",
+                    "Tell us about your group",
+                    "Group location",
+                    "Group image",
+                    "Group tags(admin only)"
+                  ],
+                  "DataRows": [
+                    [
+                      "Mighty Restarter",
+                      "https://mire.co.uk",
+                      "experts in fixing things",
+                      "Southwark",
+                      ":)",
+                      "Exampletag1"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on approve group button to save the changes",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he lands on group page with the edited group in the list of gropus in that page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Text cleaned in the description",
+            "Slug": "text-cleaned-in-the-description",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host copies and paste into the description box",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the data should loose all htmls and css properties it has",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "it show a message inside description box as text cleaned.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "How to give group location",
+            "Slug": "how-to-give-group-location",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host clicks on group location, types the address",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "automatically suggestions should show up and the place should be pointed in map.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "searching the image",
+            "Slug": "searching-the-image",
+            "Description": "",
+            "Steps": [],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Adding group tags",
+            "Slug": "adding-group-tags",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin clicks on add new tag link beside group tags and edits the data as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Group tags(admin only)"
+                  ],
+                  "DataRows": [
+                    [
+                      "Exampletags1"
+                    ]
+                  ]
+                },
+                "StepComments": [
+                  {
+                    "Text": "#Only admin can add a new tag"
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the edited tag appers in the field with cancel option, if needed we can delete the tag using cancel option.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a host or an admin",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password",
+                  "Role"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean",
+                    "Host"
+                  ],
+                  [
+                    "hello@howareyou.com",
+                    "hello",
+                    "Admin"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\EventsFilter.feature",
+      "Feature": {
+        "Name": "Filter Events",
+        "Description": "As a User (admin, host)\r\nIn order to filter events\r\nI should be able to do so by navigating to events filter page",
+        "FeatureElements": [
+          {
+            "Name": "To search for an event",
+            "Slug": "to-search-for-an-event",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to search for an event, fill the fields as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "By group",
+                    "By event",
+                    "From date",
+                    "To date",
+                    "Group tag"
+                  ],
+                  "DataRows": [
+                    [
+                      "Mighty Restarter",
+                      "history event",
+                      "23/04/2017",
+                      "09/11/2018",
+                      "Exampletag1"
+                    ],
+                    [
+                      "Mighty Restarter",
+                      "",
+                      "23/04/2017",
+                      "09/11/2018",
+                      ""
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "its not mandatory to fill all the details, they are optional",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "click on filter results button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view the filtered event results year wise(descending order) along with other information.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an admin",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\InviteUsertoGroup.feature",
+      "Feature": {
+        "Name": "Invite volunteers to a group",
+        "Description": "As a User (All roles)   \r\nIn order to invite volunteers to a group    \r\nI should be able to click on invite to group link.",
+        "FeatureElements": [
+          {
+            "Name": "Invite volunteers to a group",
+            "Slug": "invite-volunteers-to-a-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user clicks on Invite to group from the group page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "a pop up appears, where email address(s) and message should be entered as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Email address",
+                    "Message"
+                  ],
+                  "DataRows": [
+                    [
+                      "dean@wecreatedigital.co.uk",
+                      "Hi, Welcome!"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can click on send invite button.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "User triggers invitation to group email",
+            "Slug": "user-triggers-invitation-to-group-email",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user clicks the send invite to group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the volunteer(s) that the user has sent sent invite to group would receive an email about information of that group.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\BecomeAHost.feature",
+      "Feature": {
+        "Name": "Restarter becoming a host",
+        "Description": "As a restarter\r\nIn order to become a host\r\nI should be able to create a new group by clicking on create new group button on group page",
+        "FeatureElements": [
+          {
+            "Name": "To create a new group",
+            "Slug": "to-create-a-new-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter clicks on create new group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "a pop up appears with message and a button to get started.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Cancel creating a group",
+            "Slug": "cancel-creating-a-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter does not want to create a group and wants to go back to all groups page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he should click on cancel(X) to go back.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a restarter",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\StatsEmbed.feature",
+      "Feature": {
+        "Name": "Share your Stats",
+        "Description": "As a User (all roles)  \r\nIn order to share the stats of a particular event to other place   \r\nI should be able to click on Events stats embed button on group page.",
+        "FeatureElements": [
+          {
+            "Name": "Sharing your stats",
+            "Slug": "sharing-your-stats",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user wants to share their group stats to other places, click on Group stats embed button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "a pop up appreas with iframe as headline stats and CO2 equivalence visualisation",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "copy the links required and use them",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "click on cancel(X) symbol",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "preview widget link is useful for how the iframe looks visulally on screen",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user will be back on group page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\ViewGroup_host.feature",
+      "Feature": {
+        "Name": "View a Group",
+        "Description": "As a host\r\nIn order to view a particular group details\r\nI should be able to go to groups page and click on a particular group link",
+        "FeatureElements": [
+          {
+            "Name": "To view information about the group",
+            "Slug": "to-view-information-about-the-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to know the information about a group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view on the particular group page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can find all the info like group address, website, key stats, device breakdown, environmental impact, upcoming events and recently completed events.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To view description about group",
+            "Slug": "to-view-description-about-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to know about a group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view under about the group section",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can even click on read more for more info about the group.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "View Volunteers in group",
+            "Slug": "view-volunteers-in-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to know the volunteers who are present in that group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view under volunteers section.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Add Volunteers in group",
+            "Slug": "add-volunteers-in-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to add the volunteers in that group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click invite to group link under volunteers section.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Add event",
+            "Slug": "add-event",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to add an event",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on add event link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can RSVP and can also add a device by clicking on respective links.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "See all events",
+            "Slug": "see-all-events",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to see all the events that completed recently",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on see all events links",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can add a device by clicking on its link.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\ViewGroup_restarter.feature",
+      "Feature": {
+        "Name": "View a Group",
+        "Description": "As a restarter\r\nIn order to view a particular group details\r\nI should be able to go to groups page and click on a particular group link",
+        "FeatureElements": [
+          {
+            "Name": "To view information about the group",
+            "Slug": "to-view-information-about-the-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to know the information about a group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view on the particular group page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can find all the info like group address, website, key stats, device breakdown, environmental impact, upcoming events and recently completed events.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To view description about group",
+            "Slug": "to-view-description-about-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to know about a group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view under about the group section",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can even click on read more for more info about the group.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "View Volunteers in group",
+            "Slug": "view-volunteers-in-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to know the volunteers who are present in that group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view under volunteers section.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Join as a Volunteer in that group",
+            "Slug": "join-as-a-volunteer-in-that-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to join as a volunteer in that group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on join gropu link under volunteers section.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "View upcoming events",
+            "Slug": "view-upcoming-events",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to attend an event",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on RSVP link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can add a device to an event which is happening by clicking on add a device link.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "See all events",
+            "Slug": "see-all-events",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to see all the events that completed recently",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on see all events links",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can add a device by clicking on its link.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Restarter triggers notification email to host by joining the group",
+            "Slug": "restarter-triggers-notification-email-to-host-by-joining-the-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the restarter clicks on join group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the host would receive an notification email about that restarter joining the group.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a restarter",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\GroupDescription.feature",
+      "Feature": {
+        "Name": "View a Group description",
+        "Description": "As a user (all roles)\r\nIn order to view a particular group description\r\nI should be able to click on read more link on that particular group page",
+        "FeatureElements": [
+          {
+            "Name": "To view description about group",
+            "Slug": "to-view-description-about-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to know about a group and clicks on read more link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "a pop screen appears with full description of the group.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Cancel the pop up screen",
+            "Slug": "cancel-the-pop-up-screen",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to close the pop up screen and go back to that group page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on cancel(X), will land on group page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a restarter",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\ViewGroup_admin.feature",
+      "Feature": {
+        "Name": "View a Groups",
+        "Description": "As an admin\r\nIn order to view a particular group details\r\nI should be able to go to groups page and click on a particular group link",
+        "FeatureElements": [
+          {
+            "Name": "To view the information about group",
+            "Slug": "to-view-the-information-about-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to know the information about a group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view on the particular group page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can find all the info like key stats, device breakdown, environmental impact, upcoming evetns and recently completed events.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To navigate to other groups",
+            "Slug": "to-navigate-to-other-groups",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to go to other group, he can click on Group name dropdown where other group names are present",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can easily navigate to other groups.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To view description about group",
+            "Slug": "to-view-description-about-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to know about a group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view under about the group section",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can even click on read more for more info about the group.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "View Volunteers in group",
+            "Slug": "view-volunteers-in-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to know the volunteers who are present in that group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can view under volunteers section.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Add Volunteers in group",
+            "Slug": "add-volunteers-in-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to add the volunteers in that group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click invite to group link under volunteers section.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Add event",
+            "Slug": "add-event",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to add an event",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on add event link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can RSVP and can also add a device by clicking on respective links.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "See all events",
+            "Slug": "see-all-events",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to see all the events that completed recently",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can click on see all events links",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can add a device by clicking on its link.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an admin",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\ViewAllGroups(admin).feature",
+      "Feature": {
+        "Name": "View All Groups",
+        "Description": "As an admin\r\nIn order to view all the groups\r\nI should be able to go to groups page and click on see all groups link",
+        "FeatureElements": [
+          {
+            "Name": "View all groups",
+            "Slug": "view-all-groups",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin clicks on all groups link from the admin drop down",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he lands on all groups page and can see all the groups",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can even search for group(s).",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Search for groups",
+            "Slug": "search-for-groups",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin wants to search group(s), should enter the fields provided in the By details category as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Name",
+                    "Tag",
+                    "Town/City",
+                    "Country"
+                  ],
+                  "DataRows": [
+                    [
+                      "dean12",
+                      "Example1",
+                      "London",
+                      "UK"
+                    ],
+                    [
+                      "",
+                      "",
+                      "London",
+                      ""
+                    ],
+                    [
+                      "",
+                      "",
+                      "",
+                      "UK"
+                    ],
+                    [
+                      "",
+                      "Example2",
+                      "",
+                      ""
+                    ],
+                    [
+                      "James",
+                      "",
+                      "",
+                      ""
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the fields here are optional, so can search by only country or only name etc.,",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the admin can view the filtered group.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Create new group",
+            "Slug": "create-new-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to create a new group, should click on create new group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "add an group page opens.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To access group details",
+            "Slug": "to-access-group-details",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to access/check the group details",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on the group name link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "host lands on that particular group page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To check the restarters and hosts",
+            "Slug": "to-check-the-restarters-and-hosts",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to check who are the hosts and restarters",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on the number link under their respective category",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "host can view the details on a pop up screen.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an admin",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\ViewAllGroups.feature",
+      "Feature": {
+        "Name": "View All Groups",
+        "Description": "As a User (host, restarter)\r\nIn order to view all the groups\r\nI should be able to go to groups page and click on see all groups link",
+        "FeatureElements": [
+          {
+            "Name": "View all groups",
+            "Slug": "view-all-groups",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host clicks on see all groups link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he lands on all groups page and can see all the groups in that page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Create new group",
+            "Slug": "create-new-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to create a new group, should click on create new group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "add an group page opens.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To access group details",
+            "Slug": "to-access-group-details",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to access/check the group details",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on the group name link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "host lands on that particular group page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To check the restarters and hosts",
+            "Slug": "to-check-the-restarters-and-hosts",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to check who are the hosts and restarters",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on the number link under their respective category",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "host can view the details on a pop up screen.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\AllMembersofGroup.feature",
+      "Feature": {
+        "Name": "View all volunteers of a group",
+        "Description": "As a User (All roles)   \r\nIn order to view all volunteers of a group    \r\nI should be able to click on Join group link.",
+        "FeatureElements": [
+          {
+            "Name": "View all the volunteers of a group",
+            "Slug": "view-all-the-volunteers-of-a-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user clicks on Join group from the group page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "a pop up appears with all the list of restarters with their skills",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "can click on join group button.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "05-Groups\\YourGroups.feature",
+      "Feature": {
+        "Name": "View Your Groups",
+        "Description": "As a User (All roles)\r\nIn order to view all the groups that a user is involved and other groups that are near user\r\nI should be able to go to groups page",
+        "FeatureElements": [
+          {
+            "Name": "View all groups",
+            "Slug": "view-all-groups",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host clicks on group page",
+                "StepComments": [
+                  {
+                    "Text": "# View all gropus i.e., groups involved with and the groups that are near me"
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he lands on group page and can see all the groups in that page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "one section is the list of groups that host is involved",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "other section is the list of groups that are near to the host along with a see all groups link.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Create new group",
+            "Slug": "create-new-group",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to create a new group, should click on create new group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "add an group page opens.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To access group details",
+            "Slug": "to-access-group-details",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to access/check the group details",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on the group name link",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "host lands on that particular group page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "To check the restarters and hosts",
+            "Slug": "to-check-the-restarters-and-hosts",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a host wants to check who are the hosts and restarters",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "clicks on the number link under their respective category",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "host can view the details on a pop up screen.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as an host",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "06-Devices\\EditDevice.feature",
+      "Feature": {
+        "Name": "Edit devices",
+        "Description": "As a user (all roles)  \r\nIn order to edit the devices  \r\nI should be able to navigate edit devices page.",
+        "FeatureElements": [
+          {
+            "Name": "Edit devices",
+            "Slug": "edit-devices",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter clicks on edit devices page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "change/update the fields as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Resatart party",
+                    "Category of device",
+                    "Brand",
+                    "Model",
+                    "Age",
+                    "Add devices image here",
+                    "Repair Status",
+                    "Repair information",
+                    "Spare parts required",
+                    "Description of problem/solution",
+                    "Suitable for community"
+                  ],
+                  "DataRows": [
+                    [
+                      "Restart HQ",
+                      "Paper shredder",
+                      "Amazon",
+                      "Basics HY245",
+                      "3 years",
+                      ":)",
+                      "Repairable",
+                      "Do it yourself",
+                      "yes",
+                      "fuse blown out",
+                      "tick symbol"
+                    ]
+                  ]
+                },
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "click on save device to save the changes",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "you will land on all devices page with the edited device on the list of devices.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "delete device",
+            "Slug": "delete-device",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to delete a device, click on delete device button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "you will land on all devices page and you won't be able to see the deleted device from the list of devices.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created a restarter",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "06-Devices\\Emails.feature",
+      "Feature": {
+        "Name": "Emails that are sent out by the system",
+        "Description": "As a user (all roles)  \r\nIn order to organise the platform   \r\nI should be able to send automated/manual emails to users whenever required.",
+        "FeatureElements": [
+          {
+            "Name": "Post event automated reminder email to host (4)",
+            "Slug": "post-event-automated-reminder-email-to-host-4",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a host has received a post event automated email",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the host clicks on Contribute data button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the host lands on that manage event page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Post event reminder email to volunteers (5)",
+            "Slug": "post-event-reminder-email-to-volunteers-5",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a volunteer has received a post event device reminder email",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the volunteer clicks on Contribute data button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the volunteer land on that manage event page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Password reset request email (1)",
+            "Slug": "password-reset-request-email-1",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a user has received a password reset request email",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the user clicks on Reset password button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user land on the password rest page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email invitation to group by a user to a existing volunteer (2)",
+            "Slug": "email-invitation-to-group-by-a-user-to-a-existing-volunteer-2",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a existing volunteer has received an email invitation to group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the existing volunteer clicks on Join group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the volunteer land on that event page with a successful message on top.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email invitation to group by a user to a new volunteer (2)",
+            "Slug": "email-invitation-to-group-by-a-user-to-a-new-volunteer-2",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a new volunteer has received an email invitation to group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the new volunteer clicks on Join group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the volunteer land on registeration page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email invitation to an event by existing user to a existing volunteer (3)",
+            "Slug": "email-invitation-to-an-event-by-existing-user-to-a-existing-volunteer-3",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "existing volunteer has received an email invitation to an event",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the existing volunteer clicks on Read more button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the volunteer land on that particular event page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email Notification about event creation to admin (9)",
+            "Slug": "email-notification-about-event-creation-to-admin-9",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "admin has received an email notification about an event to moderate",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the admin clicks on View event button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the admin land on that particular edit event page, clicks on approve button.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email Notification about group creation to admin (missing wireframe)",
+            "Slug": "email-notification-about-group-creation-to-admin-missing-wireframe",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "admin has received an email notification about a group has been created",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the admin clicks on View group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the admin land on that particular group page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Account created by admin to a new volunteer (13)",
+            "Slug": "account-created-by-admin-to-a-new-volunteer-13",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a new volunteer has received an email to set password",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the new volunteer clicks on Set password button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the volunteer land on password reset page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email notification to admin by a host/restarter when description of a repair has been marked suitable for wiki (12)",
+            "Slug": "email-notification-to-admin-by-a-hostrestarter-when-description-of-a-repair-has-been-marked-suitable-for-wiki-12",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "admin has received an email notification about repair description to wiki",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the admin clicks on View repair notes button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the admin land on edit device page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email notification to host by admin when event has been approved (10)",
+            "Slug": "email-notification-to-host-by-admin-when-event-has-been-approved-10",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "host has received an email notification about event confirmation",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the host clicks on View event button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the host land on Upcoming event page or therestartproject.org(if clicked the link in the email).",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email notification to host by new volunteer when he joined the group (8)",
+            "Slug": "email-notification-to-host-by-new-volunteer-when-he-joined-the-group-8",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "host has received an email notification about a volunteer joined the group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the host clicks on Go to group button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the host land on that view group page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Email notification to host by volunteer when he has sent an RSVP (7)",
+            "Slug": "email-notification-to-host-by-volunteer-when-he-has-sent-an-rsvp-7",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "host has received an email notification about a volunteer attending the event",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "the host clicks on View your event button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the host land on upcoming event page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created an admin",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "06-Devices\\ViewAllDevices.feature",
+      "Feature": {
+        "Name": "View all devices",
+        "Description": "As a user (all roles)  \r\nIn order to see all the devices that was taken to restart party   \r\nI should be able to navigate devices page.",
+        "FeatureElements": [
+          {
+            "Name": "View all devices",
+            "Slug": "view-all-devices",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter clicks on devices page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "he can see all the devices starting from recent ones on the top of the page.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "search for a particular device",
+            "Slug": "search-for-a-particular-device",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a restarter wants to search for the devices, he can fill the fields as he want to search as follows",
+                "TableArgument": {
+                  "HeaderRow": [
+                    "Category",
+                    "Group",
+                    "From date",
+                    "To date",
+                    "Device ID",
+                    "Device brand",
+                    "Device model",
+                    "Search comments"
+                  ],
+                  "DataRows": [
+                    [
+                      "flat screen",
+                      "Restart HQ",
+                      "23/04/2017",
+                      "23/04/2017",
+                      "",
+                      "",
+                      "",
+                      ""
+                    ]
+                  ]
+                },
+                "StepComments": [
+                  {
+                    "Text": "#Users can search for devices by either taxonomy or by date or by other various ways like device Id etc."
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "should click on search all devices button",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "user can view the list or a particular device(s) that searched for.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created a restarter",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "dean@wecreatedigital.co.uk",
+                    "dean"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "07-Reporting\\BreakdownbyCountry.feature",
       "Feature": {
         "Name": "Breakdown by country - Total hours volunteered",
         "Description": "As a user (all roles)  \r\nIn order to see the total time volunteered country wise   \r\nI should be able to click on see all results link in breakdown by country section on time volunteered page.",
@@ -5745,7 +7039,7 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "05-Reporting\\Impact Analysis.feature",
+      "RelativeFolder": "07-Reporting\\Impact Analysis.feature",
       "Feature": {
         "Name": "Group Impact Analysis",
         "Description": "    As a Host\r\n    In order to be able to showcase the work of my Group\r\n    I want to see an impact analysis of my Group's Events\r\n\r\nGroup hosts are able to get reports about the impact of individual Restart\r\nParties: total of waste prevented (kg), CO2 emissions prevented (kg), hours\r\nvolunteered.\r\n\r\nGroup hosts are also able to get an an aggregate total of all waste\r\nprevented (kg), CO2 emissions prevented (kg), hours volunteered for the\r\nentirety of their group’s events.\r\n\r\nTODO: Add larger dataset test and checking the algorithms.",
@@ -5920,7 +7214,7 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "05-Reporting\\TimeVolunteered.feature.feature",
+      "RelativeFolder": "07-Reporting\\TimeVolunteered.feature.feature",
       "Feature": {
         "Name": "Total hours volunteered",
         "Description": "As a user (all roles)  \r\nIn order to see the total time volunteered    \r\nI should be able to navigate to time volunteered page.",
@@ -6047,23 +7341,6 @@ jsonPWrapper ({
             "WasSuccessful": false
           }
         },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "07-Wordpress-Module\\Upcoming Parties.feature",
-      "Feature": {
-        "Name": "Upcoming Parties",
-        "Description": "A list of upcoming parties.\r\n\r\nThey should display until the end time of the party.\r\n\r\nHow many should be listed - all future ones?",
-        "FeatureElements": [],
         "Result": {
           "WasExecuted": false,
           "WasSuccessful": false
@@ -8091,762 +9368,6 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "09-Devices\\EditDevice.feature",
-      "Feature": {
-        "Name": "Edit devices",
-        "Description": "As a user (all roles)  \r\nIn order to edit the devices  \r\nI should be able to navigate edit devices page.",
-        "FeatureElements": [
-          {
-            "Name": "Edit devices",
-            "Slug": "edit-devices",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter clicks on edit devices page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "change/update the fields as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Resatart party",
-                    "Category of device",
-                    "Brand",
-                    "Model",
-                    "Age",
-                    "Add devices image here",
-                    "Repair Status",
-                    "Repair information",
-                    "Spare parts required",
-                    "Description of problem/solution",
-                    "Suitable for community"
-                  ],
-                  "DataRows": [
-                    [
-                      "Restart HQ",
-                      "Paper shredder",
-                      "Amazon",
-                      "Basics HY245",
-                      "3 years",
-                      ":)",
-                      "Repairable",
-                      "Do it yourself",
-                      "yes",
-                      "fuse blown out",
-                      "tick symbol"
-                    ]
-                  ]
-                },
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "click on save device to save the changes",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "you will land on all devices page with the edited device on the list of devices.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "delete device",
-            "Slug": "delete-device",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter wants to delete a device, click on delete device button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "you will land on all devices page and you won't be able to see the deleted device from the list of devices.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created a restarter",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "09-Devices\\Emails.feature",
-      "Feature": {
-        "Name": "Emails that are sent out by the system",
-        "Description": "As a user (all roles)  \r\nIn order to organise the platform   \r\nI should be able to send automated/manual emails to users whenever required.",
-        "FeatureElements": [
-          {
-            "Name": "Post event automated reminder email to host (4)",
-            "Slug": "post-event-automated-reminder-email-to-host-4",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "a host has received a post event automated email",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the host clicks on Contribute data button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the host lands on that manage event page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Post event reminder email to volunteers (5)",
-            "Slug": "post-event-reminder-email-to-volunteers-5",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "a volunteer has received a post event device reminder email",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the volunteer clicks on Contribute data button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the volunteer land on that manage event page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Password reset request email (1)",
-            "Slug": "password-reset-request-email-1",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "a user has received a password reset request email",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the user clicks on Reset password button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user land on the password rest page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email invitation to group by a user to a existing volunteer (2)",
-            "Slug": "email-invitation-to-group-by-a-user-to-a-existing-volunteer-2",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "a existing volunteer has received an email invitation to group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the existing volunteer clicks on Join group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the volunteer land on that event page with a successful message on top.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email invitation to group by a user to a new volunteer (2)",
-            "Slug": "email-invitation-to-group-by-a-user-to-a-new-volunteer-2",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "a new volunteer has received an email invitation to group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the new volunteer clicks on Join group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the volunteer land on registeration page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email invitation to an event by existing user to a existing volunteer (3)",
-            "Slug": "email-invitation-to-an-event-by-existing-user-to-a-existing-volunteer-3",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "existing volunteer has received an email invitation to an event",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the existing volunteer clicks on Read more button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the volunteer land on that particular event page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email Notification about event creation to admin (9)",
-            "Slug": "email-notification-about-event-creation-to-admin-9",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "admin has received an email notification about an event to moderate",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the admin clicks on View event button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the admin land on that particular edit event page, clicks on approve button.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email Notification about group creation to admin (missing wireframe)",
-            "Slug": "email-notification-about-group-creation-to-admin-missing-wireframe",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "admin has received an email notification about a group has been created",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the admin clicks on View group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the admin land on that particular group page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Account created by admin to a new volunteer (13)",
-            "Slug": "account-created-by-admin-to-a-new-volunteer-13",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "a new volunteer has received an email to set password",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the new volunteer clicks on Set password button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the volunteer land on password reset page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email notification to admin by a host/restarter when description of a repair has been marked suitable for wiki (12)",
-            "Slug": "email-notification-to-admin-by-a-hostrestarter-when-description-of-a-repair-has-been-marked-suitable-for-wiki-12",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "admin has received an email notification about repair description to wiki",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the admin clicks on View repair notes button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the admin land on edit device page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email notification to host by admin when event has been approved (10)",
-            "Slug": "email-notification-to-host-by-admin-when-event-has-been-approved-10",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "host has received an email notification about event confirmation",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the host clicks on View event button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the host land on Upcoming event page or therestartproject.org(if clicked the link in the email).",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email notification to host by new volunteer when he joined the group (8)",
-            "Slug": "email-notification-to-host-by-new-volunteer-when-he-joined-the-group-8",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "host has received an email notification about a volunteer joined the group",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the host clicks on Go to group button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the host land on that view group page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Email notification to host by volunteer when he has sent an RSVP (7)",
-            "Slug": "email-notification-to-host-by-volunteer-when-he-has-sent-an-rsvp-7",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "Given",
-                "NativeKeyword": "Given ",
-                "Name": "host has received an email notification about a volunteer attending the event",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "the host clicks on View your event button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the host land on upcoming event page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created an admin",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "09-Devices\\ViewAllDevices.feature",
-      "Feature": {
-        "Name": "View all devices",
-        "Description": "As a user (all roles)  \r\nIn order to see all the devices that was taken to restart party   \r\nI should be able to navigate devices page.",
-        "FeatureElements": [
-          {
-            "Name": "View all devices",
-            "Slug": "view-all-devices",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter clicks on devices page",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he can see all the devices starting from recent ones on the top of the page.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "search for a particular device",
-            "Slug": "search-for-a-particular-device",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter wants to search for the devices, he can fill the fields as he want to search as follows",
-                "TableArgument": {
-                  "HeaderRow": [
-                    "Category",
-                    "Group",
-                    "From date",
-                    "To date",
-                    "Device ID",
-                    "Device brand",
-                    "Device model",
-                    "Search comments"
-                  ],
-                  "DataRows": [
-                    [
-                      "flat screen",
-                      "Restart HQ",
-                      "23/04/2017",
-                      "23/04/2017",
-                      "",
-                      "",
-                      "",
-                      ""
-                    ]
-                  ]
-                },
-                "StepComments": [
-                  {
-                    "Text": "#Users can search for devices by either taxonomy or by date or by other various ways like device Id etc."
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "should click on search all devices button",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "user can view the list or a particular device(s) that searched for.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created a restarter",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
       "RelativeFolder": "10-Emails\\Emails.feature",
       "Feature": {
         "Name": "Emails that are sent out by the system",
@@ -10424,27 +10945,34 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "13-Dashboard\\Dashboard_host.feature",
+      "RelativeFolder": "13-Wordpress-Push\\NewGroups.feature",
       "Feature": {
-        "Name": "View of Dashboard after log in on the community platform",
-        "Description": "As a Host\r\nIn order to view the dashboard\r\nI should be able to login as a host on the community platform.",
+        "Name": "New Groups",
+        "Description": "As an Admin\r\nIn order to view the new groups on the wordpress site(main website - https://therestartproject.org/)\r\nI should be able to do it through API call.",
         "FeatureElements": [
           {
-            "Name": "View Dashboard",
-            "Slug": "view-dashboard",
+            "Name": "View created groups",
+            "Slug": "view-created-groups",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a host lands on dashboard",
+                "Name": "an admin approves a group",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "he would view all the activities that he can do and that is going on and that has been done on the platform.",
+                "Name": "they would see the approved group in the list of groups on the wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "a group page is created on the wordpress site.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -10456,21 +10984,61 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Activities present on dashboard",
-            "Slug": "activities-present-on-dashboard",
+            "Name": "View edited upcoming group",
+            "Slug": "view-edited-upcoming-group",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "host lands on dashboard, he can view Creat new event, How to host an event, Keep your group information up to date!, Edit an existing or past event, Restarters in your area, Wiki.",
+                "Name": "an admin/host edits an approved group",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "the host should be able to navigate(by clicking the links provided) through categories according to their use.",
+                "Name": "they would see the edited group in the list of groups on the wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the changes made would appear on the group page created in wordpress site.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Delete groups",
+            "Slug": "delete-groups",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin/host deletes an approved group",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "they will not see the deleted group in the list of groups on the wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the group page created in wordpress site will also be deleted.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -10482,36 +11050,6 @@ jsonPWrapper ({
             }
           }
         ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a host",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
         "Result": {
           "WasExecuted": false,
           "WasSuccessful": false
@@ -10524,27 +11062,41 @@ jsonPWrapper ({
       }
     },
     {
-      "RelativeFolder": "13-Dashboard\\Dashboard_restarter.feature",
+      "RelativeFolder": "13-Wordpress-Push\\Upcoming Parties.feature",
       "Feature": {
-        "Name": "View of Dashboard after log in on the community platform",
-        "Description": "As a Restarter\r\nIn order to view the dashboard\r\nI should be able to login as a restarter on the community platform.",
+        "Name": "Upcoming Parties",
+        "Description": "A list of upcoming parties.\r\n\r\nThey should display until the end time of the party.\r\n\r\nHow many should be listed - all future ones?\r\n------------------------------------------------------------------------------------------------------------------\r\n\r\nFeature: Upcoming Parties\r\n    As an Admin\r\n    In order to view the upcoming parties on the wordpress site(main website - https://therestartproject.org/)\r\n    I should be able to do it through API call.",
         "FeatureElements": [
           {
-            "Name": "View Dashboard",
-            "Slug": "view-dashboard",
+            "Name": "View created Upcoming events",
+            "Slug": "view-created-upcoming-events",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "a restarter lands on dashboard",
+                "Name": "an admin approves an event",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "he would view all the activities that he can do and that is going on and that has been done on the platform.",
+                "Name": "they would see the approved event in the list of events in upcoming events section on the wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "an event page is created on the wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the event would appear till the end of the event date and time.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -10556,21 +11108,68 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Activities present on dashboard",
-            "Slug": "activities-present-on-dashboard",
+            "Name": "View edited upcoming events",
+            "Slug": "view-edited-upcoming-events",
             "Description": "",
             "Steps": [
               {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "restarter lands on dashboard, he can view past events, upcoming events, community news, wiki, Discussion, Welcome materials",
+                "Name": "an admin/host edits an approved event",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "the restarter should be able to navigate(by clicking the links provided) through categories according to their use.",
+                "Name": "they would see the edited event in the list of events in upcoming events section on the wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the changes made would appear on the event page created in wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the event would appear till the end of the event date and time.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Delete upcoming events",
+            "Slug": "delete-upcoming-events",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "an admin/host deletes an approved event",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "they will not see the deleted event in the list of events in upcoming events section on the wordpress site",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the event page created in wordpress site will also be deleted.",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -10582,296 +11181,6 @@ jsonPWrapper ({
             }
           }
         ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a restarter",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "13-Dashboard\\DashboardFirstVisit_host.feature",
-      "Feature": {
-        "Name": "View of Dashboard for the first time when a host sign up on the community platform",
-        "Description": "As a Host\r\nIn order to view the dashboard\r\nI should be able to signup as a host on the community platform.",
-        "FeatureElements": [
-          {
-            "Name": "View Dashboard",
-            "Slug": "view-dashboard",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a host lands on dashboard",
-                "StepComments": [
-                  {
-                    "Text": "# View dashboard consisting all the activities to bo done on the platform"
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he would view all the activities that he can do with a journey of updating your profile.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "About Getting started",
-            "Slug": "about-getting-started",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "host lands on dashboard, the getting started column is useful to build your profile",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the host can build his profile by clicking the links and following the process.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Activities present on dashboard",
-            "Slug": "activities-present-on-dashboard",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "host lands on dashboard, he can view Discussion, Welcome Materials, How to set up a group, Restarters in your area and Wiki categories",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the host should explore(by clicking the links provided) all the categories to get familiar with the platform.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a host",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "13-Dashboard\\DashboardFirstVisit_restarter.feature",
-      "Feature": {
-        "Name": "View of Dashboard for the first time when a restarter sign up on the community platform",
-        "Description": "As a Restarter\r\nIn order to view the dashboard\r\nI should be able to signup as a restarter on the community platform.",
-        "FeatureElements": [
-          {
-            "Name": "View Dashboard",
-            "Slug": "view-dashboard",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a restarter lands on dashboard",
-                "StepComments": [
-                  {
-                    "Text": "# View dashboard consisting all the activities to bo done on the platform"
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "he would view all the activities that he can do with a journey of updating your profile.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "About Getting started",
-            "Slug": "about-getting-started",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "restarter lands on dashboard, the getting started column is useful to build your profile",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the restarter can build his profile by clicking the links and following the process.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Activities present on dashboard",
-            "Slug": "activities-present-on-dashboard",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "restarter lands on dashboard, he can view Welcome Materials, Discussion, Upoming events and Wiki categories",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the restarter should explore(by clicking the links provided) all the categories to get familiar with the platform.",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following account have been created as a restarter",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "dean@wecreatedigital.co.uk",
-                    "dean"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
         "Result": {
           "WasExecuted": false,
           "WasSuccessful": false
@@ -10889,17 +11198,17 @@ jsonPWrapper ({
     "Folders": [
       {
         "Folder": "02-Login_Register_Onboarding",
-        "Total": 23,
+        "Total": 22,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 23
+        "Inconclusive": 22
       },
       {
-        "Folder": "03-Groups",
-        "Total": 51,
+        "Folder": "03-Dashboard",
+        "Total": 13,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 51
+        "Inconclusive": 13
       },
       {
         "Folder": "04-Events",
@@ -10909,7 +11218,21 @@ jsonPWrapper ({
         "Inconclusive": 44
       },
       {
-        "Folder": "05-Reporting",
+        "Folder": "05-Groups",
+        "Total": 51,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 51
+      },
+      {
+        "Folder": "06-Devices",
+        "Total": 17,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 17
+      },
+      {
+        "Folder": "07-Reporting",
         "Total": 6,
         "Passing": 0,
         "Failing": 0,
@@ -10921,13 +11244,6 @@ jsonPWrapper ({
         "Passing": 0,
         "Failing": 0,
         "Inconclusive": 36
-      },
-      {
-        "Folder": "09-Devices",
-        "Total": 17,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 17
       },
       {
         "Folder": "10-Emails",
@@ -10951,11 +11267,11 @@ jsonPWrapper ({
         "Inconclusive": 9
       },
       {
-        "Folder": "13-Dashboard",
-        "Total": 10,
+        "Folder": "13-Wordpress-Push",
+        "Total": 6,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 10
+        "Inconclusive": 6
       }
     ],
     "NotTestedFolders": [
@@ -10967,7 +11283,7 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
-        "Folder": "03-Groups",
+        "Folder": "03-Dashboard",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -10981,7 +11297,21 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
-        "Folder": "05-Reporting",
+        "Folder": "05-Groups",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "06-Devices",
+        "Total": 0,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 0
+      },
+      {
+        "Folder": "07-Reporting",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -10989,13 +11319,6 @@ jsonPWrapper ({
       },
       {
         "Folder": "08-Admin",
-        "Total": 0,
-        "Passing": 0,
-        "Failing": 0,
-        "Inconclusive": 0
-      },
-      {
-        "Folder": "09-Devices",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -11023,7 +11346,7 @@ jsonPWrapper ({
         "Inconclusive": 0
       },
       {
-        "Folder": "13-Dashboard",
+        "Folder": "13-Wordpress-Push",
         "Total": 0,
         "Passing": 0,
         "Failing": 0,
@@ -11031,21 +11354,21 @@ jsonPWrapper ({
       }
     ],
     "Scenarios": {
-      "Total": 214,
+      "Total": 222,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 214
+      "Inconclusive": 222
     },
     "Features": {
-      "Total": 76,
+      "Total": 77,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 76
+      "Inconclusive": 77
     }
   },
   "Configuration": {
     "SutName": "Restart Community Software",
     "SutVersion": "4.0.0(Beta)",
-    "GeneratedOn": "12 June 2018 17:52:12"
+    "GeneratedOn": "13 June 2018 10:42:02"
   }
 });
