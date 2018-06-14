@@ -1,4 +1,4 @@
-Feature: Reset Password
+Feature: 05 Reset Password
     As a User
     In order to reset my password
     I should be able to do that in password reset page. 

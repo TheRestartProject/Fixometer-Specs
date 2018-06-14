@@ -1,4 +1,4 @@
-Feature: Forgot Password
+Feature: 04 Forgot Password
     As a User
     In order to get a new password
     I should be able to do that in forgot password page. 
