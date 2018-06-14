@@ -700,8 +700,239 @@ jsonPWrapper ({
       "RelativeFolder": "02-Login_Register_Onboarding\\02-Register\\05-CompleteRegistration.feature",
       "Feature": {
         "Name": "05 Complete Registration",
-        "Description": "As a user\r\nIn order for my repair activities and volunteering to be remembered\r\nI want to be able to create an account that remembers my activities",
-        "FeatureElements": [],
+        "Description": "  As a user\r\n  In order for my repair activities and volunteering to be remembered\r\n  I want to be able to create an account that remembers my activities\r\n\r\n--------------------------------------------------------------------------------------------------------------------------------\r\n  \r\n  Feature: Complete Registration\r\n    As a User\r\n    In order to use the community platform and view all the events and other platforms\r\n    I should register myself onto the community platform and the system should create an account when I register.",
+        "FeatureElements": [
+          {
+            "Name": "System creating an account when I register",
+            "Slug": "system-creating-an-account-when-i-register",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user gets registere themselves on the community platform",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "an account should be created within the system.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Creating accounts on Wiki and Discourse.",
+            "Slug": "creating-accounts-on-wiki-and-discourse",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user creats an account onto  the system",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user would automatically creates an account on Wiki and Discourse with same details",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "directly login in wiki and discourse.",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following account have been created as a user",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "jenny@google.co.uk",
+                    "dean1"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "02-Login_Register_Onboarding\\03-SignIn.feature",
+      "Feature": {
+        "Name": "03 User Authentication",
+        "Description": "As a user\r\nIn order to perform what I want to do on the site\r\nI want to be able to log in",
+        "FeatureElements": [
+          {
+            "Name": "Valid login",
+            "Slug": "valid-login",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Valid login with alternate case email",
+            "Slug": "valid-login-with-alternate-case-email",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"FRY@PlAnetExPreSs.com\" and password \"fry!\"",
+                "StepComments": [
+                  {
+                    "Text": "# Emails are case-insensitive."
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Invalid login due to password casing",
+            "Slug": "invalid-login-due-to-password-casing",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"FRY!\"",
+                "StepComments": [
+                  {
+                    "Text": "# Passwords are case-sensitive."
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user is not logged in",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "a message is displayed to the user letting them know they have not been logged in",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Background": {
+          "Name": "",
+          "Description": "",
+          "Steps": [
+            {
+              "Keyword": "Given",
+              "NativeKeyword": "Given ",
+              "Name": "the following user accounts have been created",
+              "TableArgument": {
+                "HeaderRow": [
+                  "Email",
+                  "Password"
+                ],
+                "DataRows": [
+                  [
+                    "fry@planetexpress.com",
+                    "fry!"
+                  ]
+                ]
+              },
+              "StepComments": [],
+              "AfterLastStepComments": []
+            }
+          ],
+          "Tags": [],
+          "Result": {
+            "WasExecuted": false,
+            "WasSuccessful": false
+          }
+        },
         "Result": {
           "WasExecuted": false,
           "WasSuccessful": false
@@ -716,7 +947,7 @@ jsonPWrapper ({
     {
       "RelativeFolder": "02-Login_Register_Onboarding\\04-ForgotPassword.feature",
       "Feature": {
-        "Name": "Forgot Password",
+        "Name": "04 Forgot Password",
         "Description": "   As a User\r\n   In order to get a new password\r\n   I should be able to do that in forgot password page. \r\n\r\nGiven the following user accounts have been created\r\n   | Email                    | Role  |\r\n   | hubert@planetexpress.com | User  |",
         "FeatureElements": [
           {
@@ -869,7 +1100,7 @@ jsonPWrapper ({
     {
       "RelativeFolder": "02-Login_Register_Onboarding\\05-ResetPassword.feature",
       "Feature": {
-        "Name": "Reset Password",
+        "Name": "05 Reset Password",
         "Description": "   As a User\r\n   In order to reset my password\r\n   I should be able to do that in password reset page. \r\n\r\nGiven the following user accounts have been created\r\n   | Email                    | Role  |\r\n   | hubert@planetexpress.com | User  |",
         "FeatureElements": [
           {
@@ -929,147 +1160,6 @@ jsonPWrapper ({
             }
           }
         ],
-        "Result": {
-          "WasExecuted": false,
-          "WasSuccessful": false
-        },
-        "Tags": []
-      },
-      "Result": {
-        "WasExecuted": false,
-        "WasSuccessful": false
-      }
-    },
-    {
-      "RelativeFolder": "02-Login_Register_Onboarding\\03-SignIn.feature",
-      "Feature": {
-        "Name": "User Authentication",
-        "Description": "As a user\r\nIn order to perform what I want to do on the site\r\nI want to be able to log in",
-        "FeatureElements": [
-          {
-            "Name": "Valid login",
-            "Slug": "valid-login",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"fry!\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Valid login with alternate case email",
-            "Slug": "valid-login-with-alternate-case-email",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"FRY@PlAnetExPreSs.com\" and password \"fry!\"",
-                "StepComments": [
-                  {
-                    "Text": "# Emails are case-insensitive."
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is logged in as \"Fry\" with email \"fry@planetexpress.com\"",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          },
-          {
-            "Name": "Invalid login due to password casing",
-            "Slug": "invalid-login-due-to-password-casing",
-            "Description": "",
-            "Steps": [
-              {
-                "Keyword": "When",
-                "NativeKeyword": "When ",
-                "Name": "a user logs in with email \"fry@planetexpress.com\" and password \"FRY!\"",
-                "StepComments": [
-                  {
-                    "Text": "# Passwords are case-sensitive."
-                  }
-                ],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "Then",
-                "NativeKeyword": "Then ",
-                "Name": "the user is not logged in",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              },
-              {
-                "Keyword": "And",
-                "NativeKeyword": "And ",
-                "Name": "a message is displayed to the user letting them know they have not been logged in",
-                "StepComments": [],
-                "AfterLastStepComments": []
-              }
-            ],
-            "Tags": [],
-            "Result": {
-              "WasExecuted": false,
-              "WasSuccessful": false
-            }
-          }
-        ],
-        "Background": {
-          "Name": "",
-          "Description": "",
-          "Steps": [
-            {
-              "Keyword": "Given",
-              "NativeKeyword": "Given ",
-              "Name": "the following user accounts have been created",
-              "TableArgument": {
-                "HeaderRow": [
-                  "Email",
-                  "Password"
-                ],
-                "DataRows": [
-                  [
-                    "fry@planetexpress.com",
-                    "fry!"
-                  ]
-                ]
-              },
-              "StepComments": [],
-              "AfterLastStepComments": []
-            }
-          ],
-          "Tags": [],
-          "Result": {
-            "WasExecuted": false,
-            "WasSuccessful": false
-          }
-        },
         "Result": {
           "WasExecuted": false,
           "WasSuccessful": false
@@ -8428,24 +8518,31 @@ jsonPWrapper ({
       "RelativeFolder": "08-Admin\\Users\\AddNewUser.feature",
       "Feature": {
         "Name": "Add New User",
-        "Description": "As an admin\r\nIn order to add a user to the community platform\r\nI should use \"Create new user\" button",
+        "Description": "    As an Admin\r\n    In order to create new user accounts for cases when the user can't self-register\r\n    I would like a Create New User facility.\r\n    \r\nSince version 4, the majority of the users will self-register onto the platform.\r\nHowever, we still retain the option for Admin users to be able to create new users.\r\nThis may be needed in cases where a volunteer user is unable to create their own account\r\nfor whatever reason.\r\n\r\nThis will be quite rare I would expect.  In most cases, in order to invite people to use\r\nthe platform, we could simply send them a link to the registration page.\r\n\r\nNote: when a new user is created this way, they will be sent an email which will take\r\nthem through the registration process (to complete their skills, etc).  The parts of their\r\nprofile which has already been created by the Admin would be pre-completed.  It's a similar\r\nprocess for the onboarding steps for existing users during migration.",
         "FeatureElements": [
           {
-            "Name": "Creating New Users",
+            "Name": "Creating new users",
             "Slug": "creating-new-users",
             "Description": "",
             "Steps": [
               {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "an Admin user is on the All Users page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "an admin wants to create a new user",
+                "Name": "she clicks the New User button",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "click on create new user button.",
+                "Name": "she is shown the dialog for creating the new user",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -8457,14 +8554,25 @@ jsonPWrapper ({
             }
           },
           {
-            "Name": "Creating new user",
-            "Slug": "creating-new-user",
+            "Name": "Valid details added for user",
+            "Slug": "valid-details-added-for-user",
             "Description": "",
             "Steps": [
               {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "an Admin is creating a new user",
+                "StepComments": [
+                  {
+                    "Text": "# Entering correct details in the fields provided at Add new user pop-up."
+                  }
+                ],
+                "AfterLastStepComments": []
+              },
+              {
                 "Keyword": "When",
                 "NativeKeyword": "When ",
-                "Name": "the details are entered in the feilds provided as follows",
+                "Name": "she enters the new user's details in the fields provided as follows:",
                 "TableArgument": {
                   "HeaderRow": [
                     "Name",
@@ -8490,24 +8598,110 @@ jsonPWrapper ({
                     ]
                   ]
                 },
-                "StepComments": [
-                  {
-                    "Text": "# Entering correct details in the fields provided at Add new user pop-up."
-                  }
-                ],
+                "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "And",
                 "NativeKeyword": "And ",
-                "Name": "click on new user on the community platform",
+                "Name": "she clicks 'Create new user'",
                 "StepComments": [],
                 "AfterLastStepComments": []
               },
               {
                 "Keyword": "Then",
                 "NativeKeyword": "Then ",
-                "Name": "she will land on all users page with the newly added user in the list of users, with a message saying that new user has been added.",
+                "Name": "she lands on the All Users page with the newly added user in the list of users",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "she is shown a message saying that new user has been added successfully",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          },
+          {
+            "Name": "Invalid details added for user",
+            "Slug": "invalid-details-added-for-user",
+            "Description": "",
+            "Steps": [],
+            "Tags": [],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false
+      }
+    },
+    {
+      "RelativeFolder": "08-Admin\\Users\\DeleteUser.feature",
+      "Feature": {
+        "Name": "Delete User",
+        "Description": "    As a user\r\n    In order to exercise my right to be forgotten\r\n    I would like to be able to delete my account\r\n    \r\nDeleting accounts is possible by the user themselves, or an Admin.\r\n\r\nDeleting an account means the user will no longer be able to log in\r\nto the system, and all of their personally identifiable information \r\nwill be removed.\r\n\r\nThe repair-related data that has been contributed to the platform by\r\nthe user will not be removed.  During registration, users have to \r\nexplicitly consent to license their repair data to the site owners.\r\n\r\nBehind the scenes, we won't physically remove the user account - we will\r\nanonymise it so that there is nothing personally identifiable remaining, \r\nand marked the account as deleted.\r\n\r\nDeleted users will no longer be able to log in to the system.\r\nIt is possible that a new user account will be created using the same\r\nemail address in future.\r\n\r\nTODO: Given that the community platform is managing the accounts for\r\nDiscourse and the Wiki via SSO, we need to also understand how deleting\r\nan account with the community platform will remove/deactivate accounts\r\nin the corresponding platforms.",
+        "FeatureElements": [
+          {
+            "Name": "Admin deletes user's account",
+            "Slug": "admin-deletes-users-account",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "an Admin is on a user's account page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "she deletes the users account",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "the user's personal data is anonymised",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the account is marked as inactive",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the Admin is directed to the All Users page",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "And",
+                "NativeKeyword": "And ",
+                "Name": "the Admin is shown a message showing that this user has been successfully deleted",
                 "StepComments": [],
                 "AfterLastStepComments": []
               }
@@ -8523,7 +8717,9 @@ jsonPWrapper ({
           "WasExecuted": false,
           "WasSuccessful": false
         },
-        "Tags": []
+        "Tags": [
+          "@gdpr"
+        ]
       },
       "Result": {
         "WasExecuted": false,
@@ -11194,14 +11390,22 @@ jsonPWrapper ({
     }
   ],
   "Summary": {
-    "Tags": [],
+    "Tags": [
+      {
+        "Tag": "@gdpr",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      }
+    ],
     "Folders": [
       {
         "Folder": "02-Login_Register_Onboarding",
-        "Total": 22,
+        "Total": 24,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 22
+        "Inconclusive": 24
       },
       {
         "Folder": "03-Dashboard",
@@ -11240,10 +11444,10 @@ jsonPWrapper ({
       },
       {
         "Folder": "08-Admin",
-        "Total": 36,
+        "Total": 38,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 36
+        "Inconclusive": 38
       },
       {
         "Folder": "10-Emails",
@@ -11354,21 +11558,21 @@ jsonPWrapper ({
       }
     ],
     "Scenarios": {
-      "Total": 222,
+      "Total": 226,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 222
+      "Inconclusive": 226
     },
     "Features": {
-      "Total": 77,
+      "Total": 78,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 77
+      "Inconclusive": 78
     }
   },
   "Configuration": {
-    "SutName": "Restart Community Software",
-    "SutVersion": "4.0.0(Beta)",
-    "GeneratedOn": "13 June 2018 10:42:02"
+    "SutName": "Restart Community Platform",
+    "SutVersion": "4.0.0",
+    "GeneratedOn": "14 June 2018 16:02:09"
   }
 });
