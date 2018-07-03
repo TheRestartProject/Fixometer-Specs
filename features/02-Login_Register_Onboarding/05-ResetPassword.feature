@@ -16,3 +16,6 @@ Scenario: Reset Password
 
 Scenario: Password Validation
 # Password validation rules
+    When a user types the password in confirm password field, it should match with password entered before in the password field
+    And the password should be equal to or more than six characters
+    Then the user will be set up with new password and continue to next process.
