@@ -12,7 +12,7 @@ Background:
   | Fry   | Hackney Fixers |
   | Leyla | Hackney Fixers |
   
-Scenario:
+Scenario: Permission to edit an event
   Given Fry has created the following event:
   | Name    |
   | Big Fix | 
