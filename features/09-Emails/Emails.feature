@@ -31,7 +31,8 @@ Scenario: Email invitation to group by a user to a existing volunteer (2)
 Scenario: Email invitation to group by a user to a new volunteer (2)
    Given a new volunteer has received an email invitation to group
    When the new volunteer clicks on Join group button
-   Then the volunteer land on registeration page.
+   Then the volunteer land on registeration page, go through registration process
+   And should land on that group page with a welcome message.
 
  Scenario: Email invitation to an event by existing user to a existing volunteer (3)
    Given existing volunteer has received an email invitation to an event
