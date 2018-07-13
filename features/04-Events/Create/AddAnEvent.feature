@@ -37,8 +37,22 @@ Scenario: How to find Venue adddress
     Then automatically suggestions should show up and the place should be pointed in map.
 
 Scenario: searching the image
-#TODO: when clicked on add event image here text, dropdown opens consisting browsing options such as the picture inside system or from google drive or anyother place.
+#TODO: when clicked on add group image here text, file explorer opens.
+    When user clicks on add image text, then file explorer should open
+    And browse for the image
+    And select the one needed
+    Then you will see the uploaded image thumbnail in that area.
     
 Scenario: User triggers notification email about event creation to admin
    When the user clicks on save event button
    Then the admin would receive an notification email about event creation for moderation.
+
+Scenario: Allow for upload of multiple event images
+   When user selects multiple images and click on upload button
+   Then all the images should be uploaded with view of their thumbnails.
+
+Scenario: Restarter cannot create an event
+   Given logged in as a restarter
+   When the user is on the list of events page
+   Then there should be no create event button.
+

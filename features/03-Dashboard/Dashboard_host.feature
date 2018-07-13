@@ -13,6 +13,32 @@ Scenario: View Dashboard
     Then he would view all the activities that he can do and that is going on and that has been done on the platform.
     
 Scenario: Activities present on dashboard
-    When host lands on dashboard, he can view Creat new event, How to host an event, Keep your group information up to date!, Edit an existing or past event, Restarters in your area, Wiki.
+    When host lands on dashboard, he can view Creat new event, Your recent events, How to host an event, Restarters in your area, Discussion, wiki and Community news
     Then the host should be able to navigate(by clicking the links provided) through categories according to their use.
     
+Scenario: Host clicks on create new event link on create new event blog on dashboard
+    When host clicks on create new event link on dashboard
+    Then he will be landed on create new event page.
+   
+Scenario: Host clicks on Your recent events links on Your recent events blog on dashboard
+    When host clicks on see all events link or on a particular event link on dashboard
+    Then he will be landed on all events page or on that particular event page respectively.
+
+Scenario: Host clicks on view the materials link on how to host an event blog on dashboard
+    When host clicks on view the materials link on dashboard
+    Then he will be landed on How to run a repair event post on Discourse.
+   
+Scenario: Host clicks on Restarters in your area blog on dashboard
+#to be developed
+
+Scenario: Host clicks on Join the discussion link on Discussion blog on dashboard
+    When host clicks on Join the discussion link on dashboard
+    Then he will be landed on the homepage of the Discourse.
+
+Scenario: Host clicks on any links in Wiki blog on dashboard
+    When host clicks on the links in wiki blog on dashboard
+    Then he will be landed on wiki page of that particular link.
+
+Scenario: Host clicks on any links in the community news on dashboard
+    When host clicks on the links in wiki blog on dashboard
+    Then he will be landed on The Restart Project pages depending on the link.

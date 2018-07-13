@@ -37,10 +37,11 @@ Scenario: How to find Venue adddress
     Then automatically suggestions should show up and the place should be pointed in map.
 
 Scenario: searching the image
-#TODO: when clicked on add event image here text, dropdown opens consisting browsing options such as the picture inside system or from google drive or anyother place.
-    When a host wants to change the image, click on remove button 
-    And browse for another image 
-    Then the image gets autosaved.
+#TODO: when clicked on add group image here text, file explorer opens.
+    When user clicks on add image text, then file explorer should open
+    And browse for the image
+    And select the one needed
+    Then you will see the uploaded image thumbnail in that area.
 
 Scenario: Admin triggers view event email
    When the admin clicks the approve event button

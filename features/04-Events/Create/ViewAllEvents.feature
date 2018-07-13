@@ -22,9 +22,10 @@ Scenario: To access group details
     And clicks on the  group name link
     Then host lands on that particular group page.
     
-Scenario: Add a device
-    When a host wants to enter device(s) data into a group, click on add a device link
-    Then lands on the patrticular group page and enter the data.
+Scenario: Add/edit a device
+    When a host/admin wants to enter device(s) data into a group, click on add a device link
+    And a restarter who attended the event can only edit the device data, click on edit link
+    Then lands on the patrticular group page and enter/edit the data.
 
 Scenario: To RSVP
     When a host wants to respond to the invite, click on the link RSVP

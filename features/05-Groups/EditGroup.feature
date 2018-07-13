@@ -26,7 +26,11 @@ Scenario: How to give group location
     Then automatically suggestions should show up and the place should be pointed in map.
 
 Scenario: searching the image
-#TODO: when clicked on add group image here text, dropdown opens consisting browsing options such as the picture inside system or from google drive or anyother place.
+#TODO: when clicked on add group image here text, file explorer opens.
+    When user clicks on add image text, then file explorer should open
+    And browse for the image
+    And select the one needed
+    Then you will see the uploaded image thumbnail in that area.
 
 Scenario: Adding group tags
 #Only admin can add a new tag 

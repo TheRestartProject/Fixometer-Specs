@@ -18,6 +18,26 @@ Scenario: About Getting started
     Then the restarter can build his profile by clicking the links and following the process.
     
 Scenario: Activities present on dashboard
-    When restarter lands on dashboard, he can view Welcome Materials, Discussion, Upoming events and Wiki categories
+    When restarter lands on dashboard, he can view Discussion, Getting started in community repair, Upcoming events, Wiki and Community news
     Then the restarter should explore(by clicking the links provided) all the categories to get familiar with the platform.
+
+Scenario: Restarter clicks on Join the discussion link on Discussion blog on dashboard
+    When restarter clicks on Join the discussion link on dashboard
+    Then he will be landed on the homepage of the Discourse.
+
+Scenario: Restarter clicks on view the materials link on Getting started in community repair blog on dashboard
+    When restarter clicks on view the materials link on dashboard
+    Then he will be landed on community values post on Discourse.
+
+Scenario: Restarter clicks on see all events link on Upcoming events blog on dashboard
+    When restarter clicks on see all events link on dashboard
+    Then he will be landed on view all events page.
+
+Scenario: Restarter clicks on any links in Wiki blog on dashboard
+    When restarter clicks on the links in wiki blog on dashboard
+    Then he will be landed on wiki page of that particular link.
+
+Scenario: Restarter clicks on any links in the community news on dashboard
+    When restarter clicks on the links in wiki blog on dashboard
+    Then he will be landed on The Restart Project pages depending on the link.
     

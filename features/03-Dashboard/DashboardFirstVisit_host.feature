@@ -18,6 +18,25 @@ Scenario: About Getting started
     Then the host can build his profile by clicking the links and following the process.
     
 Scenario: Activities present on dashboard
-    When host lands on dashboard, he can view Discussion, Welcome Materials, How to set up a group, Restarters in your area and Wiki categories
+    When host lands on dashboard, he can view Getting started in community repair, How to host an event, Discussion, Wiki and Community news
     Then the host should explore(by clicking the links provided) all the categories to get familiar with the platform.
-    
+
+Scenario: Host clicks on view the materials link on Getting started in community repair blog on dashboard
+    When host clicks on view the materials link on dashboard
+    Then he will be landed on About the repair in your community category post on Discourse.
+
+Scenario: Host clicks on view the materials link in How to host an event blog on dashboard
+    When host clicks on view the materials link on dashboard
+    Then he will be landed on how to run a repair event post on Discourse.
+   
+Scenario: Host clicks on Join the discussion link on Discussion blog on dashboard
+    When host clicks on Join the discussion link on dashboard
+    Then he will be landed on the homepage of the Discourse.
+
+Scenario: Host clicks on any links in Wiki blog on dashboard
+    When host clicks on the links in wiki blog on dashboard
+    Then he will be landed on wiki page of that particular link.
+
+Scenario: Host clicks on any links in the community news on dashboard
+    When host clicks on the links in wiki blog on dashboard
+    Then he will be landed on The Restart Project pages depending on the link.

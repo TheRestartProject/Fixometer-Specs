@@ -24,3 +24,8 @@ Scenario: Password Validation
 Scenario: User wants to go to previous step
     When a user wants to go to previous step, click Previous step link
     Then the user lands on previous page i.e., select skills page
+
+Scenario: User can only signup to the application if age>=18
+    When a user wants to signup for the application, in the age field there is a restriction of age>=18
+    And the user can select the year from the dropdown
+    Then the user can enter the year if greater than or equal to 18.

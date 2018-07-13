@@ -15,8 +15,8 @@ Scenario: View active/past events
    Then he can see on that particular event page.
 
 Scenario: Edit devices section  
-#Restarter can only edit a device but cannot add or delete a device from the device section 
-   When a restarter wants to edit devices section
+#Only the restarter who attended the event can only edit a device but cannot add or delete a device from the device section 
+   When a restarter who attended the event wants to edit devices section
    And should click on edit option
    Then he can view editable options of that device
    And save the changes by clicking on save button.   
@@ -32,4 +32,9 @@ Scenario: View the invited volunteers
 Scenario: View device details   
    When a restarter wants to view the devices that hase been fixed, repairable and end of life
    Then can see the list in the devices section
-   
+
+Scenario: Restarter cannot edit devices if he did not attend event
+   Given logged in as a restarter who didn't attend the event
+   When the user is on the edit party devices page
+   Then there should be no edit button or add button in the devices section
+   And restarter can view the device only.
