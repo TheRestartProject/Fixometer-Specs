@@ -33,4 +33,10 @@ Scenario: Valid details added for user
     And she is shown a message saying that new user has been added successfully
 
 Scenario: Invalid details added for user
-  # TODO
+# Entering invalid details in the fields provided at Add new user pop-up.
+    Given an Admin is creating a new user
+    When she enters the new user's details in the fields provided as follows:
+    | Name       | Email address          | User role   | Password   | Repeat password | 
+    | diamond    | diamond@gmail.com      | Volunteer   | h£!!       | h£!!            |
+    And she clicks 'Create new user'
+    Then an error message should at the password field, password should be more than 6 characters.

@@ -10,11 +10,16 @@ Background:
         | hello@howareyou.com        | hello    | Admin |
 
 Scenario: Create a new event
-# View all events i.e., past evetns, upcoming events and moderate events
+# View all events i.e., past events, upcoming events and moderate events
     When a host clicks on event page and fills the data as follows
     | Name of event     | Event group | Description                | Date of event | Start/end time | Venue address  | Add event image  |
     | Ram               | vanarulu    | exp group in fixing things | 7/6/2018      | 20-24          | Remakery       | Add event image  |
     Then he lands on events page and can see all the events in that page.
+
+Scenario: Saving a new event
+    When a host enters all the data needed to create an event
+    And clicks on save button
+    Then a success message should appear on the same page.
     
 Scenario: Text cleaned in the description
     When a host copies and paste into the description box
