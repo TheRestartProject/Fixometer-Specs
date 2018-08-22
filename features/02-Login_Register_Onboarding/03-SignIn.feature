@@ -14,8 +14,8 @@ Scenario: Valid login
 
 Scenario: Valid login with alternate case email
 # Emails are case-insensitive.
-    When a user logs in with email "FRY@PlAnetExPreSs.com" and password "fry!"
-    Then the user is logged in as "Fry" with email "fry@planetexpress.com"
+    When a user logs in with the given email and password
+    Then the user is logged in with those credentials.
 
 Scenario: Invalid login due to password casing
 # Passwords are case-sensitive.
