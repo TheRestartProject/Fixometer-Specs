@@ -21,4 +21,4 @@ Scenario: Invalid login due to password casing
 # Passwords are case-sensitive.
     When a user logs in with email "fry@planetexpress.com" and password "FRY!"
     Then the user is not logged in
-    And a message is displayed to the user letting them know they have not been logged in
+    And a message is displayed to the user letting them know they have not been logged in.
